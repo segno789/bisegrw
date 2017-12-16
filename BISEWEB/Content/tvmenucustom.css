@@ -1,0 +1,58 @@
+
+#tv_Menut0, #tv_Menut1, #tv_Menut2, #tv_Menut3, #tv_Menut4, #tv_Menut5, #tv_Menut6, #tv_Menut7, #tv_Menut8, #tv_Menut9,
+#tv_Menut10, #tv_Menut11, #tv_Menut12, #tv_Menut13, #tv_Menut14, #tv_Menut15, #tv_Menut16, #tv_Menut17, #tv_Menut18, #tv_Menut19,
+#tv_Menut20, #tv_Menut21, #tv_Menut22, #tv_Menut23, #tv_Menut24, #tv_Menut25, #tv_Menut26, #tv_Menut27, #tv_Menut28, #tv_Menut29,
+#tv_Menut30, #tv_Menut31, #tv_Menut32, #tv_Menut33, #tv_Menut34, #tv_Menut35, #tv_Menut36, #tv_Menut37, #tv_Menut38, #tv_Menut39,
+#tv_Menut40, #tv_Menut41, #tv_Menut42, #tv_Menut43, #tv_Menut44, #tv_Menut45, #tv_Menut46, #tv_Menut47, #tv_Menut48, #tv_Menut49, #tv_Menut50,#tv_Menu4t8,#tv_Menu4t9,#tv_Menu4t10,#tv_Menu4t11,
+#tv_Menu1t0, #tv_Menu1t1, #tv_Menu1t2, #tv_Menu1t3,
+#tv_Menu2t0, #tv_Menu2t1, #tv_Menu2t2, #tv_Menu2t3, #tv_Menu2t4, #tv_Menu2t5, #tv_Menu2t6, #tv_Menu2t7, #tv_Menu2t8, #tv_Menu2t9, #tv_Menu2t10, #tv_Menu2t11,
+#tv_Menu3t0, #tv_Menu3t1, #tv_Menu3t2, #tv_Menu3t3, #tv_Menu3t4, #tv_Menu3t5, #tv_Menu3t6, #tv_Menu3t7, #tv_Menu3t8, #tv_Menu3t9, #tv_Menu3t10, #tv_Menu3t11, #tv_Menu3t12,
+#tv_Menu3t13,#tv_Menu4t0,
+#tv_Menu4t0, #tv_Menu4t1, #tv_Menu4t2, #tv_Menu4t3, #tv_Menu4t4, #tv_Menu4t5,#tv_Menu4t6,#tv_Menu4t7,
+#tv_Menu6t0,#tv_Conductt0,
+#tv_Menu7t0,#tv_Menu7t1,#tv_Menu7t2,
+#tv_Menu5t0, #tv_Menu5t1, #tv_Menu5t2, #tv_Menu6t1, #tv_Menu6t2, #tv_Menu6t3,#tv_Menu8t0,#tv_Menu8t1,#tv_Menu8t2 {
+    display: block;
+    margin: 0;
+    padding: 6px 15px 6px 43px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    background: none;
+    color: #b4bcc8;
+}
+
+#tv_Menu table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu1 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu2 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu3 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu4 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu5 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+#tv_Menu6 table tbody tr a:hover {
+    color: white;
+    font-weight: bolder;
+}

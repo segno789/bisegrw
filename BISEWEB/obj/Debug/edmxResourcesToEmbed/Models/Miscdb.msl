@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MiscDbModelStoreContainer" CdmEntityContainer="MiscDbEntities">
+    <EntitySetMapping Name="tblemployees">
+      <EntityTypeMapping TypeName="MiscDbModel.tblemployee">
+        <MappingFragment StoreEntitySet="tblemployee">
+          <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="ntn" ColumnName="ntn" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="religion" ColumnName="religion" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="last_qualify" ColumnName="last_qualify" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_joining" ColumnName="date_joining" />
+          <ScalarProperty Name="date_promote" ColumnName="date_promote" />
+          <ScalarProperty Name="date_retired" ColumnName="date_retired" />
+          <ScalarProperty Name="seniority" ColumnName="seniority" />
+          <ScalarProperty Name="Branch_Code" ColumnName="Branch_Code" />
+          <ScalarProperty Name="emp_status" ColumnName="emp_status" />
+          <ScalarProperty Name="bill_category" ColumnName="bill_category" />
+          <ScalarProperty Name="emp_cat" ColumnName="emp_cat" />
+          <ScalarProperty Name="bs" ColumnName="bs" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+          <ScalarProperty Name="salary_type" ColumnName="salary_type" />
+          <ScalarProperty Name="ecr" ColumnName="ecr" />
+          <ScalarProperty Name="blood_grp" ColumnName="blood_grp" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Disability" ColumnName="Disability" />
+          <ScalarProperty Name="Driving_License" ColumnName="Driving_License" />
+          <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+          <ScalarProperty Name="roll_id" ColumnName="roll_id" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isSuperAdmin" ColumnName="isSuperAdmin" />
+          <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+          <ScalarProperty Name="pay_stage" ColumnName="pay_stage" />
+          <ScalarProperty Name="br_sec" ColumnName="br_sec" />
+          <ScalarProperty Name="about" ColumnName="about" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="hajj" ColumnName="hajj" />
+          <ScalarProperty Name="umrah" ColumnName="umrah" />
+          <ScalarProperty Name="OutDoorJob" ColumnName="OutDoorJob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEntrySlips">
+      <EntityTypeMapping TypeName="MiscDbModel.tblEntrySlip">
+        <MappingFragment StoreEntitySet="tblEntrySlip">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="rno" ColumnName="rno" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="iyear" ColumnName="iyear" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="eUser" ColumnName="eUser" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="NoOfPersons" ColumnName="NoOfPersons" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFiles">
+      <EntityTypeMapping TypeName="MiscDbModel.tblFile">
+        <MappingFragment StoreEntitySet="tblFiles">
+          <ScalarProperty Name="fileId" ColumnName="fileId" />
+          <ScalarProperty Name="fileDesc" ColumnName="fileDesc" />
+          <ScalarProperty Name="br_code" ColumnName="br_code" />
+          <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+          <ScalarProperty Name="SubmitterMobNo" ColumnName="SubmitterMobNo" />
+          <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="next_br_code" ColumnName="next_br_code" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+          <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="RetDate" ColumnName="RetDate" />
+          <ScalarProperty Name="OwoDiaryNo" ColumnName="OwoDiaryNo" />
+          <ScalarProperty Name="OwoDate" ColumnName="OwoDate" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblfileTracks">
+      <EntityTypeMapping TypeName="MiscDbModel.tblfileTrack">
+        <MappingFragment StoreEntitySet="tblfileTrack">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fileId" ColumnName="fileId" />
+          <ScalarProperty Name="Br_code" ColumnName="Br_code" />
+          <ScalarProperty Name="Br_FileNo" ColumnName="Br_FileNo" />
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="recivedDate" ColumnName="recivedDate" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="prev_Br_code" ColumnName="prev_Br_code" />
+          <ScalarProperty Name="next_br_code" ColumnName="next_br_code" />
+          <ScalarProperty Name="IsTransfer" ColumnName="IsTransfer" />
+          <ScalarProperty Name="transferDate" ColumnName="transferDate" />
+          <ScalarProperty Name="transferBy" ColumnName="transferBy" />
+          <ScalarProperty Name="IsNext_Received" ColumnName="IsNext_Received" />
+          <ScalarProperty Name="isCompleted" ColumnName="isCompleted" />
+          <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblrolls">
+      <EntityTypeMapping TypeName="MiscDbModel.tblroll">
+        <MappingFragment StoreEntitySet="tblroll">
+          <ScalarProperty Name="roll_id" ColumnName="roll_id" />
+          <ScalarProperty Name="roll_desc" ColumnName="roll_desc" />
+          <ScalarProperty Name="form_ids" ColumnName="form_ids" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblwebforms">
+      <EntityTypeMapping TypeName="MiscDbModel.tblwebform">
+        <MappingFragment StoreEntitySet="tblwebforms">
+          <ScalarProperty Name="formId" ColumnName="formId" />
+          <ScalarProperty Name="formName" ColumnName="formName" />
+          <ScalarProperty Name="formType" ColumnName="formType" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isCommon" ColumnName="isCommon" />
+          <ScalarProperty Name="formUrl" ColumnName="formUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWebRights">
+      <EntityTypeMapping TypeName="MiscDbModel.tblWebRight">
+        <MappingFragment StoreEntitySet="tblWebRights">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="formNo" ColumnName="formNo" />
+          <ScalarProperty Name="fYear" ColumnName="fYear" />
+          <ScalarProperty Name="fSess" ColumnName="fSess" />
+          <ScalarProperty Name="fClass" ColumnName="fClass" />
+          <ScalarProperty Name="eDate" ColumnName="eDate" />
+          <ScalarProperty Name="eUser" ColumnName="eUser" />
+          <ScalarProperty Name="rightsDays" ColumnName="rightsDays" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="matric_newModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblbiodata">
+    <Key>
+      <PropertyRef Name="rno" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="Iyear" />
+      <PropertyRef Name="sess" />
+    </Key>
+    <Property Name="rno" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="Iyear" Type="Int16" Nullable="false" />
+    <Property Name="sess" Type="Byte" Nullable="false" />
+    <Property Name="strRegNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="schm" Type="Int32" />
+    <Property Name="oldRno" Type="Int32" />
+    <Property Name="YearOfLastAp" Type="Int16" />
+    <Property Name="SessOfLastAp" Type="Byte" />
+    <Property Name="Brd_cd" Type="Byte" />
+    <Property Name="classRno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SchGrade" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BForm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FNIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="markOfIden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rel" Type="Byte" />
+    <Property Name="Dob" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="regPvt" Type="Byte" />
+    <Property Name="sex" Type="Byte" />
+    <Property Name="med" Type="Byte" />
+    <Property Name="nat" Type="Byte" />
+    <Property Name="RuralORUrban" Type="Byte" />
+    <Property Name="dist_cd" Type="Byte" />
+    <Property Name="teh_cd" Type="Byte" />
+    <Property Name="formNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cat09" Type="Byte" />
+    <Property Name="cat10" Type="Byte" />
+    <Property Name="cent_cd" Type="Int16" />
+    <Property Name="exgrp" Type="Byte" />
+    <Property Name="grp_cd" Type="Byte" />
+    <Property Name="Sch_cd" Type="Int32" />
+    <Property Name="sub1" Type="Byte" />
+    <Property Name="sub1Ap1" Type="Byte" />
+    <Property Name="sub1mt1" Type="Byte" />
+    <Property Name="sub1st1" Type="Byte" />
+    <Property Name="sub1pf1" Type="Byte" />
+    <Property Name="sub1Ap2" Type="Byte" />
+    <Property Name="sub1mt2" Type="Byte" />
+    <Property Name="sub1St2" Type="Byte" />
+    <Property Name="sub1Pf2" Type="Byte" />
+    <Property Name="sub2" Type="Byte" />
+    <Property Name="sub2Ap1" Type="Byte" />
+    <Property Name="sub2mt1" Type="Byte" />
+    <Property Name="sub2st1" Type="Byte" />
+    <Property Name="sub2pf1" Type="Byte" />
+    <Property Name="sub2Ap2" Type="Byte" />
+    <Property Name="sub2mt2" Type="Byte" />
+    <Property Name="sub2st2" Type="Byte" />
+    <Property Name="sub2pf2" Type="Byte" />
+    <Property Name="sub3" Type="Byte" />
+    <Property Name="sub3Ap1" Type="Byte" />
+    <Property Name="sub3mt1" Type="Byte" />
+    <Property Name="sub3st1" Type="Byte" />
+    <Property Name="sub3pf1" Type="Byte" />
+    <Property Name="sub3ap2" Type="Byte" />
+    <Property Name="sub3mt2" Type="Byte" />
+    <Property Name="sub3st2" Type="Byte" />
+    <Property Name="sub3pf2" Type="Byte" />
+    <Property Name="sub4" Type="Byte" />
+    <Property Name="sub4Ap1" Type="Byte" />
+    <Property Name="sub4mt1" Type="Byte" />
+    <Property Name="sub4st1" Type="Byte" />
+    <Property Name="sub4pf1" Type="Byte" />
+    <Property Name="sub4Ap2" Type="Byte" />
+    <Property Name="sub4mt2" Type="Byte" />
+    <Property Name="sub4st2" Type="Byte" />
+    <Property Name="sub4mp2" Type="Byte" />
+    <Property Name="sub4sp2" Type="Byte" />
+    <Property Name="sub4pf2" Type="Byte" />
+    <Property Name="sub5" Type="Byte" />
+    <Property Name="sub5Ap1" Type="Byte" />
+    <Property Name="sub5mt1" Type="Byte" />
+    <Property Name="sub5st1" Type="Byte" />
+    <Property Name="sub5pf1" Type="Byte" />
+    <Property Name="sub5Ap2" Type="Byte" />
+    <Property Name="sub5mt2" Type="Byte" />
+    <Property Name="sub5st2" Type="Byte" />
+    <Property Name="sub5mp2" Type="Byte" />
+    <Property Name="sub5sp2" Type="Byte" />
+    <Property Name="sub5prpf" Type="Byte" />
+    <Property Name="sub5pf2" Type="Byte" />
+    <Property Name="sub6" Type="Byte" />
+    <Property Name="sub6Ap1" Type="Byte" />
+    <Property Name="sub6mt1" Type="Byte" />
+    <Property Name="sub6st1" Type="Byte" />
+    <Property Name="sub6pf1" Type="Byte" />
+    <Property Name="sub6Ap2" Type="Byte" />
+    <Property Name="sub6mt2" Type="Byte" />
+    <Property Name="sub6st2" Type="Byte" />
+    <Property Name="sub6mp2" Type="Byte" />
+    <Property Name="sub6sp2" Type="Byte" />
+    <Property Name="sub6prpf" Type="Byte" />
+    <Property Name="sub6pf2" Type="Byte" />
+    <Property Name="sub7" Type="Byte" />
+    <Property Name="sub7Ap1" Type="Byte" />
+    <Property Name="sub7mt1" Type="Byte" />
+    <Property Name="sub7st1" Type="Byte" />
+    <Property Name="sub7pf1" Type="Byte" />
+    <Property Name="sub7Ap2" Type="Byte" />
+    <Property Name="sub7mt2" Type="Byte" />
+    <Property Name="sub7st2" Type="Byte" />
+    <Property Name="sub7mp2" Type="Byte" />
+    <Property Name="sub7sp2" Type="Byte" />
+    <Property Name="sub7prpf" Type="Byte" />
+    <Property Name="sub7pf2" Type="Byte" />
+    <Property Name="sub8" Type="Byte" />
+    <Property Name="sub8ap1" Type="Byte" />
+    <Property Name="sub8mt1" Type="Byte" />
+    <Property Name="sub8st1" Type="Byte" />
+    <Property Name="sub8pf1" Type="Byte" />
+    <Property Name="sub8Ap2" Type="Byte" />
+    <Property Name="sub8mt2" Type="Byte" />
+    <Property Name="sub8st2" Type="Byte" />
+    <Property Name="sub8pf2" Type="Byte" />
+    <Property Name="obt_mrk" Type="Int16" />
+    <Property Name="result1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="result2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="spl_cd" Type="Byte" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="ekpo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ckpo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cDate" Type="DateTime" Precision="3" />
+    <Property Name="Pic" Type="Byte" />
+    <Property Name="sn" Type="Byte" />
+    <Property Name="chance" Type="Byte" />
+    <Property Name="Zone_cd" Type="Int32" />
+    <Property Name="MobNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mi_type" Type="Byte" />
+    <Property Name="Emp_cd" Type="Int32" />
+    <Property Name="Emp_rslt" Type="Int32" />
+    <Property Name="BindNo" Type="Int32" />
+    <Property Name="SrNo" Type="Int32" />
+    <Property Name="Spec" Type="Int32" />
+    <Property Name="frm" Type="Byte" />
+    <Property Name="IsReAdm" Type="Byte" />
+    <Property Name="ChallanNo" Type="Int64" />
+  </EntityType>
+  <EntityType Name="tblBioDataInter_From14">
+    <Key>
+      <PropertyRef Name="rno" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="Iyear" />
+      <PropertyRef Name="sess" />
+    </Key>
+    <Property Name="rno" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="Iyear" Type="Int16" Nullable="false" />
+    <Property Name="sess" Type="Byte" Nullable="false" />
+    <Property Name="strRegNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="schm" Type="Byte" />
+    <Property Name="oldRno" Type="Int32" />
+    <Property Name="YearOfLastAp" Type="Int16" />
+    <Property Name="SessOfLastAp" Type="Byte" />
+    <Property Name="IntBrd_cd" Type="Byte" />
+    <Property Name="matRno" Type="Int32" />
+    <Property Name="yearOfPass" Type="Int16" />
+    <Property Name="sessOfPass" Type="Byte" />
+    <Property Name="Brd_cd" Type="Byte" />
+    <Property Name="classRno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollGrade" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="addr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FNIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="markOfIden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rel" Type="Byte" />
+    <Property Name="regPvt" Type="Byte" />
+    <Property Name="sex" Type="Byte" />
+    <Property Name="med" Type="Byte" />
+    <Property Name="nat" Type="Byte" />
+    <Property Name="ruralOrurban" Type="Byte" />
+    <Property Name="dist_cd" Type="Byte" />
+    <Property Name="teh_cd" Type="Byte" />
+    <Property Name="FormNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cat11" Type="Byte" />
+    <Property Name="cat12" Type="Byte" />
+    <Property Name="cent_cd" Type="Int16" />
+    <Property Name="exgrp" Type="Byte" />
+    <Property Name="grp_cd" Type="Byte" />
+    <Property Name="coll_cd" Type="Int32" />
+    <Property Name="sub1" Type="Byte" />
+    <Property Name="sub1Ap1" Type="Byte" />
+    <Property Name="sub1mt1" Type="Byte" />
+    <Property Name="sub1st1" Type="Byte" />
+    <Property Name="sub1pf1" Type="Byte" />
+    <Property Name="sub1Ap2" Type="Byte" />
+    <Property Name="sub1mt2" Type="Byte" />
+    <Property Name="sub1St2" Type="Byte" />
+    <Property Name="sub1Pf2" Type="Byte" />
+    <Property Name="sub2" Type="Byte" />
+    <Property Name="sub2Ap1" Type="Byte" />
+    <Property Name="sub2mt1" Type="Byte" />
+    <Property Name="sub2st1" Type="Byte" />
+    <Property Name="sub2pf1" Type="Byte" />
+    <Property Name="sub2Ap2" Type="Byte" />
+    <Property Name="sub2mt2" Type="Byte" />
+    <Property Name="sub2st2" Type="Byte" />
+    <Property Name="sub2pf2" Type="Byte" />
+    <Property Name="sub3" Type="Byte" />
+    <Property Name="sub3Ap1" Type="Byte" />
+    <Property Name="sub3mt1" Type="Byte" />
+    <Property Name="sub3st1" Type="Byte" />
+    <Property Name="sub3pf1" Type="Byte" />
+    <Property Name="sub4" Type="Byte" />
+    <Property Name="sub4Ap1" Type="Byte" />
+    <Property Name="sub4mt1" Type="Byte" />
+    <Property Name="sub4st1" Type="Byte" />
+    <Property Name="sub4pf1" Type="Byte" />
+    <Property Name="sub4Ap2" Type="Byte" />
+    <Property Name="sub4mt2" Type="Byte" />
+    <Property Name="sub4st2" Type="Byte" />
+    <Property Name="sub4mp2" Type="Byte" />
+    <Property Name="sub4sp2" Type="Byte" />
+    <Property Name="sub4pf2" Type="Byte" />
+    <Property Name="sub4prpf" Type="Byte" />
+    <Property Name="sub5" Type="Byte" />
+    <Property Name="sub5A" Type="Byte" />
+    <Property Name="sub5Ap1" Type="Byte" />
+    <Property Name="sub5mt1" Type="Byte" />
+    <Property Name="sub5st1" Type="Byte" />
+    <Property Name="sub5pf1" Type="Byte" />
+    <Property Name="sub5Ap2" Type="Byte" />
+    <Property Name="sub5mt2" Type="Byte" />
+    <Property Name="sub5st2" Type="Byte" />
+    <Property Name="sub5mp2" Type="Byte" />
+    <Property Name="sub5sp2" Type="Byte" />
+    <Property Name="sub5pf2" Type="Byte" />
+    <Property Name="sub5prpf" Type="Byte" />
+    <Property Name="sub6" Type="Byte" />
+    <Property Name="sub6A" Type="Byte" />
+    <Property Name="sub6Ap1" Type="Byte" />
+    <Property Name="sub6mt1" Type="Byte" />
+    <Property Name="sub6st1" Type="Byte" />
+    <Property Name="sub6pf1" Type="Byte" />
+    <Property Name="sub6Ap2" Type="Byte" />
+    <Property Name="sub6mt2" Type="Byte" />
+    <Property Name="sub6st2" Type="Byte" />
+    <Property Name="sub6mp2" Type="Byte" />
+    <Property Name="sub6sp2" Type="Byte" />
+    <Property Name="sub6pf2" Type="Byte" />
+    <Property Name="sub6prpf" Type="Byte" />
+    <Property Name="sub7" Type="Byte" />
+    <Property Name="sub7A" Type="Byte" />
+    <Property Name="sub7Ap1" Type="Byte" />
+    <Property Name="sub7mt1" Type="Byte" />
+    <Property Name="sub7st1" Type="Byte" />
+    <Property Name="sub7pf1" Type="Byte" />
+    <Property Name="sub7Ap2" Type="Byte" />
+    <Property Name="sub7mt2" Type="Byte" />
+    <Property Name="sub7st2" Type="Byte" />
+    <Property Name="sub7mp2" Type="Byte" />
+    <Property Name="sub7sp2" Type="Byte" />
+    <Property Name="sub7pf2" Type="Byte" />
+    <Property Name="sub7prpf" Type="Byte" />
+    <Property Name="sub8" Type="Byte" />
+    <Property Name="sub8Ap2" Type="Byte" />
+    <Property Name="sub8mt2" Type="Byte" />
+    <Property Name="sub8st2" Type="Byte" />
+    <Property Name="sub8pf2" Type="Byte" />
+    <Property Name="obt_mrk" Type="Int16" />
+    <Property Name="result1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="result2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="spl_cd" Type="Byte" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="ekpo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ckpo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="cDate" Type="DateTime" Precision="3" />
+    <Property Name="Pic" Type="Byte" />
+    <Property Name="sn" Type="Byte" />
+    <Property Name="chance" Type="Byte" />
+    <Property Name="zone_cd" Type="Int32" />
+    <Property Name="MobNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_cd" Type="Int32" />
+    <Property Name="mi_type" Type="Byte" />
+    <Property Name="Emp_Rslt" Type="Int32" />
+    <Property Name="BindNo" Type="Int32" />
+    <Property Name="SrNo" Type="Int32" />
+    <Property Name="frm" Type="Byte" />
+    <Property Name="Spec" Type="Int32" />
+    <Property Name="IsReAdm" Type="Byte" />
+    <Property Name="challanNo" Type="Int64" />
+    <Property Name="MRollNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblBiodataInter_HE">
+    <Key>
+      <PropertyRef Name="rno" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="Iyear" />
+      <PropertyRef Name="sess" />
+    </Key>
+    <Property Name="rno" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="Iyear" Type="Int16" Nullable="false" />
+    <Property Name="sess" Type="Byte" Nullable="false" />
+    <Property Name="strRegNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="schm" Type="Byte" />
+    <Property Name="oldRno" Type="Int32" />
+    <Property Name="YearOfLastAp" Type="Int16" />
+    <Property Name="SessOfLastAp" Type="Byte" />
+    <Property Name="IntBrd_cd" Type="Byte" />
+    <Property Name="matRno" Type="Int32" />
+    <Property Name="yearOfPass" Type="Int16" />
+    <Property Name="sessOfPass" Type="Byte" />
+    <Property Name="Brd_cd" Type="Byte" />
+    <Property Name="classRno" Type="Int32" />
+    <Property Name="CollGrade" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="addr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FNIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="markOfIden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rel" Type="Byte" />
+    <Property Name="regPvt" Type="Byte" />
+    <Property Name="sex" Type="Byte" />
+    <Property Name="med" Type="Byte" />
+    <Property Name="nat" Type="Byte" />
+    <Property Name="ruralOrurban" Type="Byte" />
+    <Property Name="dist_cd" Type="Byte" />
+    <Property Name="teh_cd" Type="Byte" />
+    <Property Name="FormNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cat11" Type="Byte" />
+    <Property Name="cat12" Type="Byte" />
+    <Property Name="cent_cd" Type="Int16" />
+    <Property Name="exgrp" Type="Byte" />
+    <Property Name="grp_cd" Type="Byte" />
+    <Property Name="coll_cd" Type="Int32" />
+    <Property Name="sub1" Type="Byte" />
+    <Property Name="sub1Ap1" Type="Byte" />
+    <Property Name="sub1mt1" Type="Byte" />
+    <Property Name="sub1st1" Type="Byte" />
+    <Property Name="sub1pf1" Type="Byte" />
+    <Property Name="sub1Ap2" Type="Byte" />
+    <Property Name="sub1mt2" Type="Byte" />
+    <Property Name="sub1St2" Type="Byte" />
+    <Property Name="sub1Pf2" Type="Byte" />
+    <Property Name="sub2" Type="Byte" />
+    <Property Name="sub2Ap1" Type="Byte" />
+    <Property Name="sub2mt1" Type="Byte" />
+    <Property Name="sub2st1" Type="Byte" />
+    <Property Name="sub2pf1" Type="Byte" />
+    <Property Name="sub2Ap2" Type="Byte" />
+    <Property Name="sub2mt2" Type="Byte" />
+    <Property Name="sub2st2" Type="Byte" />
+    <Property Name="sub2pf2" Type="Byte" />
+    <Property Name="sub3" Type="Byte" />
+    <Property Name="sub3Ap1" Type="Byte" />
+    <Property Name="sub3mt1" Type="Byte" />
+    <Property Name="sub3st1" Type="Byte" />
+    <Property Name="sub3pf1" Type="Byte" />
+    <Property Name="sub4" Type="Byte" />
+    <Property Name="sub4A" Type="Byte" />
+    <Property Name="sub4Ap1" Type="Byte" />
+    <Property Name="sub4mt1" Type="Byte" />
+    <Property Name="sub4st1" Type="Byte" />
+    <Property Name="sub4mp1" Type="Byte" />
+    <Property Name="Sub4sp1" Type="Byte" />
+    <Property Name="Sub4prpf1" Type="Byte" />
+    <Property Name="sub4pf1" Type="Byte" />
+    <Property Name="sub4Ap2" Type="Byte" />
+    <Property Name="sub4mt2" Type="Byte" />
+    <Property Name="sub4st2" Type="Byte" />
+    <Property Name="sub4mp2" Type="Byte" />
+    <Property Name="sub4sp2" Type="Byte" />
+    <Property Name="sub4pf2" Type="Byte" />
+    <Property Name="sub4prpf2" Type="Byte" />
+    <Property Name="sub5" Type="Byte" />
+    <Property Name="sub5A" Type="Byte" />
+    <Property Name="sub5Ap1" Type="Byte" />
+    <Property Name="sub5mt1" Type="Byte" />
+    <Property Name="sub5st1" Type="Byte" />
+    <Property Name="sub5mp1" Type="Byte" />
+    <Property Name="sub5sp1" Type="Byte" />
+    <Property Name="sub5prpf1" Type="Byte" />
+    <Property Name="sub5pf1" Type="Byte" />
+    <Property Name="sub5Ap2" Type="Byte" />
+    <Property Name="sub5mt2" Type="Byte" />
+    <Property Name="sub5st2" Type="Byte" />
+    <Property Name="sub5mp2" Type="Byte" />
+    <Property Name="sub5sp2" Type="Byte" />
+    <Property Name="sub5pf2" Type="Byte" />
+    <Property Name="sub5prpf2" Type="Byte" />
+    <Property Name="sub6" Type="Byte" />
+    <Property Name="sub6A" Type="Byte" />
+    <Property Name="sub6Ap1" Type="Byte" />
+    <Property Name="sub6mt1" Type="Byte" />
+    <Property Name="sub6st1" Type="Byte" />
+    <Property Name="Sub6mp1" Type="Byte" />
+    <Property Name="sub6sp1" Type="Byte" />
+    <Property Name="sub6prpf1" Type="Byte" />
+    <Property Name="sub6pf1" Type="Byte" />
+    <Property Name="sub6Ap2" Type="Byte" />
+    <Property Name="sub6mt2" Type="Byte" />
+    <Property Name="sub6st2" Type="Byte" />
+    <Property Name="sub6mp2" Type="Byte" />
+    <Property Name="sub6sp2" Type="Byte" />
+    <Property Name="sub6pf2" Type="Byte" />
+    <Property Name="sub6prpf2" Type="Byte" />
+    <Property Name="sub7" Type="Byte" />
+    <Property Name="sub7A" Type="Byte" />
+    <Property Name="sub7Ap1" Type="Byte" />
+    <Property Name="sub7mt1" Type="Byte" />
+    <Property Name="sub7st1" Type="Byte" />
+    <Property Name="sub7pf1" Type="Byte" />
+    <Property Name="sub7Ap2" Type="Byte" />
+    <Property Name="sub7mt2" Type="Byte" />
+    <Property Name="sub7st2" Type="Byte" />
+    <Property Name="sub7mp2" Type="Byte" />
+    <Property Name="sub7sp2" Type="Byte" />
+    <Property Name="sub7pf2" Type="Byte" />
+    <Property Name="sub7prpf" Type="Byte" />
+    <Property Name="sub8" Type="Byte" />
+    <Property Name="sub8Ap2" Type="Byte" />
+    <Property Name="sub8mt2" Type="Byte" />
+    <Property Name="sub8st2" Type="Byte" />
+    <Property Name="sub8pf2" Type="Byte" />
+    <Property Name="obt_mrk" Type="Int16" />
+    <Property Name="result1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="result2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="spl_cd" Type="Byte" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="ekpo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ckpo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="cDate" Type="DateTime" Precision="3" />
+    <Property Name="Pic" Type="Byte" />
+    <Property Name="sn" Type="Byte" />
+    <Property Name="chance" Type="Byte" />
+    <Property Name="zone_cd" Type="Int32" />
+    <Property Name="MobNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_cd" Type="Int32" />
+    <Property Name="mi_type" Type="Byte" />
+    <Property Name="Emp_Rslt" Type="Int32" />
+    <Property Name="BindNo" Type="Int32" />
+    <Property Name="SrNo" Type="Int32" />
+    <Property Name="frm" Type="Byte" />
+  </EntityType>
+  <EntityType Name="tblBoard">
+    <Key>
+      <PropertyRef Name="Brd_cd" />
+    </Key>
+    <Property Name="Brd_cd" Type="Int32" Nullable="false" />
+    <Property Name="Brd_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Brd_Abr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pitb_abre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblCategory">
+    <Key>
+      <PropertyRef Name="Cat_Id" />
+    </Key>
+    <Property Name="Cat_Id" Type="Int32" Nullable="false" />
+    <Property Name="Cat_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cat_Abr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblcentre">
+    <Key>
+      <PropertyRef Name="CENT_CD" />
+      <PropertyRef Name="mYear" />
+      <PropertyRef Name="sess" />
+      <PropertyRef Name="class" />
+    </Key>
+    <Property Name="CENT_CD" Type="Int16" Nullable="false" />
+    <Property Name="mYear" Type="Int16" Nullable="false" />
+    <Property Name="sess" Type="Byte" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="CENT_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Cent_Abre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dist_cd" Type="Int32" />
+    <Property Name="cent_Gen" Type="Byte" />
+    <Property Name="Zone_cd" Type="Int32" />
+    <Property Name="Teh_cd" Type="Int32" />
+    <Property Name="Max1st_P2" Type="Int32" />
+    <Property Name="Max2nd_P2" Type="Int32" />
+    <Property Name="Max1st_P1" Type="Int32" />
+    <Property Name="Max2nd_P1" Type="Int32" />
+    <Property Name="oMax" Type="Int32" />
+    <Property Name="Inst_cd" Type="Int32" />
+    <Property Name="onlyP1" Type="Boolean" />
+    <Property Name="cent_inst_gen" Type="Byte" />
+    <Property Name="Bank_Name" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="zone_cd2" Type="Int32" />
+    <Property Name="cent_opt" Type="Int32" />
+    <Property Name="cent_opt_girls" Type="Int32" />
+    <Property Name="cent_cd_new" Type="Int32" />
+    <Property Name="Cent_cd_Old" Type="Int32" />
+    <Property Name="Bank_Code" Type="Int32" />
+    <Property Name="DeafOnly" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblChildNode">
+    <Key>
+      <PropertyRef Name="ChildNodeID" />
+    </Key>
+    <Property Name="ChildNodeID" Type="Int32" Nullable="false" />
+    <Property Name="ChildNodeName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="NodeType" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isCommon" Type="Boolean" />
+    <Property Name="formUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Controller" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParentNodeID" Type="Int32" />
+    <NavigationProperty Name="tblParentNode" Relationship="Self.FK_tblChildNodes_tblParentNodes" FromRole="tblChildNodes" ToRole="tblParentNodes" />
+  </EntityType>
+  <EntityType Name="tbldatesheetinter">
+    <Key>
+      <PropertyRef Name="sub_cd" />
+      <PropertyRef Name="IYEAR" />
+      <PropertyRef Name="sess" />
+      <PropertyRef Name="class" />
+    </Key>
+    <Property Name="sub_cd" Type="Byte" Nullable="false" />
+    <Property Name="IYEAR" Type="Int32" Nullable="false" />
+    <Property Name="sess" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="sub_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Subgrp1" Type="Byte" />
+    <Property Name="date2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="subgrp2" Type="Byte" />
+  </EntityType>
+  <EntityType Name="tbldatesheetmatric">
+    <Key>
+      <PropertyRef Name="IYear" />
+      <PropertyRef Name="Sess" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="SUB_CD" />
+    </Key>
+    <Property Name="IYear" Type="Int16" Nullable="false" />
+    <Property Name="Sess" Type="Byte" Nullable="false" />
+    <Property Name="Class" Type="Byte" Nullable="false" />
+    <Property Name="SUB_CD" Type="Byte" Nullable="false" />
+    <Property Name="SUB_ABR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TH1_MRK" Type="Byte" />
+    <Property Name="TH2_MRK" Type="Byte" />
+    <Property Name="PR_MRK" Type="Byte" />
+    <Property Name="TH1_PASSMRK" Type="Byte" />
+    <Property Name="TH2_PASSMRK" Type="Byte" />
+    <Property Name="SUB_TOTPASSMRK" Type="Byte" />
+    <Property Name="PR2_PASSMRK" Type="Byte" />
+    <Property Name="PR" Type="Byte" />
+    <Property Name="SUB_SEX" Type="Byte" />
+    <Property Name="DATE1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SUBGRP1" Type="Byte" />
+    <Property Name="DATE2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SUBGRP2" Type="Byte" />
+    <Property Name="cgtime" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="sgrp" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblDistrict">
+    <Key>
+      <PropertyRef Name="dist_cd" />
+    </Key>
+    <Property Name="dist_cd" Type="Byte" Nullable="false" />
+    <Property Name="dist_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dist_abr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rno" Type="Int32" Nullable="false" />
+    <Property Name="formno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="myear" Type="Int32" Nullable="false" />
+    <Property Name="sess" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="Int32" Nullable="false" />
+    <Property Name="histStr" Type="String" MaxLength="1200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="changedBy" Type="Int32" Nullable="false" />
+    <Property Name="changedByForm" Type="Int32" />
+    <Property Name="CrcByEmp" Type="Int32" />
+    <Property Name="SystemIP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SystemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DomainUser" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblInstitutes_all">
+    <Key>
+      <PropertyRef Name="Inst_cd" />
+    </Key>
+    <Property Name="Inst_Id" Type="Int32" />
+    <Property Name="Inst_cd" Type="Int32" Nullable="false" />
+    <Property Name="Inst_pwd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Byte" />
+    <Property Name="Gender" Type="Byte" />
+    <Property Name="IsGovernment" Type="Byte" />
+    <Property Name="IsRural" Type="Byte" />
+    <Property Name="IsCommunity" Type="Byte" />
+    <Property Name="LandLine" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MobNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="affiliation_Grace_Period" Type="Byte" />
+    <Property Name="IsExameCentre" Type="Byte" />
+    <Property Name="edu_lvl" Type="Byte" />
+    <Property Name="affiliation_date" Type="DateTime" Precision="0" />
+    <Property Name="expiration_date" Type="DateTime" Precision="0" />
+    <Property Name="feedingDate" Type="DateTime" Precision="0" />
+    <Property Name="Kpo" Type="Int32" />
+    <Property Name="edate" Type="DateTime" Precision="0" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="dist_cd" Type="Byte" />
+    <Property Name="teh_cd" Type="Int16" />
+    <Property Name="emis_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zone_cd" Type="Int32" />
+    <Property Name="iZone_cd" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emp_cd" Type="Int32" />
+    <Property Name="pp_zone" Type="Int32" />
+    <Property Name="allowed_mGrp" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="allowed_iGrp" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="allowed_mSub" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="allowed_iSub" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="inst_Abre" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblParentNode">
+    <Key>
+      <PropertyRef Name="ParentNodeID" />
+    </Key>
+    <Property Name="ParentNodeID" Type="Int32" Nullable="false" />
+    <Property Name="NodeName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblChildNodes" Relationship="Self.FK_tblChildNodes_tblParentNodes" FromRole="tblParentNodes" ToRole="tblChildNodes" />
+  </EntityType>
+  <EntityType Name="tblPicPath">
+    <Key>
+      <PropertyRef Name="mYear" />
+      <PropertyRef Name="Sess" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="mYear" Type="Int16" Nullable="false" />
+    <Property Name="Sess" Type="Byte" Nullable="false" />
+    <Property Name="Class" Type="Byte" Nullable="false" />
+    <Property Name="PicPaThRetype" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaThMiss" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PicPathGar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPaTh8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath9" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath10" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath11" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PicPath12" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfDeclaration" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pth1strt" Type="Int64" />
+    <Property Name="pth2strt" Type="Int64" />
+    <Property Name="pth3strt" Type="Int64" />
+    <Property Name="pth4strt" Type="Int64" />
+    <Property Name="pth5strt" Type="Int64" />
+    <Property Name="pth6Strt" Type="Int64" />
+    <Property Name="pth7Strt" Type="Int64" />
+    <Property Name="pth8Strt" Type="Int64" />
+    <Property Name="pth9Strt" Type="Int64" />
+    <Property Name="pth10Strt" Type="Int64" />
+    <Property Name="pth11Strt" Type="Int64" />
+    <Property Name="pth12Strt" Type="Int64" />
+    <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DecDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DecTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblScanned_Data">
+    <Key>
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="iyear" />
+      <PropertyRef Name="sess" />
+      <PropertyRef Name="bindNo" />
+      <PropertyRef Name="SrNo" />
+    </Key>
+    <Property Name="formno" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="iyear" Type="Int32" Nullable="false" />
+    <Property Name="sess" Type="Int32" Nullable="false" />
+    <Property Name="bindNo" Type="Int32" Nullable="false" />
+    <Property Name="SrNo" Type="Int32" Nullable="false" />
+    <Property Name="picpath" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+    <Property Name="barCode" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="ekpo" Type="Int32" />
+    <Property Name="Excp" Type="Byte" />
+    <Property Name="emp_cd" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblBindAllotment">
+    <Key>
+      <PropertyRef Name="Emp_cd" />
+      <PropertyRef Name="Session" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="Emp_cd" Type="Int32" Nullable="false" />
+    <Property Name="Session" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="TotalAllotment" Type="Int32" />
+    <Property Name="NoOfBinds" Type="Int32" />
+    <Property Name="StartingBind" Type="Int32" />
+    <Property Name="EndingBind" Type="Int32" />
+    <Property Name="branch_Code" Type="Int32" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblBundle">
+    <Key>
+      <PropertyRef Name="myear" />
+      <PropertyRef Name="sess" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="mExchange" />
+      <PropertyRef Name="Sub_cd" />
+      <PropertyRef Name="ExGrp" />
+      <PropertyRef Name="start" />
+      <PropertyRef Name="ended" />
+    </Key>
+    <Property Name="myear" Type="Int32" Nullable="false" />
+    <Property Name="sess" Type="Byte" Nullable="false" />
+    <Property Name="class" Type="Byte" Nullable="false" />
+    <Property Name="orderBy" Type="Int32" />
+    <Property Name="mExchange" Type="Byte" Nullable="false" />
+    <Property Name="Sub_cd" Type="Byte" Nullable="false" />
+    <Property Name="ExGrp" Type="Byte" Nullable="false" />
+    <Property Name="start" Type="Int32" Nullable="false" />
+    <Property Name="ended" Type="Int32" Nullable="false" />
+    <Property Name="BundleNo" Type="Int32" />
+    <Property Name="frCmp" Type="Int32" />
+    <Property Name="isDeaf" Type="Int32" />
+    <Property Name="schm" Type="Byte" />
+  </EntityType>
+  <EntityType Name="tblhistoryForm16">
+    <Key>
+      <PropertyRef Name="formno" />
+    </Key>
+    <Property Name="formno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="class" Type="Byte" />
+    <Property Name="mYear" Type="Int16" />
+    <Property Name="sess" Type="Byte" />
+    <Property Name="PrevString" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedString" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="Int32" />
+    <Property Name="ChangedByForm" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_tblChildNodes_tblParentNodes">
+    <End Role="tblParentNodes" Type="Self.tblParentNode" Multiplicity="0..1" />
+    <End Role="tblChildNodes" Type="Self.tblChildNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParentNodes">
+        <PropertyRef Name="ParentNodeID" />
+      </Principal>
+      <Dependent Role="tblChildNodes">
+        <PropertyRef Name="ParentNodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="matric_newEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblbiodatas" EntityType="Self.tblbiodata" />
+    <EntitySet Name="tblBioDataInter_From14" EntityType="Self.tblBioDataInter_From14" />
+    <EntitySet Name="tblBiodataInter_HE" EntityType="Self.tblBiodataInter_HE" />
+    <EntitySet Name="tblBoards" EntityType="Self.tblBoard" />
+    <EntitySet Name="TblCategories" EntityType="Self.TblCategory" />
+    <EntitySet Name="tblcentres" EntityType="Self.tblcentre" />
+    <EntitySet Name="tblChildNodes" EntityType="Self.tblChildNode" />
+    <EntitySet Name="tbldatesheetinters" EntityType="Self.tbldatesheetinter" />
+    <EntitySet Name="tbldatesheetmatrics" EntityType="Self.tbldatesheetmatric" />
+    <EntitySet Name="tblDistricts" EntityType="Self.tblDistrict" />
+    <EntitySet Name="tblHistories" EntityType="Self.tblHistory" />
+    <EntitySet Name="tblInstitutes_all" EntityType="Self.tblInstitutes_all" />
+    <EntitySet Name="tblParentNodes" EntityType="Self.tblParentNode" />
+    <EntitySet Name="tblPicPaths" EntityType="Self.tblPicPath" />
+    <EntitySet Name="tblScanned_Data" EntityType="Self.tblScanned_Data" />
+    <EntitySet Name="tblBindAllotments" EntityType="Self.tblBindAllotment" />
+    <EntitySet Name="tblBundles" EntityType="Self.tblBundle" />
+    <EntitySet Name="tblhistoryForm16" EntityType="Self.tblhistoryForm16" />
+    <AssociationSet Name="FK_tblChildNodes_tblParentNodes" Association="Self.FK_tblChildNodes_tblParentNodes">
+      <End Role="tblParentNodes" EntitySet="tblParentNodes" />
+      <End Role="tblChildNodes" EntitySet="tblChildNodes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

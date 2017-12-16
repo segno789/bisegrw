@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MiscDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblemployee">
+          <Key>
+            <PropertyRef Name="emp_cd" />
+          </Key>
+          <Property Name="emp_cd" Type="int" Nullable="false" />
+          <Property Name="pass" Type="varchar" MaxLength="80" />
+          <Property Name="Name" Type="varchar" MaxLength="80" />
+          <Property Name="fname" Type="varchar" MaxLength="80" />
+          <Property Name="cnic" Type="varchar" MaxLength="30" />
+          <Property Name="ntn" Type="nchar" MaxLength="20" />
+          <Property Name="dob" Type="date" />
+          <Property Name="religion" Type="tinyint" />
+          <Property Name="address" Type="varchar" MaxLength="150" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+          <Property Name="last_qualify" Type="int" />
+          <Property Name="gender" Type="tinyint" />
+          <Property Name="date_joining" Type="date" />
+          <Property Name="date_promote" Type="date" />
+          <Property Name="date_retired" Type="date" />
+          <Property Name="seniority" Type="tinyint" />
+          <Property Name="Branch_Code" Type="int" />
+          <Property Name="emp_status" Type="tinyint" />
+          <Property Name="bill_category" Type="tinyint" />
+          <Property Name="emp_cat" Type="tinyint" />
+          <Property Name="bs" Type="tinyint" />
+          <Property Name="desig" Type="tinyint" />
+          <Property Name="salary_type" Type="tinyint" />
+          <Property Name="ecr" Type="int" />
+          <Property Name="blood_grp" Type="nvarchar" MaxLength="4" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="Disability" Type="tinyint" />
+          <Property Name="Driving_License" Type="varchar" MaxLength="50" />
+          <Property Name="Expiry_Date" Type="date" />
+          <Property Name="roll_id" Type="tinyint" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="isSuperAdmin" Type="bit" />
+          <Property Name="accountNo" Type="varchar" MaxLength="50" />
+          <Property Name="pay_stage" Type="tinyint" />
+          <Property Name="br_sec" Type="int" />
+          <Property Name="about" Type="nvarchar" MaxLength="250" />
+          <Property Name="image" Type="image" />
+          <Property Name="hajj" Type="tinyint" />
+          <Property Name="umrah" Type="tinyint" />
+          <Property Name="OutDoorJob" Type="varchar" MaxLength="75" />
+        </EntityType>
+        <EntityType Name="tblEntrySlip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="75" />
+          <Property Name="FName" Type="varchar" MaxLength="75" />
+          <Property Name="sex" Type="tinyint" />
+          <Property Name="cnic" Type="varchar" MaxLength="20" />
+          <Property Name="rno" Type="int" />
+          <Property Name="class" Type="int" />
+          <Property Name="sess" Type="int" />
+          <Property Name="iyear" Type="int" />
+          <Property Name="edate" Type="datetime" />
+          <Property Name="eUser" Type="int" />
+          <Property Name="branch" Type="int" />
+          <Property Name="NoOfPersons" Type="int" />
+        </EntityType>
+        <EntityType Name="tblFiles">
+          <Key>
+            <PropertyRef Name="fileId" />
+          </Key>
+          <Property Name="fileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fileDesc" Type="varchar" MaxLength="75" />
+          <Property Name="br_code" Type="int" />
+          <Property Name="SubmittedBy" Type="varchar" MaxLength="75" />
+          <Property Name="SubmitterMobNo" Type="varchar" MaxLength="15" />
+          <Property Name="ReceivedDate" Type="datetime" />
+          <Property Name="ReceivedBy" Type="int" />
+          <Property Name="next_br_code" Type="int" />
+          <Property Name="isDeleted" Type="int" />
+          <Property Name="status" Type="tinyint" />
+          <Property Name="remarks" Type="varchar" MaxLength="75" />
+          <Property Name="IsSent" Type="tinyint" />
+          <Property Name="RegNo" Type="varchar" MaxLength="25" />
+          <Property Name="RegDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="RetDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="OwoDiaryNo" Type="varchar" MaxLength="25" />
+          <Property Name="OwoDate" Type="varchar" MaxLength="25" />
+          <Property Name="edate" Type="datetime" />
+          <Property Name="Emp_cd" Type="int" />
+        </EntityType>
+        <EntityType Name="tblfileTrack">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fileId" Type="int" />
+          <Property Name="Br_code" Type="int" />
+          <Property Name="Br_FileNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceivedBy" Type="int" />
+          <Property Name="recivedDate" Type="datetime" />
+          <Property Name="remarks" Type="varchar" MaxLength="80" />
+          <Property Name="prev_Br_code" Type="int" />
+          <Property Name="next_br_code" Type="int" />
+          <Property Name="IsTransfer" Type="bit" />
+          <Property Name="transferDate" Type="datetime" />
+          <Property Name="transferBy" Type="int" />
+          <Property Name="IsNext_Received" Type="bit" />
+          <Property Name="isCompleted" Type="bit" />
+          <Property Name="emp_cd" Type="int" />
+        </EntityType>
+        <EntityType Name="tblroll">
+          <Key>
+            <PropertyRef Name="roll_id" />
+          </Key>
+          <Property Name="roll_id" Type="int" Nullable="false" />
+          <Property Name="roll_desc" Type="varchar" MaxLength="50" />
+          <Property Name="form_ids" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblwebforms">
+          <Key>
+            <PropertyRef Name="formId" />
+          </Key>
+          <Property Name="formId" Type="int" Nullable="false" />
+          <Property Name="formName" Type="varchar" MaxLength="70" />
+          <Property Name="formType" Type="int" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="isCommon" Type="bit" />
+          <Property Name="formUrl" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="tblWebRights">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="formNo" Type="int" Nullable="false" />
+          <Property Name="fYear" Type="int" Nullable="false" />
+          <Property Name="fSess" Type="tinyint" Nullable="false" />
+          <Property Name="fClass" Type="tinyint" Nullable="false" />
+          <Property Name="eDate" Type="smalldatetime" />
+          <Property Name="eUser" Type="int" />
+          <Property Name="rightsDays" Type="int" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="MiscDbModelStoreContainer">
+          <EntitySet Name="tblemployee" EntityType="Self.tblemployee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEntrySlip" EntityType="Self.tblEntrySlip" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFiles" EntityType="Self.tblFiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblfileTrack" EntityType="Self.tblfileTrack" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblroll" EntityType="Self.tblroll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblwebforms" EntityType="Self.tblwebforms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblWebRights" EntityType="Self.tblWebRights" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MiscDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblemployee">
+          <Key>
+            <PropertyRef Name="emp_cd" />
+          </Key>
+          <Property Name="emp_cd" Type="Int32" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="fname" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="cnic" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ntn" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="religion" Type="Byte" />
+          <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="last_qualify" Type="Int32" />
+          <Property Name="gender" Type="Byte" />
+          <Property Name="date_joining" Type="DateTime" Precision="0" />
+          <Property Name="date_promote" Type="DateTime" Precision="0" />
+          <Property Name="date_retired" Type="DateTime" Precision="0" />
+          <Property Name="seniority" Type="Byte" />
+          <Property Name="Branch_Code" Type="Int32" />
+          <Property Name="emp_status" Type="Byte" />
+          <Property Name="bill_category" Type="Byte" />
+          <Property Name="emp_cat" Type="Byte" />
+          <Property Name="bs" Type="Byte" />
+          <Property Name="desig" Type="Byte" />
+          <Property Name="salary_type" Type="Byte" />
+          <Property Name="ecr" Type="Int32" />
+          <Property Name="blood_grp" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Disability" Type="Byte" />
+          <Property Name="Driving_License" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expiry_Date" Type="DateTime" Precision="0" />
+          <Property Name="roll_id" Type="Byte" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="isSuperAdmin" Type="Boolean" />
+          <Property Name="accountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pay_stage" Type="Byte" />
+          <Property Name="br_sec" Type="Int32" />
+          <Property Name="about" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="hajj" Type="Byte" />
+          <Property Name="umrah" Type="Byte" />
+          <Property Name="OutDoorJob" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblEntrySlip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="FName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="Byte" />
+          <Property Name="cnic" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="rno" Type="Int32" />
+          <Property Name="class" Type="Int32" />
+          <Property Name="sess" Type="Int32" />
+          <Property Name="iyear" Type="Int32" />
+          <Property Name="edate" Type="DateTime" Precision="3" />
+          <Property Name="eUser" Type="Int32" />
+          <Property Name="branch" Type="Int32" />
+          <Property Name="NoOfPersons" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblFile">
+          <Key>
+            <PropertyRef Name="fileId" />
+          </Key>
+          <Property Name="fileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fileDesc" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="br_code" Type="Int32" />
+          <Property Name="SubmittedBy" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="SubmitterMobNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ReceivedDate" Type="DateTime" Precision="3" />
+          <Property Name="ReceivedBy" Type="Int32" />
+          <Property Name="next_br_code" Type="Int32" />
+          <Property Name="isDeleted" Type="Int32" />
+          <Property Name="status" Type="Byte" />
+          <Property Name="remarks" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="IsSent" Type="Byte" />
+          <Property Name="RegNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="RegDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RetDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OwoDiaryNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="OwoDate" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="edate" Type="DateTime" Precision="3" />
+          <Property Name="Emp_cd" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblfileTrack">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fileId" Type="Int32" />
+          <Property Name="Br_code" Type="Int32" />
+          <Property Name="Br_FileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceivedBy" Type="Int32" />
+          <Property Name="recivedDate" Type="DateTime" Precision="3" />
+          <Property Name="remarks" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="prev_Br_code" Type="Int32" />
+          <Property Name="next_br_code" Type="Int32" />
+          <Property Name="IsTransfer" Type="Boolean" />
+          <Property Name="transferDate" Type="DateTime" Precision="3" />
+          <Property Name="transferBy" Type="Int32" />
+          <Property Name="IsNext_Received" Type="Boolean" />
+          <Property Name="isCompleted" Type="Boolean" />
+          <Property Name="emp_cd" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblroll">
+          <Key>
+            <PropertyRef Name="roll_id" />
+          </Key>
+          <Property Name="roll_id" Type="Int32" Nullable="false" />
+          <Property Name="roll_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="form_ids" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblwebform">
+          <Key>
+            <PropertyRef Name="formId" />
+          </Key>
+          <Property Name="formId" Type="Int32" Nullable="false" />
+          <Property Name="formName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="formType" Type="Int32" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="isCommon" Type="Boolean" />
+          <Property Name="formUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblWebRight">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="formNo" Type="Int32" Nullable="false" />
+          <Property Name="fYear" Type="Int32" Nullable="false" />
+          <Property Name="fSess" Type="Byte" Nullable="false" />
+          <Property Name="fClass" Type="Byte" Nullable="false" />
+          <Property Name="eDate" Type="DateTime" Precision="0" />
+          <Property Name="eUser" Type="Int32" />
+          <Property Name="rightsDays" Type="Int32" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="MiscDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblemployees" EntityType="Self.tblemployee" />
+          <EntitySet Name="tblEntrySlips" EntityType="Self.tblEntrySlip" />
+          <EntitySet Name="tblFiles" EntityType="Self.tblFile" />
+          <EntitySet Name="tblfileTracks" EntityType="Self.tblfileTrack" />
+          <EntitySet Name="tblrolls" EntityType="Self.tblroll" />
+          <EntitySet Name="tblwebforms" EntityType="Self.tblwebform" />
+          <EntitySet Name="tblWebRights" EntityType="Self.tblWebRight" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MiscDbModelStoreContainer" CdmEntityContainer="MiscDbEntities">
+          <EntitySetMapping Name="tblemployees">
+            <EntityTypeMapping TypeName="MiscDbModel.tblemployee">
+              <MappingFragment StoreEntitySet="tblemployee">
+                <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="cnic" ColumnName="cnic" />
+                <ScalarProperty Name="ntn" ColumnName="ntn" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="religion" ColumnName="religion" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="last_qualify" ColumnName="last_qualify" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="date_joining" ColumnName="date_joining" />
+                <ScalarProperty Name="date_promote" ColumnName="date_promote" />
+                <ScalarProperty Name="date_retired" ColumnName="date_retired" />
+                <ScalarProperty Name="seniority" ColumnName="seniority" />
+                <ScalarProperty Name="Branch_Code" ColumnName="Branch_Code" />
+                <ScalarProperty Name="emp_status" ColumnName="emp_status" />
+                <ScalarProperty Name="bill_category" ColumnName="bill_category" />
+                <ScalarProperty Name="emp_cat" ColumnName="emp_cat" />
+                <ScalarProperty Name="bs" ColumnName="bs" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+                <ScalarProperty Name="salary_type" ColumnName="salary_type" />
+                <ScalarProperty Name="ecr" ColumnName="ecr" />
+                <ScalarProperty Name="blood_grp" ColumnName="blood_grp" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Disability" ColumnName="Disability" />
+                <ScalarProperty Name="Driving_License" ColumnName="Driving_License" />
+                <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+                <ScalarProperty Name="roll_id" ColumnName="roll_id" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="isSuperAdmin" ColumnName="isSuperAdmin" />
+                <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+                <ScalarProperty Name="pay_stage" ColumnName="pay_stage" />
+                <ScalarProperty Name="br_sec" ColumnName="br_sec" />
+                <ScalarProperty Name="about" ColumnName="about" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="hajj" ColumnName="hajj" />
+                <ScalarProperty Name="umrah" ColumnName="umrah" />
+                <ScalarProperty Name="OutDoorJob" ColumnName="OutDoorJob" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEntrySlips">
+            <EntityTypeMapping TypeName="MiscDbModel.tblEntrySlip">
+              <MappingFragment StoreEntitySet="tblEntrySlip">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="cnic" ColumnName="cnic" />
+                <ScalarProperty Name="rno" ColumnName="rno" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="sess" ColumnName="sess" />
+                <ScalarProperty Name="iyear" ColumnName="iyear" />
+                <ScalarProperty Name="edate" ColumnName="edate" />
+                <ScalarProperty Name="eUser" ColumnName="eUser" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="NoOfPersons" ColumnName="NoOfPersons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFiles">
+            <EntityTypeMapping TypeName="MiscDbModel.tblFile">
+              <MappingFragment StoreEntitySet="tblFiles">
+                <ScalarProperty Name="fileId" ColumnName="fileId" />
+                <ScalarProperty Name="fileDesc" ColumnName="fileDesc" />
+                <ScalarProperty Name="br_code" ColumnName="br_code" />
+                <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+                <ScalarProperty Name="SubmitterMobNo" ColumnName="SubmitterMobNo" />
+                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+                <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+                <ScalarProperty Name="next_br_code" ColumnName="next_br_code" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="RetDate" ColumnName="RetDate" />
+                <ScalarProperty Name="OwoDiaryNo" ColumnName="OwoDiaryNo" />
+                <ScalarProperty Name="OwoDate" ColumnName="OwoDate" />
+                <ScalarProperty Name="edate" ColumnName="edate" />
+                <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblfileTracks">
+            <EntityTypeMapping TypeName="MiscDbModel.tblfileTrack">
+              <MappingFragment StoreEntitySet="tblfileTrack">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fileId" ColumnName="fileId" />
+                <ScalarProperty Name="Br_code" ColumnName="Br_code" />
+                <ScalarProperty Name="Br_FileNo" ColumnName="Br_FileNo" />
+                <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+                <ScalarProperty Name="recivedDate" ColumnName="recivedDate" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="prev_Br_code" ColumnName="prev_Br_code" />
+                <ScalarProperty Name="next_br_code" ColumnName="next_br_code" />
+                <ScalarProperty Name="IsTransfer" ColumnName="IsTransfer" />
+                <ScalarProperty Name="transferDate" ColumnName="transferDate" />
+                <ScalarProperty Name="transferBy" ColumnName="transferBy" />
+                <ScalarProperty Name="IsNext_Received" ColumnName="IsNext_Received" />
+                <ScalarProperty Name="isCompleted" ColumnName="isCompleted" />
+                <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblrolls">
+            <EntityTypeMapping TypeName="MiscDbModel.tblroll">
+              <MappingFragment StoreEntitySet="tblroll">
+                <ScalarProperty Name="roll_id" ColumnName="roll_id" />
+                <ScalarProperty Name="roll_desc" ColumnName="roll_desc" />
+                <ScalarProperty Name="form_ids" ColumnName="form_ids" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblwebforms">
+            <EntityTypeMapping TypeName="MiscDbModel.tblwebform">
+              <MappingFragment StoreEntitySet="tblwebforms">
+                <ScalarProperty Name="formId" ColumnName="formId" />
+                <ScalarProperty Name="formName" ColumnName="formName" />
+                <ScalarProperty Name="formType" ColumnName="formType" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="isCommon" ColumnName="isCommon" />
+                <ScalarProperty Name="formUrl" ColumnName="formUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblWebRights">
+            <EntityTypeMapping TypeName="MiscDbModel.tblWebRight">
+              <MappingFragment StoreEntitySet="tblWebRights">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="formNo" ColumnName="formNo" />
+                <ScalarProperty Name="fYear" ColumnName="fYear" />
+                <ScalarProperty Name="fSess" ColumnName="fSess" />
+                <ScalarProperty Name="fClass" ColumnName="fClass" />
+                <ScalarProperty Name="eDate" ColumnName="eDate" />
+                <ScalarProperty Name="eUser" ColumnName="eUser" />
+                <ScalarProperty Name="rightsDays" ColumnName="rightsDays" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

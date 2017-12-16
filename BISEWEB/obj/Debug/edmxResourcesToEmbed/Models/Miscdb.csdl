@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MiscDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblemployee">
+    <Key>
+      <PropertyRef Name="emp_cd" />
+    </Key>
+    <Property Name="emp_cd" Type="Int32" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="fname" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="cnic" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ntn" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="religion" Type="Byte" />
+    <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="last_qualify" Type="Int32" />
+    <Property Name="gender" Type="Byte" />
+    <Property Name="date_joining" Type="DateTime" Precision="0" />
+    <Property Name="date_promote" Type="DateTime" Precision="0" />
+    <Property Name="date_retired" Type="DateTime" Precision="0" />
+    <Property Name="seniority" Type="Byte" />
+    <Property Name="Branch_Code" Type="Int32" />
+    <Property Name="emp_status" Type="Byte" />
+    <Property Name="bill_category" Type="Byte" />
+    <Property Name="emp_cat" Type="Byte" />
+    <Property Name="bs" Type="Byte" />
+    <Property Name="desig" Type="Byte" />
+    <Property Name="salary_type" Type="Byte" />
+    <Property Name="ecr" Type="Int32" />
+    <Property Name="blood_grp" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Disability" Type="Byte" />
+    <Property Name="Driving_License" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expiry_Date" Type="DateTime" Precision="0" />
+    <Property Name="roll_id" Type="Byte" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isSuperAdmin" Type="Boolean" />
+    <Property Name="accountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pay_stage" Type="Byte" />
+    <Property Name="br_sec" Type="Int32" />
+    <Property Name="about" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="hajj" Type="Byte" />
+    <Property Name="umrah" Type="Byte" />
+    <Property Name="OutDoorJob" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblEntrySlip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="FName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="Byte" />
+    <Property Name="cnic" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rno" Type="Int32" />
+    <Property Name="class" Type="Int32" />
+    <Property Name="sess" Type="Int32" />
+    <Property Name="iyear" Type="Int32" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="eUser" Type="Int32" />
+    <Property Name="branch" Type="Int32" />
+    <Property Name="NoOfPersons" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblFile">
+    <Key>
+      <PropertyRef Name="fileId" />
+    </Key>
+    <Property Name="fileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fileDesc" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="br_code" Type="Int32" />
+    <Property Name="SubmittedBy" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="SubmitterMobNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ReceivedDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceivedBy" Type="Int32" />
+    <Property Name="next_br_code" Type="Int32" />
+    <Property Name="isDeleted" Type="Int32" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="remarks" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="IsSent" Type="Byte" />
+    <Property Name="RegNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RetDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OwoDiaryNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="OwoDate" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="edate" Type="DateTime" Precision="3" />
+    <Property Name="Emp_cd" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblfileTrack">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fileId" Type="Int32" />
+    <Property Name="Br_code" Type="Int32" />
+    <Property Name="Br_FileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReceivedBy" Type="Int32" />
+    <Property Name="recivedDate" Type="DateTime" Precision="3" />
+    <Property Name="remarks" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="prev_Br_code" Type="Int32" />
+    <Property Name="next_br_code" Type="Int32" />
+    <Property Name="IsTransfer" Type="Boolean" />
+    <Property Name="transferDate" Type="DateTime" Precision="3" />
+    <Property Name="transferBy" Type="Int32" />
+    <Property Name="IsNext_Received" Type="Boolean" />
+    <Property Name="isCompleted" Type="Boolean" />
+    <Property Name="emp_cd" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblroll">
+    <Key>
+      <PropertyRef Name="roll_id" />
+    </Key>
+    <Property Name="roll_id" Type="Int32" Nullable="false" />
+    <Property Name="roll_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="form_ids" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblwebform">
+    <Key>
+      <PropertyRef Name="formId" />
+    </Key>
+    <Property Name="formId" Type="Int32" Nullable="false" />
+    <Property Name="formName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="formType" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isCommon" Type="Boolean" />
+    <Property Name="formUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblWebRight">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="formNo" Type="Int32" Nullable="false" />
+    <Property Name="fYear" Type="Int32" Nullable="false" />
+    <Property Name="fSess" Type="Byte" Nullable="false" />
+    <Property Name="fClass" Type="Byte" Nullable="false" />
+    <Property Name="eDate" Type="DateTime" Precision="0" />
+    <Property Name="eUser" Type="Int32" />
+    <Property Name="rightsDays" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="MiscDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblemployees" EntityType="Self.tblemployee" />
+    <EntitySet Name="tblEntrySlips" EntityType="Self.tblEntrySlip" />
+    <EntitySet Name="tblFiles" EntityType="Self.tblFile" />
+    <EntitySet Name="tblfileTracks" EntityType="Self.tblfileTrack" />
+    <EntitySet Name="tblrolls" EntityType="Self.tblroll" />
+    <EntitySet Name="tblwebforms" EntityType="Self.tblwebform" />
+    <EntitySet Name="tblWebRights" EntityType="Self.tblWebRight" />
+  </EntityContainer>
+</Schema>

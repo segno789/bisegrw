@@ -1,0 +1,171 @@
+﻿@model BISEWEB.Models.tblemployee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link type="text/css" href=@Url.Content("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/font-awesome/css/font-awesome.min.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/simple-line-icons/simple-line-icons.min.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/bootstrap/css/bootstrap.min.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/uniform/css/uniform.default.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/pages/css/lock.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/css/components.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/css/plugins.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/layout.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/themes/darkblue.css") rel="stylesheet" />
+    <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/custom.css") rel="stylesheet" />
+
+    <style>
+        .no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            -moz-appearance: textfield !important;
+        }
+    </style>
+
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+
+
+    @*@Html.ValidationSummary(true)*@
+
+    <div class="page-lock">
+        <div class="page-logo">
+            <a class="brand" href="index.html">
+                <img style="width:150px;height:150px;" src="~/Content/otherImages/Logo.png" alt="BISE GRW" />
+            </a>
+        </div>
+        <div class="page-body">
+            <div class="lock-head">
+                Log in
+            </div>
+            <div class="lock-body">
+                <div class="pull-left lock-avatar-block">
+                    <img style="width:120px;height:120px;" id="EmpImg" src="~/Content/EmpImages/no-image.png" alt="No Image Found" class="lock-avatar">
+                </div>
+                @using (Html.BeginForm("UserLogin", "User", FormMethod.Post, new { @class = "lock-form pull-left" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4><label id="EmpName"></label></h4>
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.emp_cd, new { @class = "form-control placeholder-no-fix no-spin", required = "required", id = "txtLogin", type = "number", autocomplete = "off", name = "empcd", placeholder = "Employee Code" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.pass, new { @class = "form-control placeholder-no-fix", id = "txtPassword", type = "password", autocomplete = "off", name = "password", placeholder = "Password" })
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="btnLogin" class="btn btn-success uppercase">Let me in</button>
+                    </div>
+                }
+
+            </div>
+            <div class="lock-bottom">
+                <a href="">Forget Password ?</a>
+            </div>
+        </div>
+        <div class="page-footer-custom">
+            2017 &copy;Powered by Computer Cell, BISE Gujranwala.
+        </div>
+    </div>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-migrate.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/bootstrap/js/bootstrap.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery.blockui.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/uniform/jquery.uniform.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery.cokie.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/backstretch/jquery.backstretch.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/scripts/metronic.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/demo.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/layout.js")></script>
+
+
+    <script>
+        jQuery(document).ready(function () {
+            
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            Demo.init();
+           
+            $("#btnLogin").click(function () {
+                debugger;
+                if ($("#txtLogin").val() == "")
+                {
+                    alert("Enter Employee Code Please !");
+                    $("#txtLogin").focus();
+                    return false;
+                }
+                if ($("#txtPassword").val() == "") {
+                    alert("Enter Password Please !");
+                    $("#txtPassword").focus();
+                    return false;
+                }
+                return true;
+            })
+        });
+        $("#txtPassword").focus(function () {
+            
+            var id = $("#txtLogin").val();
+            if(id=="")
+            {
+                alert("Enter Emloyee Code First !");
+                $("#txtLogin").focus();
+                $("#txtPassword").val()="";
+                return false
+            }
+            $.ajax({
+                url: "/api/MyWebAPI/GetNameByID/" + id,
+                type: "POST",
+                // data: '{id: "' + $("#txtLogin").val() + '" }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response == "") {
+                        alert("Employee Code Is Not Valid !")
+                        $("#txtLogin").show();
+                        $("#txtLogin").focus();
+                        return false;
+                    }
+                    var resp = response.split("|");
+                    $('#EmpName').html(resp[0]);
+                    if (resp[1] == "True") {
+                        $('#EmpImg').attr('src', '/Content/EmpImages/' + id + '.jpg');
+                    }
+                    else {
+                        $('#EmpImg').attr('src', '/Content/EmpImages/no-image.png');
+                    }
+                    return false;
+                },
+                failure: function (response) {
+                    alert("Failure");
+                },
+                error: function (response) {
+                    alert("Error" + response.responseText);
+                }
+            });
+
+        });
+        $("#txtLogin").keypress(function (e) {
+            if (e.which == 13) {
+                $("#txtPassword").focus();
+                return false
+            }
+        });
+
+    </script>
+</body>
+</html>

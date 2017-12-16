@@ -1,0 +1,4 @@
+D:\BISE MVC\BISEWEB\BE\bin\Debug\BE.dll
+D:\BISE MVC\BISEWEB\BE\bin\Debug\BE.pdb
+D:\BISE MVC\BISEWEB\BE\obj\Debug\BE.dll
+D:\BISE MVC\BISEWEB\BE\obj\Debug\BE.pdb

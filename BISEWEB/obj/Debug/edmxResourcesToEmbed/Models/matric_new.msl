@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="matric_newModelStoreContainer" CdmEntityContainer="matric_newEntities">
+    <EntitySetMapping Name="tblbiodatas">
+      <EntityTypeMapping TypeName="matric_newModel.tblbiodata">
+        <MappingFragment StoreEntitySet="tblbiodata">
+          <ScalarProperty Name="rno" ColumnName="rno" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="Iyear" ColumnName="Iyear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="strRegNo" ColumnName="strRegNo" />
+          <ScalarProperty Name="schm" ColumnName="schm" />
+          <ScalarProperty Name="oldRno" ColumnName="oldRno" />
+          <ScalarProperty Name="YearOfLastAp" ColumnName="YearOfLastAp" />
+          <ScalarProperty Name="SessOfLastAp" ColumnName="SessOfLastAp" />
+          <ScalarProperty Name="Brd_cd" ColumnName="Brd_cd" />
+          <ScalarProperty Name="classRno" ColumnName="classRno" />
+          <ScalarProperty Name="SchGrade" ColumnName="SchGrade" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="BForm" ColumnName="BForm" />
+          <ScalarProperty Name="addr" ColumnName="addr" />
+          <ScalarProperty Name="FNIC" ColumnName="FNIC" />
+          <ScalarProperty Name="markOfIden" ColumnName="markOfIden" />
+          <ScalarProperty Name="rel" ColumnName="rel" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="regPvt" ColumnName="regPvt" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="med" ColumnName="med" />
+          <ScalarProperty Name="nat" ColumnName="nat" />
+          <ScalarProperty Name="RuralORUrban" ColumnName="RuralORUrban" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+          <ScalarProperty Name="formNo" ColumnName="formNo" />
+          <ScalarProperty Name="cat09" ColumnName="cat09" />
+          <ScalarProperty Name="cat10" ColumnName="cat10" />
+          <ScalarProperty Name="cent_cd" ColumnName="cent_cd" />
+          <ScalarProperty Name="exgrp" ColumnName="exgrp" />
+          <ScalarProperty Name="grp_cd" ColumnName="grp_cd" />
+          <ScalarProperty Name="Sch_cd" ColumnName="Sch_cd" />
+          <ScalarProperty Name="sub1" ColumnName="sub1" />
+          <ScalarProperty Name="sub1Ap1" ColumnName="sub1Ap1" />
+          <ScalarProperty Name="sub1mt1" ColumnName="sub1mt1" />
+          <ScalarProperty Name="sub1st1" ColumnName="sub1st1" />
+          <ScalarProperty Name="sub1pf1" ColumnName="sub1pf1" />
+          <ScalarProperty Name="sub1Ap2" ColumnName="sub1Ap2" />
+          <ScalarProperty Name="sub1mt2" ColumnName="sub1mt2" />
+          <ScalarProperty Name="sub1St2" ColumnName="sub1St2" />
+          <ScalarProperty Name="sub1Pf2" ColumnName="sub1Pf2" />
+          <ScalarProperty Name="sub2" ColumnName="sub2" />
+          <ScalarProperty Name="sub2Ap1" ColumnName="sub2Ap1" />
+          <ScalarProperty Name="sub2mt1" ColumnName="sub2mt1" />
+          <ScalarProperty Name="sub2st1" ColumnName="sub2st1" />
+          <ScalarProperty Name="sub2pf1" ColumnName="sub2pf1" />
+          <ScalarProperty Name="sub2Ap2" ColumnName="sub2Ap2" />
+          <ScalarProperty Name="sub2mt2" ColumnName="sub2mt2" />
+          <ScalarProperty Name="sub2st2" ColumnName="sub2st2" />
+          <ScalarProperty Name="sub2pf2" ColumnName="sub2pf2" />
+          <ScalarProperty Name="sub3" ColumnName="sub3" />
+          <ScalarProperty Name="sub3Ap1" ColumnName="sub3Ap1" />
+          <ScalarProperty Name="sub3mt1" ColumnName="sub3mt1" />
+          <ScalarProperty Name="sub3st1" ColumnName="sub3st1" />
+          <ScalarProperty Name="sub3pf1" ColumnName="sub3pf1" />
+          <ScalarProperty Name="sub3ap2" ColumnName="sub3ap2" />
+          <ScalarProperty Name="sub3mt2" ColumnName="sub3mt2" />
+          <ScalarProperty Name="sub3st2" ColumnName="sub3st2" />
+          <ScalarProperty Name="sub3pf2" ColumnName="sub3pf2" />
+          <ScalarProperty Name="sub4" ColumnName="sub4" />
+          <ScalarProperty Name="sub4Ap1" ColumnName="sub4Ap1" />
+          <ScalarProperty Name="sub4mt1" ColumnName="sub4mt1" />
+          <ScalarProperty Name="sub4st1" ColumnName="sub4st1" />
+          <ScalarProperty Name="sub4pf1" ColumnName="sub4pf1" />
+          <ScalarProperty Name="sub4Ap2" ColumnName="sub4Ap2" />
+          <ScalarProperty Name="sub4mt2" ColumnName="sub4mt2" />
+          <ScalarProperty Name="sub4st2" ColumnName="sub4st2" />
+          <ScalarProperty Name="sub4mp2" ColumnName="sub4mp2" />
+          <ScalarProperty Name="sub4sp2" ColumnName="sub4sp2" />
+          <ScalarProperty Name="sub4pf2" ColumnName="sub4pf2" />
+          <ScalarProperty Name="sub5" ColumnName="sub5" />
+          <ScalarProperty Name="sub5Ap1" ColumnName="sub5Ap1" />
+          <ScalarProperty Name="sub5mt1" ColumnName="sub5mt1" />
+          <ScalarProperty Name="sub5st1" ColumnName="sub5st1" />
+          <ScalarProperty Name="sub5pf1" ColumnName="sub5pf1" />
+          <ScalarProperty Name="sub5Ap2" ColumnName="sub5Ap2" />
+          <ScalarProperty Name="sub5mt2" ColumnName="sub5mt2" />
+          <ScalarProperty Name="sub5st2" ColumnName="sub5st2" />
+          <ScalarProperty Name="sub5mp2" ColumnName="sub5mp2" />
+          <ScalarProperty Name="sub5sp2" ColumnName="sub5sp2" />
+          <ScalarProperty Name="sub5prpf" ColumnName="sub5prpf" />
+          <ScalarProperty Name="sub5pf2" ColumnName="sub5pf2" />
+          <ScalarProperty Name="sub6" ColumnName="sub6" />
+          <ScalarProperty Name="sub6Ap1" ColumnName="sub6Ap1" />
+          <ScalarProperty Name="sub6mt1" ColumnName="sub6mt1" />
+          <ScalarProperty Name="sub6st1" ColumnName="sub6st1" />
+          <ScalarProperty Name="sub6pf1" ColumnName="sub6pf1" />
+          <ScalarProperty Name="sub6Ap2" ColumnName="sub6Ap2" />
+          <ScalarProperty Name="sub6mt2" ColumnName="sub6mt2" />
+          <ScalarProperty Name="sub6st2" ColumnName="sub6st2" />
+          <ScalarProperty Name="sub6mp2" ColumnName="sub6mp2" />
+          <ScalarProperty Name="sub6sp2" ColumnName="sub6sp2" />
+          <ScalarProperty Name="sub6prpf" ColumnName="sub6prpf" />
+          <ScalarProperty Name="sub6pf2" ColumnName="sub6pf2" />
+          <ScalarProperty Name="sub7" ColumnName="sub7" />
+          <ScalarProperty Name="sub7Ap1" ColumnName="sub7Ap1" />
+          <ScalarProperty Name="sub7mt1" ColumnName="sub7mt1" />
+          <ScalarProperty Name="sub7st1" ColumnName="sub7st1" />
+          <ScalarProperty Name="sub7pf1" ColumnName="sub7pf1" />
+          <ScalarProperty Name="sub7Ap2" ColumnName="sub7Ap2" />
+          <ScalarProperty Name="sub7mt2" ColumnName="sub7mt2" />
+          <ScalarProperty Name="sub7st2" ColumnName="sub7st2" />
+          <ScalarProperty Name="sub7mp2" ColumnName="sub7mp2" />
+          <ScalarProperty Name="sub7sp2" ColumnName="sub7sp2" />
+          <ScalarProperty Name="sub7prpf" ColumnName="sub7prpf" />
+          <ScalarProperty Name="sub7pf2" ColumnName="sub7pf2" />
+          <ScalarProperty Name="sub8" ColumnName="sub8" />
+          <ScalarProperty Name="sub8ap1" ColumnName="sub8ap1" />
+          <ScalarProperty Name="sub8mt1" ColumnName="sub8mt1" />
+          <ScalarProperty Name="sub8st1" ColumnName="sub8st1" />
+          <ScalarProperty Name="sub8pf1" ColumnName="sub8pf1" />
+          <ScalarProperty Name="sub8Ap2" ColumnName="sub8Ap2" />
+          <ScalarProperty Name="sub8mt2" ColumnName="sub8mt2" />
+          <ScalarProperty Name="sub8st2" ColumnName="sub8st2" />
+          <ScalarProperty Name="sub8pf2" ColumnName="sub8pf2" />
+          <ScalarProperty Name="obt_mrk" ColumnName="obt_mrk" />
+          <ScalarProperty Name="result1" ColumnName="result1" />
+          <ScalarProperty Name="result2" ColumnName="result2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="spl_cd" ColumnName="spl_cd" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="ekpo" ColumnName="ekpo" />
+          <ScalarProperty Name="ckpo" ColumnName="ckpo" />
+          <ScalarProperty Name="cDate" ColumnName="cDate" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+          <ScalarProperty Name="Zone_cd" ColumnName="Zone_cd" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="mi_type" ColumnName="mi_type" />
+          <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+          <ScalarProperty Name="Emp_rslt" ColumnName="Emp_rslt" />
+          <ScalarProperty Name="BindNo" ColumnName="BindNo" />
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="frm" ColumnName="frm" />
+          <ScalarProperty Name="IsReAdm" ColumnName="IsReAdm" />
+          <ScalarProperty Name="ChallanNo" ColumnName="ChallanNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBioDataInter_From14">
+      <EntityTypeMapping TypeName="matric_newModel.tblBioDataInter_From14">
+        <MappingFragment StoreEntitySet="tblBioDataInter_From14">
+          <ScalarProperty Name="rno" ColumnName="rno" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="Iyear" ColumnName="Iyear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="strRegNo" ColumnName="strRegNo" />
+          <ScalarProperty Name="schm" ColumnName="schm" />
+          <ScalarProperty Name="oldRno" ColumnName="oldRno" />
+          <ScalarProperty Name="YearOfLastAp" ColumnName="YearOfLastAp" />
+          <ScalarProperty Name="SessOfLastAp" ColumnName="SessOfLastAp" />
+          <ScalarProperty Name="IntBrd_cd" ColumnName="IntBrd_cd" />
+          <ScalarProperty Name="matRno" ColumnName="matRno" />
+          <ScalarProperty Name="yearOfPass" ColumnName="yearOfPass" />
+          <ScalarProperty Name="sessOfPass" ColumnName="sessOfPass" />
+          <ScalarProperty Name="Brd_cd" ColumnName="Brd_cd" />
+          <ScalarProperty Name="classRno" ColumnName="classRno" />
+          <ScalarProperty Name="CollGrade" ColumnName="CollGrade" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="addr" ColumnName="addr" />
+          <ScalarProperty Name="BForm" ColumnName="BForm" />
+          <ScalarProperty Name="FNIC" ColumnName="FNIC" />
+          <ScalarProperty Name="markOfIden" ColumnName="markOfIden" />
+          <ScalarProperty Name="rel" ColumnName="rel" />
+          <ScalarProperty Name="regPvt" ColumnName="regPvt" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="med" ColumnName="med" />
+          <ScalarProperty Name="nat" ColumnName="nat" />
+          <ScalarProperty Name="ruralOrurban" ColumnName="ruralOrurban" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+          <ScalarProperty Name="FormNo" ColumnName="FormNo" />
+          <ScalarProperty Name="cat11" ColumnName="cat11" />
+          <ScalarProperty Name="cat12" ColumnName="cat12" />
+          <ScalarProperty Name="cent_cd" ColumnName="cent_cd" />
+          <ScalarProperty Name="exgrp" ColumnName="exgrp" />
+          <ScalarProperty Name="grp_cd" ColumnName="grp_cd" />
+          <ScalarProperty Name="coll_cd" ColumnName="coll_cd" />
+          <ScalarProperty Name="sub1" ColumnName="sub1" />
+          <ScalarProperty Name="sub1Ap1" ColumnName="sub1Ap1" />
+          <ScalarProperty Name="sub1mt1" ColumnName="sub1mt1" />
+          <ScalarProperty Name="sub1st1" ColumnName="sub1st1" />
+          <ScalarProperty Name="sub1pf1" ColumnName="sub1pf1" />
+          <ScalarProperty Name="sub1Ap2" ColumnName="sub1Ap2" />
+          <ScalarProperty Name="sub1mt2" ColumnName="sub1mt2" />
+          <ScalarProperty Name="sub1St2" ColumnName="sub1St2" />
+          <ScalarProperty Name="sub1Pf2" ColumnName="sub1Pf2" />
+          <ScalarProperty Name="sub2" ColumnName="sub2" />
+          <ScalarProperty Name="sub2Ap1" ColumnName="sub2Ap1" />
+          <ScalarProperty Name="sub2mt1" ColumnName="sub2mt1" />
+          <ScalarProperty Name="sub2st1" ColumnName="sub2st1" />
+          <ScalarProperty Name="sub2pf1" ColumnName="sub2pf1" />
+          <ScalarProperty Name="sub2Ap2" ColumnName="sub2Ap2" />
+          <ScalarProperty Name="sub2mt2" ColumnName="sub2mt2" />
+          <ScalarProperty Name="sub2st2" ColumnName="sub2st2" />
+          <ScalarProperty Name="sub2pf2" ColumnName="sub2pf2" />
+          <ScalarProperty Name="sub3" ColumnName="sub3" />
+          <ScalarProperty Name="sub3Ap1" ColumnName="sub3Ap1" />
+          <ScalarProperty Name="sub3mt1" ColumnName="sub3mt1" />
+          <ScalarProperty Name="sub3st1" ColumnName="sub3st1" />
+          <ScalarProperty Name="sub3pf1" ColumnName="sub3pf1" />
+          <ScalarProperty Name="sub4" ColumnName="sub4" />
+          <ScalarProperty Name="sub4Ap1" ColumnName="sub4Ap1" />
+          <ScalarProperty Name="sub4mt1" ColumnName="sub4mt1" />
+          <ScalarProperty Name="sub4st1" ColumnName="sub4st1" />
+          <ScalarProperty Name="sub4pf1" ColumnName="sub4pf1" />
+          <ScalarProperty Name="sub4Ap2" ColumnName="sub4Ap2" />
+          <ScalarProperty Name="sub4mt2" ColumnName="sub4mt2" />
+          <ScalarProperty Name="sub4st2" ColumnName="sub4st2" />
+          <ScalarProperty Name="sub4mp2" ColumnName="sub4mp2" />
+          <ScalarProperty Name="sub4sp2" ColumnName="sub4sp2" />
+          <ScalarProperty Name="sub4pf2" ColumnName="sub4pf2" />
+          <ScalarProperty Name="sub4prpf" ColumnName="sub4prpf" />
+          <ScalarProperty Name="sub5" ColumnName="sub5" />
+          <ScalarProperty Name="sub5A" ColumnName="sub5A" />
+          <ScalarProperty Name="sub5Ap1" ColumnName="sub5Ap1" />
+          <ScalarProperty Name="sub5mt1" ColumnName="sub5mt1" />
+          <ScalarProperty Name="sub5st1" ColumnName="sub5st1" />
+          <ScalarProperty Name="sub5pf1" ColumnName="sub5pf1" />
+          <ScalarProperty Name="sub5Ap2" ColumnName="sub5Ap2" />
+          <ScalarProperty Name="sub5mt2" ColumnName="sub5mt2" />
+          <ScalarProperty Name="sub5st2" ColumnName="sub5st2" />
+          <ScalarProperty Name="sub5mp2" ColumnName="sub5mp2" />
+          <ScalarProperty Name="sub5sp2" ColumnName="sub5sp2" />
+          <ScalarProperty Name="sub5pf2" ColumnName="sub5pf2" />
+          <ScalarProperty Name="sub5prpf" ColumnName="sub5prpf" />
+          <ScalarProperty Name="sub6" ColumnName="sub6" />
+          <ScalarProperty Name="sub6A" ColumnName="sub6A" />
+          <ScalarProperty Name="sub6Ap1" ColumnName="sub6Ap1" />
+          <ScalarProperty Name="sub6mt1" ColumnName="sub6mt1" />
+          <ScalarProperty Name="sub6st1" ColumnName="sub6st1" />
+          <ScalarProperty Name="sub6pf1" ColumnName="sub6pf1" />
+          <ScalarProperty Name="sub6Ap2" ColumnName="sub6Ap2" />
+          <ScalarProperty Name="sub6mt2" ColumnName="sub6mt2" />
+          <ScalarProperty Name="sub6st2" ColumnName="sub6st2" />
+          <ScalarProperty Name="sub6mp2" ColumnName="sub6mp2" />
+          <ScalarProperty Name="sub6sp2" ColumnName="sub6sp2" />
+          <ScalarProperty Name="sub6pf2" ColumnName="sub6pf2" />
+          <ScalarProperty Name="sub6prpf" ColumnName="sub6prpf" />
+          <ScalarProperty Name="sub7" ColumnName="sub7" />
+          <ScalarProperty Name="sub7A" ColumnName="sub7A" />
+          <ScalarProperty Name="sub7Ap1" ColumnName="sub7Ap1" />
+          <ScalarProperty Name="sub7mt1" ColumnName="sub7mt1" />
+          <ScalarProperty Name="sub7st1" ColumnName="sub7st1" />
+          <ScalarProperty Name="sub7pf1" ColumnName="sub7pf1" />
+          <ScalarProperty Name="sub7Ap2" ColumnName="sub7Ap2" />
+          <ScalarProperty Name="sub7mt2" ColumnName="sub7mt2" />
+          <ScalarProperty Name="sub7st2" ColumnName="sub7st2" />
+          <ScalarProperty Name="sub7mp2" ColumnName="sub7mp2" />
+          <ScalarProperty Name="sub7sp2" ColumnName="sub7sp2" />
+          <ScalarProperty Name="sub7pf2" ColumnName="sub7pf2" />
+          <ScalarProperty Name="sub7prpf" ColumnName="sub7prpf" />
+          <ScalarProperty Name="sub8" ColumnName="sub8" />
+          <ScalarProperty Name="sub8Ap2" ColumnName="sub8Ap2" />
+          <ScalarProperty Name="sub8mt2" ColumnName="sub8mt2" />
+          <ScalarProperty Name="sub8st2" ColumnName="sub8st2" />
+          <ScalarProperty Name="sub8pf2" ColumnName="sub8pf2" />
+          <ScalarProperty Name="obt_mrk" ColumnName="obt_mrk" />
+          <ScalarProperty Name="result1" ColumnName="result1" />
+          <ScalarProperty Name="result2" ColumnName="result2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="spl_cd" ColumnName="spl_cd" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="ekpo" ColumnName="ekpo" />
+          <ScalarProperty Name="ckpo" ColumnName="ckpo" />
+          <ScalarProperty Name="cDate" ColumnName="cDate" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+          <ScalarProperty Name="zone_cd" ColumnName="zone_cd" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+          <ScalarProperty Name="mi_type" ColumnName="mi_type" />
+          <ScalarProperty Name="Emp_Rslt" ColumnName="Emp_Rslt" />
+          <ScalarProperty Name="BindNo" ColumnName="BindNo" />
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="frm" ColumnName="frm" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="IsReAdm" ColumnName="IsReAdm" />
+          <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+          <ScalarProperty Name="MRollNo" ColumnName="MRollNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBiodataInter_HE">
+      <EntityTypeMapping TypeName="matric_newModel.tblBiodataInter_HE">
+        <MappingFragment StoreEntitySet="tblBiodataInter_HE">
+          <ScalarProperty Name="rno" ColumnName="rno" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="Iyear" ColumnName="Iyear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="strRegNo" ColumnName="strRegNo" />
+          <ScalarProperty Name="schm" ColumnName="schm" />
+          <ScalarProperty Name="oldRno" ColumnName="oldRno" />
+          <ScalarProperty Name="YearOfLastAp" ColumnName="YearOfLastAp" />
+          <ScalarProperty Name="SessOfLastAp" ColumnName="SessOfLastAp" />
+          <ScalarProperty Name="IntBrd_cd" ColumnName="IntBrd_cd" />
+          <ScalarProperty Name="matRno" ColumnName="matRno" />
+          <ScalarProperty Name="yearOfPass" ColumnName="yearOfPass" />
+          <ScalarProperty Name="sessOfPass" ColumnName="sessOfPass" />
+          <ScalarProperty Name="Brd_cd" ColumnName="Brd_cd" />
+          <ScalarProperty Name="classRno" ColumnName="classRno" />
+          <ScalarProperty Name="CollGrade" ColumnName="CollGrade" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="addr" ColumnName="addr" />
+          <ScalarProperty Name="BForm" ColumnName="BForm" />
+          <ScalarProperty Name="FNIC" ColumnName="FNIC" />
+          <ScalarProperty Name="markOfIden" ColumnName="markOfIden" />
+          <ScalarProperty Name="rel" ColumnName="rel" />
+          <ScalarProperty Name="regPvt" ColumnName="regPvt" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="med" ColumnName="med" />
+          <ScalarProperty Name="nat" ColumnName="nat" />
+          <ScalarProperty Name="ruralOrurban" ColumnName="ruralOrurban" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+          <ScalarProperty Name="FormNo" ColumnName="FormNo" />
+          <ScalarProperty Name="cat11" ColumnName="cat11" />
+          <ScalarProperty Name="cat12" ColumnName="cat12" />
+          <ScalarProperty Name="cent_cd" ColumnName="cent_cd" />
+          <ScalarProperty Name="exgrp" ColumnName="exgrp" />
+          <ScalarProperty Name="grp_cd" ColumnName="grp_cd" />
+          <ScalarProperty Name="coll_cd" ColumnName="coll_cd" />
+          <ScalarProperty Name="sub1" ColumnName="sub1" />
+          <ScalarProperty Name="sub1Ap1" ColumnName="sub1Ap1" />
+          <ScalarProperty Name="sub1mt1" ColumnName="sub1mt1" />
+          <ScalarProperty Name="sub1st1" ColumnName="sub1st1" />
+          <ScalarProperty Name="sub1pf1" ColumnName="sub1pf1" />
+          <ScalarProperty Name="sub1Ap2" ColumnName="sub1Ap2" />
+          <ScalarProperty Name="sub1mt2" ColumnName="sub1mt2" />
+          <ScalarProperty Name="sub1St2" ColumnName="sub1St2" />
+          <ScalarProperty Name="sub1Pf2" ColumnName="sub1Pf2" />
+          <ScalarProperty Name="sub2" ColumnName="sub2" />
+          <ScalarProperty Name="sub2Ap1" ColumnName="sub2Ap1" />
+          <ScalarProperty Name="sub2mt1" ColumnName="sub2mt1" />
+          <ScalarProperty Name="sub2st1" ColumnName="sub2st1" />
+          <ScalarProperty Name="sub2pf1" ColumnName="sub2pf1" />
+          <ScalarProperty Name="sub2Ap2" ColumnName="sub2Ap2" />
+          <ScalarProperty Name="sub2mt2" ColumnName="sub2mt2" />
+          <ScalarProperty Name="sub2st2" ColumnName="sub2st2" />
+          <ScalarProperty Name="sub2pf2" ColumnName="sub2pf2" />
+          <ScalarProperty Name="sub3" ColumnName="sub3" />
+          <ScalarProperty Name="sub3Ap1" ColumnName="sub3Ap1" />
+          <ScalarProperty Name="sub3mt1" ColumnName="sub3mt1" />
+          <ScalarProperty Name="sub3st1" ColumnName="sub3st1" />
+          <ScalarProperty Name="sub3pf1" ColumnName="sub3pf1" />
+          <ScalarProperty Name="sub4" ColumnName="sub4" />
+          <ScalarProperty Name="sub4A" ColumnName="sub4A" />
+          <ScalarProperty Name="sub4Ap1" ColumnName="sub4Ap1" />
+          <ScalarProperty Name="sub4mt1" ColumnName="sub4mt1" />
+          <ScalarProperty Name="sub4st1" ColumnName="sub4st1" />
+          <ScalarProperty Name="sub4mp1" ColumnName="sub4mp1" />
+          <ScalarProperty Name="Sub4sp1" ColumnName="Sub4sp1" />
+          <ScalarProperty Name="Sub4prpf1" ColumnName="Sub4prpf1" />
+          <ScalarProperty Name="sub4pf1" ColumnName="sub4pf1" />
+          <ScalarProperty Name="sub4Ap2" ColumnName="sub4Ap2" />
+          <ScalarProperty Name="sub4mt2" ColumnName="sub4mt2" />
+          <ScalarProperty Name="sub4st2" ColumnName="sub4st2" />
+          <ScalarProperty Name="sub4mp2" ColumnName="sub4mp2" />
+          <ScalarProperty Name="sub4sp2" ColumnName="sub4sp2" />
+          <ScalarProperty Name="sub4pf2" ColumnName="sub4pf2" />
+          <ScalarProperty Name="sub4prpf2" ColumnName="sub4prpf2" />
+          <ScalarProperty Name="sub5" ColumnName="sub5" />
+          <ScalarProperty Name="sub5A" ColumnName="sub5A" />
+          <ScalarProperty Name="sub5Ap1" ColumnName="sub5Ap1" />
+          <ScalarProperty Name="sub5mt1" ColumnName="sub5mt1" />
+          <ScalarProperty Name="sub5st1" ColumnName="sub5st1" />
+          <ScalarProperty Name="sub5mp1" ColumnName="sub5mp1" />
+          <ScalarProperty Name="sub5sp1" ColumnName="sub5sp1" />
+          <ScalarProperty Name="sub5prpf1" ColumnName="sub5prpf1" />
+          <ScalarProperty Name="sub5pf1" ColumnName="sub5pf1" />
+          <ScalarProperty Name="sub5Ap2" ColumnName="sub5Ap2" />
+          <ScalarProperty Name="sub5mt2" ColumnName="sub5mt2" />
+          <ScalarProperty Name="sub5st2" ColumnName="sub5st2" />
+          <ScalarProperty Name="sub5mp2" ColumnName="sub5mp2" />
+          <ScalarProperty Name="sub5sp2" ColumnName="sub5sp2" />
+          <ScalarProperty Name="sub5pf2" ColumnName="sub5pf2" />
+          <ScalarProperty Name="sub5prpf2" ColumnName="sub5prpf2" />
+          <ScalarProperty Name="sub6" ColumnName="sub6" />
+          <ScalarProperty Name="sub6A" ColumnName="sub6A" />
+          <ScalarProperty Name="sub6Ap1" ColumnName="sub6Ap1" />
+          <ScalarProperty Name="sub6mt1" ColumnName="sub6mt1" />
+          <ScalarProperty Name="sub6st1" ColumnName="sub6st1" />
+          <ScalarProperty Name="Sub6mp1" ColumnName="Sub6mp1" />
+          <ScalarProperty Name="sub6sp1" ColumnName="sub6sp1" />
+          <ScalarProperty Name="sub6prpf1" ColumnName="sub6prpf1" />
+          <ScalarProperty Name="sub6pf1" ColumnName="sub6pf1" />
+          <ScalarProperty Name="sub6Ap2" ColumnName="sub6Ap2" />
+          <ScalarProperty Name="sub6mt2" ColumnName="sub6mt2" />
+          <ScalarProperty Name="sub6st2" ColumnName="sub6st2" />
+          <ScalarProperty Name="sub6mp2" ColumnName="sub6mp2" />
+          <ScalarProperty Name="sub6sp2" ColumnName="sub6sp2" />
+          <ScalarProperty Name="sub6pf2" ColumnName="sub6pf2" />
+          <ScalarProperty Name="sub6prpf2" ColumnName="sub6prpf2" />
+          <ScalarProperty Name="sub7" ColumnName="sub7" />
+          <ScalarProperty Name="sub7A" ColumnName="sub7A" />
+          <ScalarProperty Name="sub7Ap1" ColumnName="sub7Ap1" />
+          <ScalarProperty Name="sub7mt1" ColumnName="sub7mt1" />
+          <ScalarProperty Name="sub7st1" ColumnName="sub7st1" />
+          <ScalarProperty Name="sub7pf1" ColumnName="sub7pf1" />
+          <ScalarProperty Name="sub7Ap2" ColumnName="sub7Ap2" />
+          <ScalarProperty Name="sub7mt2" ColumnName="sub7mt2" />
+          <ScalarProperty Name="sub7st2" ColumnName="sub7st2" />
+          <ScalarProperty Name="sub7mp2" ColumnName="sub7mp2" />
+          <ScalarProperty Name="sub7sp2" ColumnName="sub7sp2" />
+          <ScalarProperty Name="sub7pf2" ColumnName="sub7pf2" />
+          <ScalarProperty Name="sub7prpf" ColumnName="sub7prpf" />
+          <ScalarProperty Name="sub8" ColumnName="sub8" />
+          <ScalarProperty Name="sub8Ap2" ColumnName="sub8Ap2" />
+          <ScalarProperty Name="sub8mt2" ColumnName="sub8mt2" />
+          <ScalarProperty Name="sub8st2" ColumnName="sub8st2" />
+          <ScalarProperty Name="sub8pf2" ColumnName="sub8pf2" />
+          <ScalarProperty Name="obt_mrk" ColumnName="obt_mrk" />
+          <ScalarProperty Name="result1" ColumnName="result1" />
+          <ScalarProperty Name="result2" ColumnName="result2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="spl_cd" ColumnName="spl_cd" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="ekpo" ColumnName="ekpo" />
+          <ScalarProperty Name="ckpo" ColumnName="ckpo" />
+          <ScalarProperty Name="cDate" ColumnName="cDate" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+          <ScalarProperty Name="zone_cd" ColumnName="zone_cd" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+          <ScalarProperty Name="mi_type" ColumnName="mi_type" />
+          <ScalarProperty Name="Emp_Rslt" ColumnName="Emp_Rslt" />
+          <ScalarProperty Name="BindNo" ColumnName="BindNo" />
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="frm" ColumnName="frm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBoards">
+      <EntityTypeMapping TypeName="matric_newModel.tblBoard">
+        <MappingFragment StoreEntitySet="tblBoard">
+          <ScalarProperty Name="Brd_cd" ColumnName="Brd_cd" />
+          <ScalarProperty Name="Brd_name" ColumnName="Brd_name" />
+          <ScalarProperty Name="Brd_Abr" ColumnName="Brd_Abr" />
+          <ScalarProperty Name="pitb_abre" ColumnName="pitb_abre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCategories">
+      <EntityTypeMapping TypeName="matric_newModel.TblCategory">
+        <MappingFragment StoreEntitySet="TblCategory">
+          <ScalarProperty Name="Cat_Id" ColumnName="Cat_Id" />
+          <ScalarProperty Name="Cat_Name" ColumnName="Cat_Name" />
+          <ScalarProperty Name="Cat_Abr" ColumnName="Cat_Abr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcentres">
+      <EntityTypeMapping TypeName="matric_newModel.tblcentre">
+        <MappingFragment StoreEntitySet="tblcentre">
+          <ScalarProperty Name="CENT_CD" ColumnName="CENT_CD" />
+          <ScalarProperty Name="mYear" ColumnName="mYear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="CENT_NAME" ColumnName="CENT_NAME" />
+          <ScalarProperty Name="Cent_Abre" ColumnName="Cent_Abre" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="cent_Gen" ColumnName="cent_Gen" />
+          <ScalarProperty Name="Zone_cd" ColumnName="Zone_cd" />
+          <ScalarProperty Name="Teh_cd" ColumnName="Teh_cd" />
+          <ScalarProperty Name="Max1st_P2" ColumnName="Max1st_P2" />
+          <ScalarProperty Name="Max2nd_P2" ColumnName="Max2nd_P2" />
+          <ScalarProperty Name="Max1st_P1" ColumnName="Max1st_P1" />
+          <ScalarProperty Name="Max2nd_P1" ColumnName="Max2nd_P1" />
+          <ScalarProperty Name="oMax" ColumnName="oMax" />
+          <ScalarProperty Name="Inst_cd" ColumnName="Inst_cd" />
+          <ScalarProperty Name="onlyP1" ColumnName="onlyP1" />
+          <ScalarProperty Name="cent_inst_gen" ColumnName="cent_inst_gen" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="zone_cd2" ColumnName="zone_cd2" />
+          <ScalarProperty Name="cent_opt" ColumnName="cent_opt" />
+          <ScalarProperty Name="cent_opt_girls" ColumnName="cent_opt_girls" />
+          <ScalarProperty Name="cent_cd_new" ColumnName="cent_cd_new" />
+          <ScalarProperty Name="Cent_cd_Old" ColumnName="Cent_cd_Old" />
+          <ScalarProperty Name="Bank_Code" ColumnName="Bank_Code" />
+          <ScalarProperty Name="DeafOnly" ColumnName="DeafOnly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChildNodes">
+      <EntityTypeMapping TypeName="matric_newModel.tblChildNode">
+        <MappingFragment StoreEntitySet="tblChildNodes">
+          <ScalarProperty Name="ChildNodeID" ColumnName="ChildNodeID" />
+          <ScalarProperty Name="ChildNodeName" ColumnName="ChildNodeName" />
+          <ScalarProperty Name="NodeType" ColumnName="NodeType" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isCommon" ColumnName="isCommon" />
+          <ScalarProperty Name="formUrl" ColumnName="formUrl" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="ParentNodeID" ColumnName="ParentNodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldatesheetinters">
+      <EntityTypeMapping TypeName="matric_newModel.tbldatesheetinter">
+        <MappingFragment StoreEntitySet="tbldatesheetinter">
+          <ScalarProperty Name="sub_cd" ColumnName="sub_cd" />
+          <ScalarProperty Name="IYEAR" ColumnName="IYEAR" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="sub_Name" ColumnName="sub_Name" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Subgrp1" ColumnName="Subgrp1" />
+          <ScalarProperty Name="date2" ColumnName="date2" />
+          <ScalarProperty Name="subgrp2" ColumnName="subgrp2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldatesheetmatrics">
+      <EntityTypeMapping TypeName="matric_newModel.tbldatesheetmatric">
+        <MappingFragment StoreEntitySet="tbldatesheetmatric">
+          <ScalarProperty Name="IYear" ColumnName="IYear" />
+          <ScalarProperty Name="Sess" ColumnName="Sess" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="SUB_CD" ColumnName="SUB_CD" />
+          <ScalarProperty Name="SUB_ABR" ColumnName="SUB_ABR" />
+          <ScalarProperty Name="SUB_NAME" ColumnName="SUB_NAME" />
+          <ScalarProperty Name="TH1_MRK" ColumnName="TH1_MRK" />
+          <ScalarProperty Name="TH2_MRK" ColumnName="TH2_MRK" />
+          <ScalarProperty Name="PR_MRK" ColumnName="PR_MRK" />
+          <ScalarProperty Name="TH1_PASSMRK" ColumnName="TH1_PASSMRK" />
+          <ScalarProperty Name="TH2_PASSMRK" ColumnName="TH2_PASSMRK" />
+          <ScalarProperty Name="SUB_TOTPASSMRK" ColumnName="SUB_TOTPASSMRK" />
+          <ScalarProperty Name="PR2_PASSMRK" ColumnName="PR2_PASSMRK" />
+          <ScalarProperty Name="PR" ColumnName="PR" />
+          <ScalarProperty Name="SUB_SEX" ColumnName="SUB_SEX" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+          <ScalarProperty Name="SUBGRP1" ColumnName="SUBGRP1" />
+          <ScalarProperty Name="DATE2" ColumnName="DATE2" />
+          <ScalarProperty Name="SUBGRP2" ColumnName="SUBGRP2" />
+          <ScalarProperty Name="cgtime" ColumnName="cgtime" />
+          <ScalarProperty Name="sgrp" ColumnName="sgrp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistricts">
+      <EntityTypeMapping TypeName="matric_newModel.tblDistrict">
+        <MappingFragment StoreEntitySet="tblDistrict">
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="dist_name" ColumnName="dist_name" />
+          <ScalarProperty Name="dist_abr" ColumnName="dist_abr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHistories">
+      <EntityTypeMapping TypeName="matric_newModel.tblHistory">
+        <MappingFragment StoreEntitySet="tblHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rno" ColumnName="rno" />
+          <ScalarProperty Name="formno" ColumnName="formno" />
+          <ScalarProperty Name="myear" ColumnName="myear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="histStr" ColumnName="histStr" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="changedBy" ColumnName="changedBy" />
+          <ScalarProperty Name="changedByForm" ColumnName="changedByForm" />
+          <ScalarProperty Name="CrcByEmp" ColumnName="CrcByEmp" />
+          <ScalarProperty Name="SystemIP" ColumnName="SystemIP" />
+          <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+          <ScalarProperty Name="DomainUser" ColumnName="DomainUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblInstitutes_all">
+      <EntityTypeMapping TypeName="matric_newModel.tblInstitutes_all">
+        <MappingFragment StoreEntitySet="tblInstitutes_all">
+          <ScalarProperty Name="Inst_Id" ColumnName="Inst_Id" />
+          <ScalarProperty Name="Inst_cd" ColumnName="Inst_cd" />
+          <ScalarProperty Name="Inst_pwd" ColumnName="Inst_pwd" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IsGovernment" ColumnName="IsGovernment" />
+          <ScalarProperty Name="IsRural" ColumnName="IsRural" />
+          <ScalarProperty Name="IsCommunity" ColumnName="IsCommunity" />
+          <ScalarProperty Name="LandLine" ColumnName="LandLine" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="affiliation_Grace_Period" ColumnName="affiliation_Grace_Period" />
+          <ScalarProperty Name="IsExameCentre" ColumnName="IsExameCentre" />
+          <ScalarProperty Name="edu_lvl" ColumnName="edu_lvl" />
+          <ScalarProperty Name="affiliation_date" ColumnName="affiliation_date" />
+          <ScalarProperty Name="expiration_date" ColumnName="expiration_date" />
+          <ScalarProperty Name="feedingDate" ColumnName="feedingDate" />
+          <ScalarProperty Name="Kpo" ColumnName="Kpo" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+          <ScalarProperty Name="emis_code" ColumnName="emis_code" />
+          <ScalarProperty Name="zone_cd" ColumnName="zone_cd" />
+          <ScalarProperty Name="iZone_cd" ColumnName="iZone_cd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+          <ScalarProperty Name="pp_zone" ColumnName="pp_zone" />
+          <ScalarProperty Name="allowed_mGrp" ColumnName="allowed_mGrp" />
+          <ScalarProperty Name="allowed_iGrp" ColumnName="allowed_iGrp" />
+          <ScalarProperty Name="allowed_mSub" ColumnName="allowed_mSub" />
+          <ScalarProperty Name="allowed_iSub" ColumnName="allowed_iSub" />
+          <ScalarProperty Name="inst_Abre" ColumnName="inst_Abre" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblParentNodes">
+      <EntityTypeMapping TypeName="matric_newModel.tblParentNode">
+        <MappingFragment StoreEntitySet="tblParentNodes">
+          <ScalarProperty Name="ParentNodeID" ColumnName="ParentNodeID" />
+          <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPicPaths">
+      <EntityTypeMapping TypeName="matric_newModel.tblPicPath">
+        <MappingFragment StoreEntitySet="tblPicPath">
+          <ScalarProperty Name="mYear" ColumnName="mYear" />
+          <ScalarProperty Name="Sess" ColumnName="Sess" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="PicPaThRetype" ColumnName="PicPaThRetype" />
+          <ScalarProperty Name="PicPaThMiss" ColumnName="PicPaThMiss" />
+          <ScalarProperty Name="PicPathGar" ColumnName="PicPathGar" />
+          <ScalarProperty Name="PicPaTh1" ColumnName="PicPaTh1" />
+          <ScalarProperty Name="PicPath2" ColumnName="PicPath2" />
+          <ScalarProperty Name="PicPath3" ColumnName="PicPath3" />
+          <ScalarProperty Name="PicPaTh4" ColumnName="PicPaTh4" />
+          <ScalarProperty Name="PicPaTh5" ColumnName="PicPaTh5" />
+          <ScalarProperty Name="PicPaTh6" ColumnName="PicPaTh6" />
+          <ScalarProperty Name="PicPaTh7" ColumnName="PicPaTh7" />
+          <ScalarProperty Name="PicPaTh8" ColumnName="PicPaTh8" />
+          <ScalarProperty Name="PicPath9" ColumnName="PicPath9" />
+          <ScalarProperty Name="PicPath10" ColumnName="PicPath10" />
+          <ScalarProperty Name="PicPath11" ColumnName="PicPath11" />
+          <ScalarProperty Name="PicPath12" ColumnName="PicPath12" />
+          <ScalarProperty Name="DateOfDeclaration" ColumnName="DateOfDeclaration" />
+          <ScalarProperty Name="pth1strt" ColumnName="pth1strt" />
+          <ScalarProperty Name="pth2strt" ColumnName="pth2strt" />
+          <ScalarProperty Name="pth3strt" ColumnName="pth3strt" />
+          <ScalarProperty Name="pth4strt" ColumnName="pth4strt" />
+          <ScalarProperty Name="pth5strt" ColumnName="pth5strt" />
+          <ScalarProperty Name="pth6Strt" ColumnName="pth6Strt" />
+          <ScalarProperty Name="pth7Strt" ColumnName="pth7Strt" />
+          <ScalarProperty Name="pth8Strt" ColumnName="pth8Strt" />
+          <ScalarProperty Name="pth9Strt" ColumnName="pth9Strt" />
+          <ScalarProperty Name="pth10Strt" ColumnName="pth10Strt" />
+          <ScalarProperty Name="pth11Strt" ColumnName="pth11Strt" />
+          <ScalarProperty Name="pth12Strt" ColumnName="pth12Strt" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="DecDate" ColumnName="DecDate" />
+          <ScalarProperty Name="DecTime" ColumnName="DecTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblScanned_Data">
+      <EntityTypeMapping TypeName="matric_newModel.tblScanned_Data">
+        <MappingFragment StoreEntitySet="tblScanned_Data">
+          <ScalarProperty Name="formno" ColumnName="formno" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="iyear" ColumnName="iyear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="bindNo" ColumnName="bindNo" />
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="picpath" ColumnName="picpath" />
+          <ScalarProperty Name="barCode" ColumnName="barCode" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="ekpo" ColumnName="ekpo" />
+          <ScalarProperty Name="Excp" ColumnName="Excp" />
+          <ScalarProperty Name="emp_cd" ColumnName="emp_cd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBindAllotments">
+      <EntityTypeMapping TypeName="matric_newModel.tblBindAllotment">
+        <MappingFragment StoreEntitySet="tblBindAllotment">
+          <ScalarProperty Name="Emp_cd" ColumnName="Emp_cd" />
+          <ScalarProperty Name="Session" ColumnName="Session" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="TotalAllotment" ColumnName="TotalAllotment" />
+          <ScalarProperty Name="NoOfBinds" ColumnName="NoOfBinds" />
+          <ScalarProperty Name="StartingBind" ColumnName="StartingBind" />
+          <ScalarProperty Name="EndingBind" ColumnName="EndingBind" />
+          <ScalarProperty Name="branch_Code" ColumnName="branch_Code" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBundles">
+      <EntityTypeMapping TypeName="matric_newModel.tblBundle">
+        <MappingFragment StoreEntitySet="tblBundle">
+          <ScalarProperty Name="myear" ColumnName="myear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="orderBy" ColumnName="orderBy" />
+          <ScalarProperty Name="mExchange" ColumnName="mExchange" />
+          <ScalarProperty Name="Sub_cd" ColumnName="Sub_cd" />
+          <ScalarProperty Name="ExGrp" ColumnName="ExGrp" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="ended" ColumnName="ended" />
+          <ScalarProperty Name="BundleNo" ColumnName="BundleNo" />
+          <ScalarProperty Name="frCmp" ColumnName="frCmp" />
+          <ScalarProperty Name="isDeaf" ColumnName="isDeaf" />
+          <ScalarProperty Name="schm" ColumnName="schm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblhistoryForm16">
+      <EntityTypeMapping TypeName="matric_newModel.tblhistoryForm16">
+        <MappingFragment StoreEntitySet="tblhistoryForm16">
+          <ScalarProperty Name="formno" ColumnName="formno" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="mYear" ColumnName="mYear" />
+          <ScalarProperty Name="sess" ColumnName="sess" />
+          <ScalarProperty Name="PrevString" ColumnName="PrevString" />
+          <ScalarProperty Name="ChangedString" ColumnName="ChangedString" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedByForm" ColumnName="ChangedByForm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

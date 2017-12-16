@@ -1,0 +1,7 @@
+D:\BISE MVC\BISEWEB\BLL\bin\Debug\BLL.dll
+D:\BISE MVC\BISEWEB\BLL\bin\Debug\BLL.pdb
+D:\BISE MVC\BISEWEB\BLL\bin\Debug\BE.dll
+D:\BISE MVC\BISEWEB\BLL\bin\Debug\BE.pdb
+D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.dll
+D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.pdb

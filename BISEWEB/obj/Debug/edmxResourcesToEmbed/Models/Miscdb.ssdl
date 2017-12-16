@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MiscDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblemployee">
+    <Key>
+      <PropertyRef Name="emp_cd" />
+    </Key>
+    <Property Name="emp_cd" Type="int" Nullable="false" />
+    <Property Name="pass" Type="varchar" MaxLength="80" />
+    <Property Name="Name" Type="varchar" MaxLength="80" />
+    <Property Name="fname" Type="varchar" MaxLength="80" />
+    <Property Name="cnic" Type="varchar" MaxLength="30" />
+    <Property Name="ntn" Type="nchar" MaxLength="20" />
+    <Property Name="dob" Type="date" />
+    <Property Name="religion" Type="tinyint" />
+    <Property Name="address" Type="varchar" MaxLength="150" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+    <Property Name="last_qualify" Type="int" />
+    <Property Name="gender" Type="tinyint" />
+    <Property Name="date_joining" Type="date" />
+    <Property Name="date_promote" Type="date" />
+    <Property Name="date_retired" Type="date" />
+    <Property Name="seniority" Type="tinyint" />
+    <Property Name="Branch_Code" Type="int" />
+    <Property Name="emp_status" Type="tinyint" />
+    <Property Name="bill_category" Type="tinyint" />
+    <Property Name="emp_cat" Type="tinyint" />
+    <Property Name="bs" Type="tinyint" />
+    <Property Name="desig" Type="tinyint" />
+    <Property Name="salary_type" Type="tinyint" />
+    <Property Name="ecr" Type="int" />
+    <Property Name="blood_grp" Type="nvarchar" MaxLength="4" />
+    <Property Name="email" Type="varchar" MaxLength="30" />
+    <Property Name="Disability" Type="tinyint" />
+    <Property Name="Driving_License" Type="varchar" MaxLength="50" />
+    <Property Name="Expiry_Date" Type="date" />
+    <Property Name="roll_id" Type="tinyint" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isSuperAdmin" Type="bit" />
+    <Property Name="accountNo" Type="varchar" MaxLength="50" />
+    <Property Name="pay_stage" Type="tinyint" />
+    <Property Name="br_sec" Type="int" />
+    <Property Name="about" Type="nvarchar" MaxLength="250" />
+    <Property Name="image" Type="image" />
+    <Property Name="hajj" Type="tinyint" />
+    <Property Name="umrah" Type="tinyint" />
+    <Property Name="OutDoorJob" Type="varchar" MaxLength="75" />
+  </EntityType>
+  <EntityType Name="tblEntrySlip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="75" />
+    <Property Name="FName" Type="varchar" MaxLength="75" />
+    <Property Name="sex" Type="tinyint" />
+    <Property Name="cnic" Type="varchar" MaxLength="20" />
+    <Property Name="rno" Type="int" />
+    <Property Name="class" Type="int" />
+    <Property Name="sess" Type="int" />
+    <Property Name="iyear" Type="int" />
+    <Property Name="edate" Type="datetime" />
+    <Property Name="eUser" Type="int" />
+    <Property Name="branch" Type="int" />
+    <Property Name="NoOfPersons" Type="int" />
+  </EntityType>
+  <EntityType Name="tblFiles">
+    <Key>
+      <PropertyRef Name="fileId" />
+    </Key>
+    <Property Name="fileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fileDesc" Type="varchar" MaxLength="75" />
+    <Property Name="br_code" Type="int" />
+    <Property Name="SubmittedBy" Type="varchar" MaxLength="75" />
+    <Property Name="SubmitterMobNo" Type="varchar" MaxLength="15" />
+    <Property Name="ReceivedDate" Type="datetime" />
+    <Property Name="ReceivedBy" Type="int" />
+    <Property Name="next_br_code" Type="int" />
+    <Property Name="isDeleted" Type="int" />
+    <Property Name="status" Type="tinyint" />
+    <Property Name="remarks" Type="varchar" MaxLength="75" />
+    <Property Name="IsSent" Type="tinyint" />
+    <Property Name="RegNo" Type="varchar" MaxLength="25" />
+    <Property Name="RegDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="RetDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwoDiaryNo" Type="varchar" MaxLength="25" />
+    <Property Name="OwoDate" Type="varchar" MaxLength="25" />
+    <Property Name="edate" Type="datetime" />
+    <Property Name="Emp_cd" Type="int" />
+  </EntityType>
+  <EntityType Name="tblfileTrack">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fileId" Type="int" />
+    <Property Name="Br_code" Type="int" />
+    <Property Name="Br_FileNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceivedBy" Type="int" />
+    <Property Name="recivedDate" Type="datetime" />
+    <Property Name="remarks" Type="varchar" MaxLength="80" />
+    <Property Name="prev_Br_code" Type="int" />
+    <Property Name="next_br_code" Type="int" />
+    <Property Name="IsTransfer" Type="bit" />
+    <Property Name="transferDate" Type="datetime" />
+    <Property Name="transferBy" Type="int" />
+    <Property Name="IsNext_Received" Type="bit" />
+    <Property Name="isCompleted" Type="bit" />
+    <Property Name="emp_cd" Type="int" />
+  </EntityType>
+  <EntityType Name="tblroll">
+    <Key>
+      <PropertyRef Name="roll_id" />
+    </Key>
+    <Property Name="roll_id" Type="int" Nullable="false" />
+    <Property Name="roll_desc" Type="varchar" MaxLength="50" />
+    <Property Name="form_ids" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblwebforms">
+    <Key>
+      <PropertyRef Name="formId" />
+    </Key>
+    <Property Name="formId" Type="int" Nullable="false" />
+    <Property Name="formName" Type="varchar" MaxLength="70" />
+    <Property Name="formType" Type="int" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isCommon" Type="bit" />
+    <Property Name="formUrl" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblWebRights">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="formNo" Type="int" Nullable="false" />
+    <Property Name="fYear" Type="int" Nullable="false" />
+    <Property Name="fSess" Type="tinyint" Nullable="false" />
+    <Property Name="fClass" Type="tinyint" Nullable="false" />
+    <Property Name="eDate" Type="smalldatetime" />
+    <Property Name="eUser" Type="int" />
+    <Property Name="rightsDays" Type="int" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="MiscDbModelStoreContainer">
+    <EntitySet Name="tblemployee" EntityType="Self.tblemployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEntrySlip" EntityType="Self.tblEntrySlip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFiles" EntityType="Self.tblFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblfileTrack" EntityType="Self.tblfileTrack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblroll" EntityType="Self.tblroll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblwebforms" EntityType="Self.tblwebforms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWebRights" EntityType="Self.tblWebRights" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
