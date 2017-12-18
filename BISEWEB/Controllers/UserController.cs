@@ -12,6 +12,8 @@ namespace BISEWEB.Controllers
     {
         MiscDbEntities Miscdb = new MiscDbEntities();
         matric_newEntities matric_new = new matric_newEntities();
+        Generics obj = new Generics();
+        BE.User obj_user = new BE.User();
 
         // GET: User
         public ActionResult Index()
@@ -21,8 +23,9 @@ namespace BISEWEB.Controllers
         [HttpGet]
         public ActionResult UserLogin()
         {
-            Session["UserID"] = null;
-            Session["UserName"] = null;
+            obj_user.Emp_cd = 0;
+            obj_user.IsSuperAdmin = false;
+            obj_user.Name = null;
             Session.Abandon();
             Session.Clear();
             return View();
@@ -38,23 +41,19 @@ namespace BISEWEB.Controllers
                 if (obj != null)
                 {
                     int emp = Convert.ToInt32(obj.emp_cd);
-
-                    BE.User obj_user = new BE.User();
                     obj_user.Emp_cd = emp;
                     obj_user.IsSuperAdmin = Convert.ToBoolean(obj.isSuperAdmin);
                     obj_user.Name = obj.Name;
                     obj_user.Branch_Code = Convert.ToInt32(obj.Branch_Code);
-
-
                     SessionWrapper.User = obj_user;
-
-                    Session["Redirect"] = "1";
-                    return RedirectToAction("Contact", "Home");
+                    return RedirectToAction("Home", "Dashboard");
                 }
 
             }
 
             return View(objUser);
         }
+
+       
     }
 }

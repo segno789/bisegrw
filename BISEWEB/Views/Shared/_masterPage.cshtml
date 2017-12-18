@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BISEWEB.Models.tblParentNode>
+﻿@*@model IEnumerable<BISEWEB.Models.tblParentNode>*@
 @*@model BiseLocalWeb.Models.tblParentNode*@
 
 <!DOCTYPE html>
@@ -534,8 +534,11 @@ License: You must have a valid license purchased only from themeforest(the above
                     <br />
 
                     @{
-                        foreach (var item in Model)
+                        var model = Session["ParentNodes"] as List<BISEWEB.Models.tblParentNode>;
+                        foreach (var item in model)
                         {
+
+
                             <li class="">
                                 <a href="javascript:;">
                                     <i class="icon-home"></i>
@@ -550,7 +553,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                             if (BLL.SessionWrapper.User.IsSuperAdmin == true)
                                             {
                                                 <li>
-                                                    @Html.ActionLink(c.ChildNodeName, c.Action, c.Controller, new { id = c.ChildNodeName })
+
+                                                    @Html.ActionLink(c.ChildNodeName, c.Action, c.Controller)
+                                                    @*@Html.ActionLink("hanzala", "AddEmployee", "AddStuff")*@
                                                 </li>
                                             }
                                             else if (BLL.SessionWrapper.User.IsSuperAdmin == false)
@@ -559,7 +564,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 if (rightNodes.Contains(c.ChildNodeID))
                                                 {
                                                     <li>
-                                                        @Html.ActionLink(c.ChildNodeName, c.Action, c.Controller, new { id = c.ChildNodeName })
+                                                        @Html.ActionLink(c.ChildNodeName, c.Action, c.Controller, new { id = c.ChildNodeID })
                                                     </li>
                                                 }
                                             }
@@ -573,74 +578,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
                     }
-
-
-                    @*<li>
-                            <a href="javascript:;">
-                                <i class="icon-home"></i>
-                                <span class="title">Dashboard</span>
-                                <span class="arrow "></span>
-                                <span class="selected "></span>
-                            </a>
-                            <ul class="sub-menu">
-
-                                <li>
-
-
-                                    @Html.ActionLink("Index", "Index", "Home")
-
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:;">
-                                <i class="icon-settings"></i>
-                                <span class="title">Form Stuff</span>
-                                <span class="arrow"></span>
-                                <span class="selected"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    @Html.ActionLink("About", "About", "Home")
-                                </li>
-
-                                <li>
-                                    @Html.ActionLink("abc", "abc", "Home")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("def", "def", "Home")
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <i class="icon-briefcase"></i>
-                                <span class="title">Data Tables</span>
-                                <span class="arrow "></span>
-                                <span class="selected"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-
-                                    @Html.ActionLink("Contact", "Contact", "Home")
-
-                                </li>
-                                <li>
-                                    @Html.ActionLink("ghi", "ghi", "Home")
-                                </li>
-
-                            </ul>
-                        </li>*@
-
-
-
-
-
-
 
 
 
@@ -778,7 +715,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- END STYLE CUSTOMIZER -->
                 <!-- BEGIN PAGE HEADER-->
 
-                <div class="page-bar">
+                @*<div class="page-bar">
                     <ul class="page-breadcrumb col-md-10">
 
 
@@ -790,27 +727,19 @@ License: You must have a valid license purchased only from themeforest(the above
                             @if (ViewContext.RouteData.Values["controller"].ToString() != "Home")
                             {
                                 @: @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())
-                                @*@:> @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")*@
+                                @: > @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
                             }
                             <i class="fa fa-angle-right"></i>
                             @if (ViewContext.RouteData.Values["action"].ToString() != "Index")
                             {
-                                @: @Html.ActionLink(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
+                              @: @Html.ActionLink(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
 }
-                            @*<i class="fa fa-home"></i>
-                                <a href="index.html">Home</a>
-                                <i class="fa fa-angle-right"></i>*@
+                           
                         </li>
-                        @*<li>
-                                <a href="#">UI Features</a>
-                                <i class="fa fa-angle-right"></i>
-                            </li>
-                            <li>
-                                <a href="#">Font Icons</a>
-                            </li>*@
+                      
                     </ul>
 
-                </div>
+                </div>*@
                 <!-- END PAGE HEADER-->
                 <!-- BEGIN PAGE CONTENT-->
                 <div class="row">
@@ -1536,11 +1465,11 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
         jQuery(document).ready(function () {
-            var val = @Session["Redirect"];
-            if (val == "1") {
-                window.location.href = ("http://localhost:54394/Home/Contact?Length=4");
-                $.ajax('/Home/ClearSession');
-            }
+            //var val = @Session["Redirect"];
+            //if (val == "1") {
+            //    window.location.href = ("http://localhost:54394/Home/Contact?Length=4");
+            //    $.ajax('/Home/ClearSession');
+            //}
             $('li').removeClass('active');
             $('li').removeClass('open');
             var url = window.location;
@@ -1566,7 +1495,7 @@ License: You must have a valid license purchased only from themeforest(the above
     @RenderSection("PageScripts", required: false)
 
 
-    <div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>
+    @*<div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>*@
 
 </body>
 <!-- END BODY -->
