@@ -1505,7 +1505,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
     </div>
 
-    <div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>
+    
     <!-- END FOOTER -->
     <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
     <!-- BEGIN CORE PLUGINS -->
@@ -1513,6 +1513,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="~/Content/metronic/theme/assets/global/plugins/respond.min.js"></script>
     <script src="~/Content/metronic/theme/assets/global/plugins/excanvas.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-idle-timeout/jquery.idletimeout.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-idle-timeout/jquery.idletimer.js")></script>
+
 
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery.min.js")></script>
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-migrate.min.js")></script>
@@ -1529,8 +1532,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/quick-sidebar.js")></script>
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/demo.js")></script>
 
-    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-idle-timeout/jquery.idletimeout.js")></script>
-    <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/jquery-idle-timeout/jquery.idletimer.js")</script>
+   
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
         jQuery(document).ready(function () {
@@ -1557,8 +1559,14 @@ License: You must have a valid license purchased only from themeforest(the above
         });
 
     </script>
+
+
+  
     @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("PageScripts", required: false)
+
+
+    <div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>
 
 </body>
 <!-- END BODY -->
