@@ -5,3 +5,10 @@ D:\BISE MVC\BISEWEB\BLL\bin\Debug\BE.pdb
 D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.dll
 D:\BISE MVC\BISEWEB\BLL\obj\Debug\BLL.pdb
+D:\bisegrw\BLL\bin\Debug\BLL.dll
+D:\bisegrw\BLL\bin\Debug\BLL.pdb
+D:\bisegrw\BLL\bin\Debug\BE.dll
+D:\bisegrw\BLL\bin\Debug\BE.pdb
+D:\bisegrw\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\bisegrw\BLL\obj\Debug\BLL.dll
+D:\bisegrw\BLL\obj\Debug\BLL.pdb
