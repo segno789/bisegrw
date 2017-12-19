@@ -24,6 +24,16 @@ namespace BISEWEB.Controllers
             return View(obj.GetNodes());
         }
        
+
+        public ActionResult Keepalive()
+        {
+            return Json("OK", JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult AjaxClick()
+        {
+            return Json("OK", JsonRequestBehavior.AllowGet);
+        }
         public ActionResult Contact()
         {
             return View(obj.GetNodes());

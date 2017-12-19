@@ -211,6 +211,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddStuffController.cs" />
     <Compile Include="Controllers\Generics.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -4641,11 +4642,13 @@
     <Content Include="Content\metronic\theme\assets\global\scripts\metronic.js" />
     <Content Include="Content\MyScripts\UserJS.js" />
     <Content Include="Content\otherImages\Logo.png" />
+    <Content Include="Content\timeout-dialog.css" />
     <Content Include="Content\tvmenucustom.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\timeout-icon.png" />
     <Content Include="Models\matric_new.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>matric_new.edmx</DependentUpon>
@@ -5133,6 +5136,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\timeout-dialog.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -5167,6 +5171,8 @@
     <Content Include="Views\Home\def.cshtml" />
     <Content Include="Views\Home\ghi.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Views\Shared\TimeOutPartial.cshtml" />
+    <Content Include="Views\AddStuff\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
