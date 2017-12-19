@@ -715,7 +715,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- END STYLE CUSTOMIZER -->
                 <!-- BEGIN PAGE HEADER-->
 
-                @*<div class="page-bar">
+                <div class="page-bar">
                     <ul class="page-breadcrumb col-md-10">
 
 
@@ -726,8 +726,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             @Html.ActionLink("Home", "Index", "Home")
                             @if (ViewContext.RouteData.Values["controller"].ToString() != "Home")
                             {
-                                @: @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())
-                                @: > @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
+                                <i class="fa fa-angle-right"></i>
+                                @*@: @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())*@
+                                @:  @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
                             }
                             <i class="fa fa-angle-right"></i>
                             @if (ViewContext.RouteData.Values["action"].ToString() != "Index")
@@ -739,7 +740,7 @@ License: You must have a valid license purchased only from themeforest(the above
                       
                     </ul>
 
-                </div>*@
+                </div>
                 <!-- END PAGE HEADER-->
                 <!-- BEGIN PAGE CONTENT-->
                 <div class="row">
