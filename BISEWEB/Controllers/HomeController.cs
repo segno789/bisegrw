@@ -20,7 +20,6 @@ namespace BISEWEB.Controllers
         public ActionResult About()
         {
 
-
             return View(obj.GetNodes());
         }
        
@@ -36,7 +35,11 @@ namespace BISEWEB.Controllers
         }
         public ActionResult Contact()
         {
-            return View(obj.GetNodes());
+            Session["ParentNodes"] = obj.GetNodes();
+
+            List<tblParentNode> obbb = Session["ParentNodes"] as List<tblParentNode>;
+
+            return View();
         }
         public void ClearSession()
         {
