@@ -225,6 +225,7 @@
     <Compile Include="Controllers\OMRController.cs" />
     <Compile Include="Controllers\OneWindowController.cs" />
     <Compile Include="Controllers\OnlineController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\RecheckingController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TraceDataController.cs" />
@@ -5180,6 +5181,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <Content Include="Views\Dashboard\Home.cshtml" />
+    <Content Include="Views\Partial\SessionOut.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5197,6 +5199,7 @@
     <Folder Include="Views\OMR\" />
     <Folder Include="Views\OneWindow\" />
     <Folder Include="Views\Online\" />
+    <Folder Include="Views\PartialView\" />
     <Folder Include="Views\Rechecking\" />
     <Folder Include="Views\Store\" />
     <Folder Include="Views\TraceData\" />
