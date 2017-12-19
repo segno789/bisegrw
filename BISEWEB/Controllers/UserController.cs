@@ -15,6 +15,17 @@ namespace BISEWEB.Controllers
         Generics obj = new Generics();
         BE.User obj_user = new BE.User();
 
+
+
+
+        public ActionResult ExtendSession()
+        {
+            System.Web.Security.FormsAuthentication.SetAuthCookie(User.Identity.Name, false);
+            var data = new { IsSuccess = true };
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+
         // GET: User
         public ActionResult Index()
         {

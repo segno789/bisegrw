@@ -1,4 +1,23 @@
 ﻿
-<h2>Session going to out </h2>
+@*<h2>Session going to out </h2>
 
-<button>Keep me login</button>
+<button>Keep me login</button>*@
+
+
+<div id="divPopupTimeOut" style="display:none; text-align: left; margin-top:15px; width:280px !important; position:fixed; top:40px; right:0px; z-index:9999; height:165px;" class="alert alert-warning">
+    <div class="row" style="margin-top:10px; margin-left:10px;">
+        Your session is about to expire!
+        <br />
+        <span id="CountDownHolder"></span>
+        <br />
+        Click OK to continue your session.
+    </div>
+    <div class="row">
+        <div class="text-center button-block" style="text-align:center; margin-top:22px;">
+
+
+            <button type="button" class="btn btn-default btn-sm" onclick="SessionTimeout.hidePopup();">Logout</button>
+            <button type="button" class="btn btn-default btn-sm" onclick="SessionTimeout.sendKeepAlive();">Keep Login</button>
+        </div>
+    </div>
+</div>

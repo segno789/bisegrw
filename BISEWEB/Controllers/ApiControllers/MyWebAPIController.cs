@@ -38,18 +38,18 @@ namespace BISEWEB.Controllers
         }
 
         //[HttpPost]
-        //public tblemployee ValidateUser([FromBody] tblemployee model)
+        //public void ActionResesult([FromBody] tblemployee model)
         //{
 
-        //    //var obj = miscdb.tblemployees.Where(a => a.emp_cd.Equals(model.emp_cd) && a.pass.Equals(model.pass)).FirstOrDefault();
-        //    //if (obj != null)
-        //    //{
-        //    //    //HttpContext.Current.Session["UserID"] = obj.emp_cd.ToString();
-        //    //    //HttpContext.Current.Session["UserName"] = obj.Name.ToString();
-        //    //    //return RedirectToAction("Index", "Home");
+        //    var obj = Miscdb.tblemployees.Where(a => a.emp_cd.Equals(model.emp_cd) && a.pass.Equals(model.pass)).FirstOrDefault();
+        //    if (obj != null)
+        //    {
+        //        //HttpContext.Current.Session["UserID"] = obj.emp_cd.ToString();
+        //        //HttpContext.Current.Session["UserName"] = obj.Name.ToString();
+        //        //return RedirectToAction("Index", "Home");
 
-        //    //}
-        //    //return obj;
+        //    }
+        //    return View();
         //}
 
     }

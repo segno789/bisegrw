@@ -7,12 +7,7 @@ using System.Web.Mvc;
 
 
 namespace BISEWEB.Controllers
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 4cfa5203a3eb7640537dd34ab4d0280cf7871dab
 {
     public class AddStuffController : Controller
     {
@@ -30,21 +25,21 @@ namespace BISEWEB.Controllers
 
         public ActionResult AddNewInst()
         {
-            return View(obj.GetNodes());
-<<<<<<< HEAD
-
-        }
-=======
-        }
-
->>>>>>> 4cfa5203a3eb7640537dd34ab4d0280cf7871dab
-        // GET: AddStuff
-        public ActionResult AddEmployee()
-        {
-            List<tblParentNode> obbb = Session["ParentNodes"] as List<tblParentNode>;
             return View();
 
         }
+
+        
+
+        // GET: AddStuff
+        public ActionResult AddEmployee()
+        {
+          
+            return View();
+
+        }
+
+       
     }
 
 }
