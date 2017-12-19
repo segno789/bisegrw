@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 
 namespace BISEWEB.Controllers
+
 {
     public class AddStuffController : Controller
     {
@@ -19,20 +20,26 @@ namespace BISEWEB.Controllers
         public ActionResult Index()
         {
             return View(obj.GetNodes());
-    
+
         }
 
         public ActionResult AddNewInst()
         {
-            return View(obj.GetNodes());
+            return View();
+
         }
+
+        
 
         // GET: AddStuff
         public ActionResult AddEmployee()
         {
-            List<tblParentNode> obbb = Session["ParentNodes"] as List<tblParentNode>;
+          
             return View();
 
         }
+
+       
     }
+
 }

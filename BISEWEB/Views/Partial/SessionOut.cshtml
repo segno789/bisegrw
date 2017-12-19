@@ -1,2 +1,27 @@
 ﻿
+<<<<<<< HEAD
 <div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>
+=======
+@*<h2>Session going to out </h2>
+
+<button>Keep me login</button>*@
+
+
+<div id="divPopupTimeOut" style="display:none; text-align: left; margin-top:15px; width:280px !important; position:fixed; top:40px; right:0px; z-index:9999; height:165px;" class="alert alert-warning">
+    <div class="row" style="margin-top:10px; margin-left:10px;">
+        Your session is about to expire!
+        <br />
+        <span id="CountDownHolder"></span>
+        <br />
+        Click OK to continue your session.
+    </div>
+    <div class="row">
+        <div class="text-center button-block" style="text-align:center; margin-top:22px;">
+
+
+            <button type="button" class="btn btn-default btn-sm" onclick="SessionTimeout.hidePopup();">Logout</button>
+            <button type="button" class="btn btn-default btn-sm" onclick="SessionTimeout.sendKeepAlive();">Keep Login</button>
+        </div>
+    </div>
+</div>
+>>>>>>> 79bbe7adc20391b6d27a8c6d43687118b5fa58d1
