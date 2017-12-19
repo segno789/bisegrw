@@ -10,7 +10,10 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_masterPage.cshtml</WebStackScaffolding_LayoutPageFile>
-    <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected><WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>    <WebStackScaffolding_DbContextTypeFullName>BISEWEB.Models.MiscDbEntities</WebStackScaffolding_DbContextTypeFullName>  </PropertyGroup>
+    <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
+    <WebStackScaffolding_DbContextTypeFullName>BISEWEB.Models.MiscDbEntities</WebStackScaffolding_DbContextTypeFullName>
+  </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">

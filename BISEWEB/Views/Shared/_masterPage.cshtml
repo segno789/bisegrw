@@ -728,12 +728,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             {
                                 <i class="fa fa-angle-right"></i>
                                 @*@: @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())*@
-                                @:  @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
+                                @:  @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())
                             }
                             <i class="fa fa-angle-right"></i>
                             @if (ViewContext.RouteData.Values["action"].ToString() != "Index")
                             {
-                              @: @Html.ActionLink(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), "?Length=4")
+                              @: @Html.ActionLink(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
 }
                            
                         </li>
@@ -1434,7 +1434,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <i class="icon-arrow-up"></i>
         </div>
     </div>
-
+   @* @Html.Partial("../Partial/SessionOut")*@
     
     <!-- END FOOTER -->
     <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -1489,11 +1489,26 @@ License: You must have a valid license purchased only from themeforest(the above
             QuickSidebar.init();
             Demo.init();
 
-           // UIIdleTimeout.init();
+            // UIIdleTimeout.init();
+
+            $(function () {
+                var fnTimeOut = function () {
+
+                    jQuery.timeoutDialog.setupDialogTimer({
+                        timeout: 1,
+                        countdown: 20,
+                        logout_redirect_url: '@Url.Action("Logout", "Home")',
+                        keep_alive_url: '@Url.Action("Keepalive", "Home")'
+                    });
+                };
+                fnTimeOut();
+            });
+
         });
 
     </script>
 
+    
 
   
     @Scripts.Render("~/bundles/jqueryval")
@@ -1505,7 +1520,6 @@ License: You must have a valid license purchased only from themeforest(the above
        
         $(function () {
             var fnTimeOut = function () {
-                alert('keepalive')
                 jQuery.timeoutDialog.setupDialogTimer({
                     timeout: 1,
                     countdown: 20,

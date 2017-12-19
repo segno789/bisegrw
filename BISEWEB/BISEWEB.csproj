@@ -5148,6 +5148,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\timeout-dialog.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -5199,7 +5200,6 @@
     <Folder Include="Views\OMR\" />
     <Folder Include="Views\OneWindow\" />
     <Folder Include="Views\Online\" />
-    <Folder Include="Views\PartialView\" />
     <Folder Include="Views\Rechecking\" />
     <Folder Include="Views\Store\" />
     <Folder Include="Views\TraceData\" />

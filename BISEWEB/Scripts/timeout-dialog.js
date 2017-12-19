@@ -43,6 +43,7 @@ String.prototype.format = function () {
 
 !function ($) {
     $.timeoutDialog = {
+        
         settings: {
             timeout: 1200,
             countdown: 60,
