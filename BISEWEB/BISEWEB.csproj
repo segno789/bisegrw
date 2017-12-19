@@ -212,11 +212,27 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddStuffController.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\BarCodeAdmissionController.cs" />
+    <Compile Include="Controllers\ChangeStuffController.cs" />
+    <Compile Include="Controllers\ConductController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\FinanceController.cs" />
+>>>>>>> 05115b3a94e6ee001a31abca420c2becd2129b86
     <Compile Include="Controllers\Generics.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ApiControllers\MyWebAPIController.cs" />
+    <Compile Include="Controllers\OMRController.cs" />
+    <Compile Include="Controllers\OneWindowController.cs" />
+    <Compile Include="Controllers\OnlineController.cs" />
+    <Compile Include="Controllers\RecheckingController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\TraceDataController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ViewReportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5167,12 +5183,14 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\UserLogin.cshtml" />
     <Content Include="Views\Shared\_masterPage.cshtml" />
-    <Content Include="Views\Home\abc.cshtml" />
-    <Content Include="Views\Home\def.cshtml" />
-    <Content Include="Views\Home\ghi.cshtml" />
     <Content Include="Web.config" />
+<<<<<<< HEAD
     <Content Include="Views\Shared\TimeOutPartial.cshtml" />
     <Content Include="Views\AddStuff\Index.cshtml" />
+=======
+    <Content Include="Views\AddStuff\AddEmployee.cshtml" />
+    <Content Include="Views\Dashboard\Home.cshtml" />
+>>>>>>> 05115b3a94e6ee001a31abca420c2becd2129b86
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5182,6 +5200,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Administration\" />
+    <Folder Include="Views\BarCodeAdmission\" />
+    <Folder Include="Views\ChangeStuff\" />
+    <Folder Include="Views\Conduct\" />
+    <Folder Include="Views\Finance\" />
+    <Folder Include="Views\OMR\" />
+    <Folder Include="Views\OneWindow\" />
+    <Folder Include="Views\Online\" />
+    <Folder Include="Views\Rechecking\" />
+    <Folder Include="Views\Store\" />
+    <Folder Include="Views\TraceData\" />
+    <Folder Include="Views\ViewReports\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
