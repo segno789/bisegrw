@@ -212,14 +212,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddStuffController.cs" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4cfa5203a3eb7640537dd34ab4d0280cf7871dab
     <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\BarCodeAdmissionController.cs" />
     <Compile Include="Controllers\ChangeStuffController.cs" />
     <Compile Include="Controllers\ConductController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FinanceController.cs" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4cfa5203a3eb7640537dd34ab4d0280cf7871dab
     <Compile Include="Controllers\Generics.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -227,6 +233,7 @@
     <Compile Include="Controllers\OMRController.cs" />
     <Compile Include="Controllers\OneWindowController.cs" />
     <Compile Include="Controllers\OnlineController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\RecheckingController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TraceDataController.cs" />
@@ -4657,13 +4664,11 @@
     <Content Include="Content\metronic\theme\assets\global\scripts\metronic.js" />
     <Content Include="Content\MyScripts\UserJS.js" />
     <Content Include="Content\otherImages\Logo.png" />
-    <Content Include="Content\timeout-dialog.css" />
     <Content Include="Content\tvmenucustom.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\timeout-icon.png" />
     <Content Include="Models\matric_new.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>matric_new.edmx</DependentUpon>
@@ -5151,7 +5156,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\timeout-dialog.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -5183,6 +5187,7 @@
     <Content Include="Views\User\UserLogin.cshtml" />
     <Content Include="Views\Shared\_masterPage.cshtml" />
     <Content Include="Web.config" />
+<<<<<<< HEAD
 
     <Content Include="Views\Shared\TimeOutPartial.cshtml" />
     <Content Include="Views\AddStuff\Index.cshtml" />
@@ -5190,6 +5195,11 @@
     <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <Content Include="Views\Dashboard\Home.cshtml" />
 
+=======
+    <Content Include="Views\AddStuff\AddEmployee.cshtml" />
+    <Content Include="Views\Dashboard\Home.cshtml" />
+    <Content Include="Views\Partial\SessionOut.cshtml" />
+>>>>>>> 4cfa5203a3eb7640537dd34ab4d0280cf7871dab
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5207,6 +5217,7 @@
     <Folder Include="Views\OMR\" />
     <Folder Include="Views\OneWindow\" />
     <Folder Include="Views\Online\" />
+    <Folder Include="Views\PartialView\" />
     <Folder Include="Views\Rechecking\" />
     <Folder Include="Views\Store\" />
     <Folder Include="Views\TraceData\" />
