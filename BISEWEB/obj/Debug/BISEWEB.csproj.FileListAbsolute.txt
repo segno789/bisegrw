@@ -103,7 +103,6 @@ D:\bisegrw\BISEWEB\bin\roslyn\System.Reflection.Metadata.dll
 D:\bisegrw\BISEWEB\bin\roslyn\vbc.exe
 D:\bisegrw\BISEWEB\bin\roslyn\VBCSCompiler.exe
 D:\bisegrw\BISEWEB\bin\roslyn\VBCSCompiler.exe.config
-D:\bisegrw\BISEWEB\bin\BISEWEB.dll.config
 D:\bisegrw\BISEWEB\bin\BISEWEB.dll
 D:\bisegrw\BISEWEB\bin\BISEWEB.pdb
 D:\bisegrw\BISEWEB\bin\Antlr3.Runtime.dll
@@ -182,3 +181,4 @@ D:\bisegrw\BISEWEB\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\bisegrw\BISEWEB\obj\Debug\BISEWEB.csprojResolveAssemblyReference.cache
 D:\bisegrw\BISEWEB\obj\Debug\BISEWEB.dll
 D:\bisegrw\BISEWEB\obj\Debug\BISEWEB.pdb
+D:\bisegrw\BISEWEB\bin\BISEWEB.dll.config

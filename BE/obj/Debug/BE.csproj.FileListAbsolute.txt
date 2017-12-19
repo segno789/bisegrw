@@ -4,6 +4,5 @@ D:\BISE MVC\BISEWEB\BE\obj\Debug\BE.dll
 D:\BISE MVC\BISEWEB\BE\obj\Debug\BE.pdb
 D:\bisegrw\BE\bin\Debug\BE.dll
 D:\bisegrw\BE\bin\Debug\BE.pdb
-D:\bisegrw\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
 D:\bisegrw\BE\obj\Debug\BE.dll
 D:\bisegrw\BE\obj\Debug\BE.pdb

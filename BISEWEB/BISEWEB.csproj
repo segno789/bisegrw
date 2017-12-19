@@ -212,15 +212,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddStuffController.cs" />
-<<<<<<< HEAD
-=======
+
     <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\BarCodeAdmissionController.cs" />
     <Compile Include="Controllers\ChangeStuffController.cs" />
     <Compile Include="Controllers\ConductController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FinanceController.cs" />
->>>>>>> 05115b3a94e6ee001a31abca420c2becd2129b86
+
     <Compile Include="Controllers\Generics.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -5184,13 +5183,13 @@
     <Content Include="Views\User\UserLogin.cshtml" />
     <Content Include="Views\Shared\_masterPage.cshtml" />
     <Content Include="Web.config" />
-<<<<<<< HEAD
+
     <Content Include="Views\Shared\TimeOutPartial.cshtml" />
     <Content Include="Views\AddStuff\Index.cshtml" />
-=======
+
     <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <Content Include="Views\Dashboard\Home.cshtml" />
->>>>>>> 05115b3a94e6ee001a31abca420c2becd2129b86
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
