@@ -49,8 +49,5 @@ namespace BISEWEB.Controllers
             return obj;
 
         }
-
-
-
     }
 }

@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link type="text/css" id="style_color" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/themes/darkblue.css") rel="stylesheet" />
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/custom.css") rel="stylesheet" />
 
-
+    <link type="text/css" href=@Url.Content("~/Content/timeout-dialog.css") rel="stylesheet" />
 
 
 
@@ -1463,6 +1463,10 @@ License: You must have a valid license purchased only from themeforest(the above
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/demo.js")></script>
 
    
+    <script type="text/javascript" src=@Url.Content("~/Scripts/timeout-dialog.js")></script>
+
+
+
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
         jQuery(document).ready(function () {
@@ -1485,7 +1489,7 @@ License: You must have a valid license purchased only from themeforest(the above
             QuickSidebar.init();
             Demo.init();
 
-            UIIdleTimeout.init();
+           // UIIdleTimeout.init();
         });
 
     </script>
@@ -1495,6 +1499,39 @@ License: You must have a valid license purchased only from themeforest(the above
     @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("PageScripts", required: false)
 
+
+    @*<div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>*@
+    <script>
+       
+        $(function () {
+            var fnTimeOut = function () {
+                alert('keepalive')
+                jQuery.timeoutDialog.setupDialogTimer({
+                    timeout: 1,
+                    countdown: 20,
+                    logout_redirect_url: '@Url.Action("Logout", "Home")',
+                    keep_alive_url: '@Url.Action("Keepalive", "Home")'
+               });
+            };
+            fnTimeOut();
+        });
+    </script>
+
+
+
+    <script>
+    $(function () {
+        $("#btn1").click(function () {
+            $.get("@Url.Action("AjaxClick", "Home")", function (data) {
+                console.log(data);
+            });
+        });
+    });
+
+    $(document).ajaxComplete(function () {
+        jQuery.timeoutDialog.setupDialogTimer();
+    });
+    </script>
 
     @*<div class="modal fade in" id="idle-timeout-dialog" data-backdrop="static" aria-hidden="false" style="display: block; padding-right: 17px;"><div class="modal-backdrop fade in" style="height: 493px;"></div><div class="modal-dialog modal-small"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Your session is about to expire.</h4></div><div class="modal-body"><p><i class="fa fa-warning"></i> You session will be locked in <span id="idle-timeout-counter">20</span> seconds.</p><p>Do you want to continue your session?</p></div><div class="modal-footer"><button id="idle-timeout-dialog-logout" type="button" class="btn btn-default">No, Logout</button><button id="idle-timeout-dialog-keepalive" type="button" class="btn btn-primary" data-dismiss="modal">Yes, Keep Working</button></div></div></div></div>*@
 
