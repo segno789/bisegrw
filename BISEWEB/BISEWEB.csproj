@@ -5188,6 +5188,7 @@
     <Content Include="Views\Dashboard\Home.cshtml" />
     <Content Include="Views\Partial\SessionOut.cshtml" />
     <Content Include="Views\AddStuff\AddNewInst.cshtml" />
+    <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
