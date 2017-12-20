@@ -5184,9 +5184,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\Shared\TimeOutPartial.cshtml" />
     <Content Include="Views\AddStuff\Index.cshtml" />
-    <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <Content Include="Views\Dashboard\Home.cshtml" />
-    <Content Include="Views\AddStuff\AddEmployee.cshtml" />
     <Content Include="Views\Dashboard\Home.cshtml" />
     <Content Include="Views\Partial\SessionOut.cshtml" />
     <Content Include="Views\AddStuff\AddNewInst.cshtml" />
