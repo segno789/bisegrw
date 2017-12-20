@@ -4,5 +4,780 @@
     Layout = "~/Views/Shared/_masterPage.cshtml";
 }
 
-<h2>AddNewInst</h2>
+@*<h2>AddNewInst</h2>
 
+
+
+<div>*@
+
+
+    @*<div class="page-header"></div>*@
+
+
+    <div class="col-md-12">
+
+            <div class="portlet light bordered">
+
+                <div class="portlet-title">
+                    <div class="caption font-green-haze">
+                        <span class="caption-subject bold uppercase">Add New Institute</span>
+                    </div>
+                    <div class="tools">
+                        <a href="" class="collapse" data-original-title="" title=""></a>
+                    </div>
+                </div>
+
+                <div class="portlet-body form" style="display: block;">
+                    <div class="form-horizontal">
+                        <div class="form-body">
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Institute Name</label>
+                                <div class="col-md-8">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtInstName" type="text" id="RegUser_txtInstName" class="form-control" placeholder="Enter Institute Name">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Institute Address</label>
+                                <div class="col-md-8">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtAddr" type="text" id="RegUser_txtAddr" class="form-control" placeholder="Enter Institute Address">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Institute Code</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel4">
+
+                                            <input name="ctl00$RegUser$txtInst_cd" type="text" readonly="readonly" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$txtInst_cd\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="RegUser_txtInst_cd" class="form-control" placeholder="Institute Code">
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="col-md-2 control-label" for="form_control_1">Institute ID</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel5">
+
+                                            <input name="ctl00$RegUser$txtId" type="text" readonly="readonly" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$txtId\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="RegUser_txtId" class="form-control" placeholder="Institute ID">
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Tehsil</label>
+                                <div class="col-md-3">
+                                    <select name="ctl00$RegUser$ddlTehsil" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlTehsil\',\'\')', 0)" id="RegUser_ddlTehsil" class="form-control">
+                                        <option selected="selected" value="0">None</option>
+                                        <option value="1">KAMOKE</option>
+                                        <option value="2">GUJRANWALA</option>
+                                        <option value="3">WAZIRABAD</option>
+                                        <option value="4">NOWSHERA VIRKAN</option>
+                                        <option value="5">GUJRAT</option>
+                                        <option value="6">KHARIAN</option>
+                                        <option value="7">SARAI ALAMGIR</option>
+                                        <option value="8">HAFIZABAD</option>
+                                        <option value="9">PINDI BHATTIAN</option>
+                                        <option value="10">MANDI BAHA-UD-DIN</option>
+                                        <option value="11">PHALIA</option>
+                                        <option value="12">MALAKWAL</option>
+                                        <option value="13">NAROWAL</option>
+                                        <option value="14">SHAKARGARH</option>
+                                        <option value="15">SIALKOT</option>
+                                        <option value="16">PASRUR</option>
+                                        <option value="17">DASKA</option>
+                                        <option value="18">SAMBRIAL</option>
+                                        <option value="19">ZAFARWAL</option>
+
+                                    </select>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">District</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel3">
+
+                                            <span id="RegUser_lbDist" class="col-md-2 control-label" style="color:Green;font-size:Large;font-weight:bold;"></span>
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Institute Type</label>
+                                <div class="col-md-3">
+                                    <select name="ctl00$RegUser$ddlInstType" id="RegUser_ddlInstType" class="form-control">
+                                        <option selected="selected" value="1">1-Govt</option>
+                                        <option value="2">2-Private</option>
+
+                                    </select>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Password</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtPswd" type="password" id="RegUser_txtPswd" class="form-control">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Education Level</label>
+                                <div class="col-md-3">
+                                    <div id="RegUser_UpdatePanel8">
+
+                                        <select name="ctl00$RegUser$ddlEduLvl" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlEduLvl\',\'\')', 0)" id="RegUser_ddlEduLvl" class="form-control">
+                                            <option selected="selected" value="1">1-School</option>
+                                            <option value="2">2-College</option>
+                                            <option value="3">3-Higher Secondary School</option>
+
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Status</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div class="checker" id="uniform-RegUser_chkIsRural"><span><input id="RegUser_chkIsRural" type="checkbox" name="ctl00$RegUser$chkIsRural"></span></div><label for="RegUser_chkIsRural">Is Rural</label>
+                                        <div class="checker" id="uniform-RegUser_chkIsActive"><span><input id="RegUser_chkIsActive" type="checkbox" name="ctl00$RegUser$chkIsActive"></span></div><label for="RegUser_chkIsActive">Is Active</label>
+                                        <div class="checker" id="uniform-RegUser_chkICommunity"><span><input id="RegUser_chkICommunity" type="checkbox" name="ctl00$RegUser$chkICommunity"></span></div><label for="RegUser_chkICommunity">Is Community</label>
+
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Gender</label>
+                                <div class="col-md-3">
+                                    <select name="ctl00$RegUser$ddlGender" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlGender\',\'\')', 0)" id="RegUser_ddlGender" class="form-control">
+                                        <option selected="selected" value="1">Male</option>
+                                        <option value="2">Female</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Select Zone</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel9">
+
+                                            <select name="ctl00$RegUser$ddlZoneMatric" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneMatric\',\'\')', 0)" id="RegUser_ddlZoneMatric" class="form-control">
+                                                <option selected="selected" value="0">None</option>
+                                                <option value="1">AHMAD NAGAR</option>
+                                                <option value="2">ALI PUR CHATHA</option>
+                                                <option value="3">AROOP</option>
+                                                <option value="4">AULAKH BHIKEY</option>
+                                                <option value="5">BHIRI KHURD</option>
+                                                <option value="6">BHAROKE CHEEMA</option>
+                                                <option value="7">BUDHA GORAYA</option>
+                                                <option value="8">BHATTI BHANGO</option>
+                                                <option value="9">DHOUNKAL</option>
+                                                <option value="10">DOGRANWALA</option>
+                                                <option value="11">EMINABAD</option>
+                                                <option value="12">GHAKHAR</option>
+                                                <option value="13">FEROZ WALA</option>
+                                                <option value="14">JALAL BALGHAN</option>
+                                                <option value="15">JUARA SIAN</option>
+                                                <option value="16">JHALLAN</option>
+                                                <option value="17">KALASKE</option>
+                                                <option value="18">KARYAL KALAN</option>
+                                                <option value="19">KAMONKE</option>
+                                                <option value="20">KALI SOBA</option>
+                                                <option value="21">LADHEWALA WARRIACH</option>
+                                                <option value="22">MANDIALA TEGA</option>
+                                                <option value="23">MADHARIANWALA KALAR</option>
+                                                <option value="24">MARI BHINDRAN</option>
+                                                <option value="25">NIZAM PUR</option>
+                                                <option value="26">NOWSHERA VIRKAN</option>
+                                                <option value="27">NOKHAR</option>
+                                                <option value="28">PAPNAKHA</option>
+                                                <option value="29">QILA DIDAR SINGH</option>
+                                                <option value="30">QILA MIAN SINGH</option>
+                                                <option value="31">RAHWALI</option>
+                                                <option value="32">RAJA (BOYS ONLY)</option>
+                                                <option value="33">RASOOL NAGAR</option>
+                                                <option value="34">SADHOKE (GIRLS ONLY)</option>
+                                                <option value="35">SAROKE</option>
+                                                <option value="36">SODHRA</option>
+                                                <option value="37">TALWANDI MUSA KHAN</option>
+                                                <option value="38">TALWANDI KHAJOOR WALI</option>
+                                                <option value="39">TATTLAY AALI</option>
+                                                <option value="40">UDHOWALI</option>
+                                                <option value="41">VERPAL</option>
+                                                <option value="42">WANDO</option>
+                                                <option value="43">WAZIRABAD</option>
+                                                <option value="44">SATELLITE TOWN </option>
+                                                <option value="45">PEOPLES COLONY </option>
+                                                <option value="46">MODEL TOWN </option>
+                                                <option value="47">KHIALI </option>
+                                                <option value="48">SARFARAZ COLONY </option>
+                                                <option value="49">GUJRANWALA CITY</option>
+                                                <option value="50">JALAL PUR BHATTIAN</option>
+                                                <option value="51">JURIAN</option>
+                                                <option value="52">KALEKE MANDI</option>
+                                                <option value="53">KASOKI</option>
+                                                <option value="54">KOLO TARAR</option>
+                                                <option value="55">PINDI BHATTIAN</option>
+                                                <option value="56">QADARABAD COLONY</option>
+                                                <option value="57">RASOOLPUR TARAR</option>
+                                                <option value="58">SAGGAR KALAN</option>
+                                                <option value="59">SUKHEKE MANDI</option>
+                                                <option value="60">VANIKE TARAR</option>
+                                                <option value="61">VINNI</option>
+                                                <option value="62">HAFIZABAD</option>
+                                                <option value="63">UMRA KALAN</option>
+                                                <option value="64">BAGRIANWALA</option>
+                                                <option value="65">BHAGOWAL KALAN</option>
+                                                <option value="66">BEHLOLPUR (BOYS ONLY)</option>
+                                                <option value="67">BAZURGWAL </option>
+                                                <option value="68">BHURCHH</option>
+                                                <option value="69">CHOPALA</option>
+                                                <option value="70">CHAK KAMALA</option>
+                                                <option value="71">CHANNAN</option>
+                                                <option value="72">CHANNI DEONA</option>
+                                                <option value="73">CHACHIAN</option>
+                                                <option value="74">DAULAT NAGAR</option>
+                                                <option value="75">DINGA</option>
+                                                <option value="76">FATEH PUR</option>
+                                                <option value="77">GULIANA</option>
+                                                <option value="78">GUNJA</option>
+                                                <option value="79">GOLEKE</option>
+                                                <option value="80">JALALPUR SOBTIAN</option>
+                                                <option value="81">JALAL PUR JUTTAN</option>
+                                                <option value="82">JHEURANWALI</option>
+                                                <option value="83">KARIANWALA</option>
+                                                <option value="84">KHARIAN</option>
+                                                <option value="85">KOTLA ARAB ALI KHAN</option>
+                                                <option value="87">KHOHAR</option>
+                                                <option value="88">KHARKA KHADRIALA</option>
+                                                <option value="89">KUNJAH</option>
+                                                <option value="90">KUTHIALA CHANAB</option>
+                                                <option value="91">LAKHANWAL</option>
+                                                <option value="92">LALA MUSSA</option>
+                                                <option value="93">LADHA SADHA</option>
+                                                <option value="94">MANGLIA</option>
+                                                <option value="95">MALKA</option>
+                                                <option value="96">MALHO KHOKHAR</option>
+                                                <option value="97">MANGOWAL</option>
+                                                <option value="99">PERO SHAH</option>
+                                                <option value="100">PUNJAN KISANA</option>
+                                                <option value="101">SOOK KALAN</option>
+                                                <option value="102">SEHNA</option>
+                                                <option value="103">SHADIWAL</option>
+                                                <option value="104">SHEIKPUR</option>
+                                                <option value="105">SARAI ALAMGIR</option>
+                                                <option value="106">SIDH</option>
+                                                <option value="107">THOTHA RAI BAHADAR</option>
+                                                <option value="108">TANDA</option>
+                                                <option value="109">GUJRAT</option>
+                                                <option value="110">BAR MUSA</option>
+                                                <option value="111">BHEROWAL</option>
+                                                <option value="112">BHUA HASSAN</option>
+                                                <option value="113">BOSAL</option>
+                                                <option value="114">CHAK NO. 26</option>
+                                                <option value="115">DHOK KASIB</option>
+                                                <option value="116">GOJRA</option>
+                                                <option value="117">HASILAN WALA</option>
+                                                <option value="118">HEAD RASUL</option>
+                                                <option value="119">HELAN </option>
+                                                <option value="120">HARIA</option>
+                                                <option value="121">JOKALIAN</option>
+                                                <option value="122">KHEWA</option>
+                                                <option value="123">KITHIALA SHEIKHAN</option>
+                                                <option value="124">KADHAR</option>
+                                                <option value="125">MAKHNAWALI</option>
+                                                <option value="126">MIANWAL RANJHA</option>
+                                                <option value="127">MALIK WAL</option>
+                                                <option value="128">MAJHI</option>
+                                                <option value="129">MIANA GONDAL</option>
+                                                <option value="130">MANGAT</option>
+                                                <option value="131">MANO CHAK</option>
+                                                <option value="132">MONA DEPOT</option>
+                                                <option value="133">PAHRIAN WALI</option>
+                                                <option value="134">PHALIA</option>
+                                                <option value="135">QADER ABAD</option>
+                                                <option value="136">RUKKAN</option>
+                                                <option value="137">SAHNAH</option>
+                                                <option value="138">SOHAWA BOLANI</option>
+                                                <option value="139">WARA AALAM SHAH</option>
+                                                <option value="140">MANDI BAHAUDDIN</option>
+                                                <option value="141">ADAMKE CHEEMA</option>
+                                                <option value="142">BEGOWALA</option>
+                                                <option value="143">BUDIANA</option>
+                                                <option value="144">BOGRAY</option>
+                                                <option value="145">BHILOMUHAR</option>
+                                                <option value="146">BHOPALWALA</option>
+                                                <option value="147">BHALO WALI</option>
+                                                <option value="148">BHARTH</option>
+                                                <option value="149">BHAGWAL AWAN</option>
+                                                <option value="150">BHAGOWAL</option>
+                                                <option value="151">BAN BAJWA</option>
+                                                <option value="152">BHAGHAT PUR</option>
+                                                <option value="153">BUDHA GORAYA </option>
+                                                <option value="154">CHARWAH</option>
+                                                <option value="155">CHAPRAR</option>
+                                                <option value="156">CHOBARA</option>
+                                                <option value="157">CHAWINDA</option>
+                                                <option value="158">DASKA</option>
+                                                <option value="159">DALLOWALI</option>
+                                                <option value="160">GUNNA KALAN</option>
+                                                <option value="161">GLOTTIAN KHURD</option>
+                                                <option value="162">GUDGOR</option>
+                                                <option value="163">GHARTAL</option>
+                                                <option value="164">GOJRA</option>
+                                                <option value="165">GHUINKE</option>
+                                                <option value="166">GONDAL</option>
+                                                <option value="167">GHTALIAN</option>
+                                                <option value="168">HEAD MARALA</option>
+                                                <option value="169">JAMKE CHEEMA</option>
+                                                <option value="170">JURIAN KALAN/KAPOOR WALI</option>
+                                                <option value="171">KALASWALA</option>
+                                                <option value="172">KHAN PUR SYEDAN</option>
+                                                <option value="173">KOTLI FAQIR CHAND</option>
+                                                <option value="174">KOTLI LOHARAN</option>
+                                                <option value="175">KULLOWAL</option>
+                                                <option value="176">KALA GHUMANAN</option>
+                                                <option value="177">KHAROTA SYEDAN</option>
+                                                <option value="178">LORHIKI</option>
+                                                <option value="179">MAJRA</option>
+                                                <option value="180">MARAJKE</option>
+                                                <option value="181">MARAKIWAL</option>
+                                                <option value="182">MALKHANWALA</option>
+                                                <option value="183">MITRANWALI</option>
+                                                <option value="184">MUNDEKEY GORAYA</option>
+                                                <option value="185">PASRUR</option>
+                                                <option value="186">PHOKLIAN</option>
+                                                <option value="187">PAKKI KOTLI</option>
+                                                <option value="188">QILA KALAR WALA</option>
+                                                <option value="189">RASOOL PUR BHALLIAN</option>
+                                                <option value="190">SAMBRIAL</option>
+                                                <option value="191">SAHOWALA</option>
+                                                <option value="192">SATRAH</option>
+                                                <option value="193">SIRANWALI</option>
+                                                <option value="194">THROO MANDI</option>
+                                                <option value="195">UGGOKE</option>
+                                                <option value="197">WADALA SANDHWAN</option>
+                                                <option value="198">SIALKOT CITY/HABIB PURA</option>
+                                                <option value="199">MODEL TOWN SIALKOT (GIRLS ONLY)</option>
+                                                <option value="200">GOHAD PUR MURAD PUR  SIALKOT</option>
+                                                <option value="201">SIALKOT/HAJIPURA</option>
+                                                <option value="202">SIALKOT CANTT.</option>
+                                                <option value="203">AKHLAS PUR</option>
+                                                <option value="204">AURANGABAD</option>
+                                                <option value="205">AHMAD ABAD</option>
+                                                <option value="206">BADDOMALHI</option>
+                                                <option value="207">BHIRI KHURD (BOYS ONLY)</option>
+                                                <option value="208">DHUDO CHAK</option>
+                                                <option value="209">DHAMTHAL</option>
+                                                <option value="210">DARMAN</option>
+                                                <option value="211">DEHLRA</option>
+                                                <option value="212">DOMALA</option>
+                                                <option value="213">GHOTA FATEH GARH</option>
+                                                <option value="214">JABBAL</option>
+                                                <option value="215">JASSAR</option>
+                                                <option value="216">KANJRUR</option>
+                                                <option value="217">KOT NAINAN</option>
+                                                <option value="218">KOTLA AFGHANAN</option>
+                                                <option value="219">LASSAR KALAN</option>
+                                                <option value="220">MAINGRI</option>
+                                                <option value="221">NONAR</option>
+                                                <option value="222">RUPPO CHAK</option>
+                                                <option value="223">SAHARI</option>
+                                                <option value="224">SANKHATRA</option>
+                                                <option value="225">SADDO WALA</option>
+                                                <option value="226">SUKHO CHAK</option>
+                                                <option value="227">SHAKARGARH</option>
+                                                <option value="228">TALWANDI BHINDRAN</option>
+                                                <option value="229">ZAFAR WAL</option>
+                                                <option value="230">NAROWAL</option>
+                                                <option value="231">BUBBER</option>
+                                                <option value="232">CHACK NIZAM</option>
+                                                <option value="233">CHAJOKE</option>
+                                                <option value="234">GUMANWALA</option>
+                                                <option value="235">GONDLANWALA</option>
+                                                <option value="237">DANDI NIZAM</option>
+                                                <option value="238">SAADAT PUR</option>
+                                                <option value="239">KAANPUR</option>
+                                                <option value="240">SABAZ KOT</option>
+                                                <option value="241">SOHAWA</option>
+                                                <option value="242">SOKINWIND</option>
+                                                <option value="243">BARA PIND</option>
+                                                <option value="244">DHABLIWALA</option>
+                                                <option value="245">HADNAAL/CHAMMAL</option>
+                                                <option value="246">MARYAL</option>
+                                                <option value="247">PINDI AMRA</option>
+                                                <option value="248">RIYYA KHAS</option>
+                                                <option value="249">SHAHPUR BHANGO</option>
+                                                <option value="250">NOTHEN</option>
+                                                <option value="251">CHAK PEERANA</option>
+                                                <option value="252">KALRA KALAN</option>
+                                                <option value="253">MANDAIR</option>
+                                                <option value="254">THEKRIAN</option>
+                                                <option value="255">BHAKHI SHARIF</option>
+                                                <option value="256">CHAILIAN WALA</option>
+                                                <option value="258">NATLA KALAN</option>
+                                                <option value="259">RAMBRI</option>
+                                                <option value="260">RAIRKA BALA</option>
+                                                <option value="261">SAYEDA SHARIF</option>
+                                                <option value="262">CHABBA SANDHWAN</option>
+                                                <option value="263"> KHATTHOR KALAN </option>
+                                                <option value="264"> MALKAY </option>
+                                                <option value="265"> KASESAY</option>
+                                                <option value="266"> MANGAT NECHA </option>
+                                                <option value="267"> THATHA KHAIRO MATMAL</option>
+                                                <option value="268"> GOTRIALA </option>
+                                                <option value="269"> JORRA KARNANA </option>
+                                                <option value="270"> SHAKREELA </option>
+                                                <option value="272"> DHAREKAN KALAN</option>
+                                                <option value="273">DHOOL RANJHA</option>
+                                                <option value="274">PINDI KALO</option>
+                                                <option value="275">WASO </option>
+                                                <option value="276">JHETTHIKAY </option>
+                                                <option value="277">KHAROLIAN</option>
+                                                <option value="278">BHAJHNA</option>
+                                                <option value="279">DHARAG MIANA</option>
+                                                <option value="280">DERIAN WALA </option>
+                                                <option value="281">PHUGWARRI </option>
+                                                <option value="282">SETTHIALA </option>
+                                                <option value="283">SOHAWARRA</option>
+                                                <option value="284">VANIA WALA</option>
+                                                <option value="285">DHANSARPAIN</option>
+                                                <option value="286">BHAGYARI</option>
+                                                <option value="287">KOTLI NAWAB</option>
+                                                <option value="288">HFIZ  HAYAT CAMPUS</option>
+                                                <option value="289">BOA</option>
+                                                <option value="290">PIND MAKO</option>
+                                                <option value="291">BARU</option>
+                                                <option value="292">KANDAN SIAN</option>
+                                                <option value="293">MADDO KAHLOAN</option>
+                                                <option value="294">CENTRAL JAIL GUJRANWALA</option>
+                                                <option value="295">DISTRICT JAIL GUJRAT</option>
+                                                <option value="296">DISTRICT JAIL MANDI BAHA UD DIN</option>
+                                                <option value="297">DISTRICT JAIL SIALKOT</option>
+                                                <option value="298">BAMBANWALA (COMBINE)</option>
+                                                <option value="299">KAPOOR WALI (GIRLS ONLY)</option>
+                                                <option value="300">VERYO (GIRLS ONLY)</option>
+                                                <option value="301">BUSTAN AFGHANA (GIRLS ONLY)</option>
+                                                <option value="302">BHATTI AFGHANA</option>
+                                                <option value="303">KALIANWALA</option>
+                                                <option value="304">TAHLI GORAYA</option>
+                                                <option value="305">THATTA MUSA</option>
+                                                <option value="306">KOPRA KHURD</option>
+                                                <option value="307">PEERO CHAK</option>
+                                                <option value="308">MALI PUR</option>
+
+                                            </select>
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="col-md-2 control-label" for="form_control_1">Zone Matric</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel10">
+
+                                            <input name="ctl00$RegUser$txtZoneMatric" type="text" id="RegUser_txtZoneMatric" class="form-control">
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Select Zone</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel7">
+
+                                            <select name="ctl00$RegUser$ddlZoneInter" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneInter\',\'\')', 0)" id="RegUser_ddlZoneInter" class="form-control">
+                                                <option selected="selected" value="0">None</option>
+                                                <option value="501">AHMED  NAGAR</option>
+                                                <option value="502">ALI PUR CHATTHA</option>
+                                                <option value="503">EMINABAD</option>
+                                                <option value="504">GHAKHAR</option>
+                                                <option value="505">JALAL BALAGAN</option>
+                                                <option value="506">KALASKE</option>
+                                                <option value="507">KAMOKE</option>
+                                                <option value="508">MANDIALA TEGA</option>
+                                                <option value="509">NOWSHEHRA VIRKAN</option>
+                                                <option value="510">QILA DIDAR SINGH</option>
+                                                <option value="511">RAHWALI</option>
+                                                <option value="512">TATLAY AALI</option>
+                                                <option value="513">WAHNDO</option>
+                                                <option value="514">WAZIRABAD</option>
+                                                <option value="515">KHIALY </option>
+                                                <option value="516">MODEL TOWN </option>
+                                                <option value="517">PEOPLES COLONY</option>
+                                                <option value="518">SATELLITE TOWN </option>
+                                                <option value="519">GUJRANWALA CITY</option>
+                                                <option value="520">JALAL PUR BHATTIAN</option>
+                                                <option value="521">KALE KE MANDI</option>
+                                                <option value="522">PINDI BHATTIAN</option>
+                                                <option value="523">SUKHE KE MANDI</option>
+                                                <option value="524">VANI  KE TARAR</option>
+                                                <option value="525">VINNI</option>
+                                                <option value="526">HAFIZABAD CITY</option>
+                                                <option value="527">BAGRIANWALA</option>
+                                                <option value="528">CHANNAN</option>
+                                                <option value="529">DAULAT NAGAR</option>
+                                                <option value="530">DINGA</option>
+                                                <option value="531">GULIANA</option>
+                                                <option value="532">JALAL PUR JATTAN</option>
+                                                <option value="533">KHARIAN</option>
+                                                <option value="534">KHOHAR</option>
+                                                <option value="535">KOTLA ARAB ALI KHAN</option>
+                                                <option value="536">KUNJAH</option>
+                                                <option value="537">LALA MUSA</option>
+                                                <option value="538">SARA-I- ALAMGIR</option>
+                                                <option value="539">TANDA</option>
+                                                <option value="540">GUJRAT CITY</option>
+                                                <option value="541">GOJRA</option>
+                                                <option value="542">MALAKWAL</option>
+                                                <option value="543">PAHRIANWALI</option>
+                                                <option value="544">PHALIA</option>
+                                                <option value="545">QADIRABAD</option>
+                                                <option value="546">MANDI BAHA UD DIN CITY</option>
+                                                <option value="547">CHAWINDA</option>
+                                                <option value="548">DASKA</option>
+                                                <option value="549">KOTLI LOHARAN</option>
+                                                <option value="550">MUNDE KI GORAYA</option>
+                                                <option value="551">PASRUR</option>
+                                                <option value="552">QILA KALAR WALA</option>
+                                                <option value="553">SAMBRIAL</option>
+                                                <option value="554">SATRAH</option>
+                                                <option value="555">UGGOKE</option>
+                                                <option value="556">WADALA SANDHUWAN</option>
+                                                <option value="557">SIALKOT CANTT.</option>
+                                                <option value="558">SIALKOT CITY</option>
+                                                <option value="559">AHMADABAD</option>
+                                                <option value="560">BADDOMALHI</option>
+                                                <option value="561">KOT NAINAN</option>
+                                                <option value="562">MAINGRI</option>
+                                                <option value="563">SHAKARGARH</option>
+                                                <option value="564">ZAFARWAL</option>
+                                                <option value="565">NAROWAL CITY</option>
+                                                <option value="566">TALWANDI BHINDRAN</option>
+                                                <option value="567">CENTRAL JAIL GUJRANWALA</option>
+                                                <option value="568">DISTT. JAIL GUJRAT</option>
+                                                <option value="569">DISTT. JAIL MANDI BAHA UD DIN</option>
+                                                <option value="570">DISTT. JAIL SIALKOT </option>
+                                                <option value="571">DANDI NIZAM</option>
+                                                <option value="572">CHOBARA</option>
+                                                <option value="573">KAPOORWALI</option>
+                                                <option value="574">MITRANWALI</option>
+                                                <option value="575">JABBAL</option>
+                                                <option value="576">KOTLA AFGHANAN</option>
+                                                <option value="577">JAMKE CHEEMA </option>
+
+                                            </select>
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="col-md-2 control-label" for="form_control_1">Zone Inter</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel6">
+
+                                            <input name="ctl00$RegUser$txtZoneInter" type="text" id="RegUser_txtZoneInter" class="form-control">
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Landline No</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtPtcl" type="text" id="RegUser_txtPtcl" class="form-control" placeholder="Enter Landline No">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">MOBILE No</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtMob" type="text" id="RegUser_txtMob" class="form-control" placeholder="Enter Mobile No">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">EMIS CODE</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtEmisCode" type="text" id="RegUser_txtEmisCode" class="form-control" placeholder="Enter EMIS No">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">EMAIL</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtEmailAddr" type="text" id="RegUser_txtEmailAddr" class="form-control" placeholder="Enter Inst Email">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Affiliation Date</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel1">
+
+                                            <input name="ctl00$RegUser$txtAffDate" type="text" id="RegUser_txtAffDate" class="form-control">
+                                            <input type="image" name="ctl00$RegUser$ImageButton3" id="RegUser_ImageButton3" src="../Images/Cal.jpg" style="height:25px;width:25px;">
+
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Expiration Date</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel2">
+
+                                            <input name="ctl00$RegUser$txtExpDate" type="text" id="RegUser_txtExpDate" class="form-control">
+                                            <input type="image" name="ctl00$RegUser$ImageButton4" id="RegUser_ImageButton4" src="../Images/Cal.jpg" style="height:25px;width:25px;">
+
+
+                                        </div>
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Allowed Matric Groups</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtMgrps" type="text" id="RegUser_txtMgrps" class="form-control" placeholder="comma Seprated matric Groups Codes">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Allowed Inter Groups</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtIgrps" type="text" id="RegUser_txtIgrps" class="form-control" placeholder="comma Seprated Inter Groups Codes">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Allowed Matric Subjects</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtMsbjs" type="text" id="RegUser_txtMsbjs" class="form-control" placeholder="comma Seprated matric Subject Codes">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Allowed Inter Subjects</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <input name="ctl00$RegUser$txtIsbjs" type="text" id="RegUser_txtIsbjs" class="form-control" placeholder="comma Seprated matric Subject Codes">
+                                        <div class="form-control-focus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input has-danger">
+                                <label class="col-md-2 control-label" for="form_control_1">Grace Period Info</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_upchkgrcprd">
+
+                                            <span style="display:inline-block;font-size:Medium;height:24px;width:194px;"><div class="checker" id="uniform-RegUser_chkGrcPrd"><span><input id="RegUser_chkGrcPrd" type="checkbox" name="ctl00$RegUser$chkGrcPrd" onclick="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$chkGrcPrd\',\'\')', 0)"></span></div><label for="RegUser_chkGrcPrd">Is Grace Period</label></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label" for="form_control_1">Grace Period Date</label>
+                                <div class="col-md-3">
+                                    <div class="input-icon">
+                                        <div id="RegUser_UpdatePanel11">
+
+                                            <input name="ctl00$RegUser$txtGrcDate" type="text" id="RegUser_txtGrcDate" class="form-control">
+                                            <div class="form-control-focus">
+                                            </div>
+                                            <input type="image" name="ctl00$RegUser$ImageButton1" id="RegUser_ImageButton1" src="../Images/Cal.jpg" style="height:17px;width:21px;">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions right">
+                                <input type="submit" name="ctl00$RegUser$btnSave" value="Add an Institute" onclick="return PostSaveTasks();" id="RegUser_btnSave" class="btn green">
+                                <input type="submit" name="ctl00$RegUser$btnAffliation" value="Go to Affiliation" id="RegUser_btnAffliation" class="btn green">
+                                <input type="submit" name="ctl00$RegUser$btnView" value="View Report" id="RegUser_btnView" class="btn green">
+                                <input type="submit" name="ctl00$RegUser$btnMore" value="More" id="RegUser_btnMore" class="btn green">
+                            </div>
+
+
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+
+
+</div>
