@@ -1,7 +1,7 @@
 ﻿@model BISEWEB.Models.tblInstitutes_all
 
 @{
-    ViewBag.Title = "AddNewInst";
+    ViewBag.Title = "Add New Institute";
     Layout = "~/Views/Shared/_masterPage.cshtml";
 }
 
@@ -15,430 +15,838 @@
     @*<div class="page-header"></div>*@
 
 
-    <div class="col-md-12">
+@*<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption font-green">
+            <i class="icon-pin font-green"></i>
+            <span class="caption-subject bold uppercase"> Floating Labels</span>
+        </div>
+ 
+    </div>
 
-            <div class="portlet light bordered">
+        <div class="portlet-body form">
+            @using (Ajax.BeginForm("AddNewInst", "AddStuff", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnItemVoucherSaved" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+               
 
-                <div class="portlet-title ">
-                    <div class="caption font-green-haze">
-                        <span class="caption-subject bold uppercase">Add New Institute</span>
-                    </div>
-                    <div class="tools">
-                        <a href="" class="collapse" data-original-title="" title=""></a>
-                    </div>
-                </div>
+                    <div class="form-body">
+                        <div class="col-md-12">
+                            
+                            <div class="form-group form-md-line-input form-md-floating-label">
+                                @Html.TextBoxFor(model => model.Name, new { required = "required", @class = "form-control" })
+                                @Html.Label("Institute Name", new { @class = "col-md-2 control-label" })
 
-                <div class="portlet-body form" style="display: block;">
-                    <div class="form-horizontal">
-@using (Ajax.BeginForm("AddNewInst", "AddStuff", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnItemVoucherSaved" }))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-                        <div class="form-body">
-                           
-
-                           
-
-
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Institute Name", new { @class= "col-md-2 control-label" })
-                                @*<label class="col-md-2 control-label" for="form_control_1">Institute Name</label>*@
-                                <div class="col-md-8">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.Name, new { required = "required", @class= "form-control", placeholder = "Enter Institute Name" })
-
-                                        @*<input name="ctl00$RegUser$txtInstName" type="text" id="RegUser_txtInstName" class="form-control" placeholder="Enter Institute Name">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-
-                            <div class="form-group form-md-line-input has-danger">
+                            <div class="form-group form-md-line-input form-md-floating-label">
+                                @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control" })
                                 @Html.Label("Institute Address", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-8">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control", placeholder = "Enter Institute Address" })
-                                        @*<input name="ctl00$RegUser$txtAddr" type="text" id="RegUser_txtAddr" class="form-control" placeholder="Enter Institute Address">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
+
+
+
+
+
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group form-md-line-input form-md-floating-label">
+                                    @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control" })
+                                    @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-md-line-input form-md-floating-label">
+                                    @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control" })
+                                    @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
                                 </div>
                             </div>
 
-                            <div class="form-group form-md-line-input has-danger">
+                        
+                    </div>
+              
+            }
+        </div>
+</div>*@
+
+
+
+
+
+
+
+    <div class="portlet light bordered">
+        <div class="portlet-title">
+            <div class="caption font-green">
+                <i class="icon-pin font-green"></i>
+                <span class="caption-subject bold uppercase"> @ViewBag.Title</span>
+            </div>
+         
+        </div>
+        <div class="portlet-body form">
+                        @using (Ajax.BeginForm("AddNewInst", "AddStuff", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnItemVoucherSaved" }))
+                        {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+            @*<form role="form">*@
+                <div class="form-body">
+                    <div class="col-md-12">
+                        
+
+
+
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label">
+                                @Html.TextBoxFor(model => model.Name, new { required = "required", @class = "form-control" })
+                                @Html.Label("Institute Name", new { @class = "col-md-2 control-label" })
+
+                            </div>
+                            
+                           <div class="col-md-1"></div>
+                        
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label ">
+                                @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control" })
+                                @Html.Label("Institute Address", new { @class = "col-md-2 control-label" })
+
+                            </div>
+                        <div class="col-md-1"></div> 
+
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-success">
+                                @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control" })
                                 @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel4">
-                                            @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control", placeholder = "Institution Code" })
-
-                                            @*<input name="ctl00$RegUser$txtInst_cd" type="text" readonly="readonly" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$txtInst_cd\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="RegUser_txtInst_cd" class="form-control" placeholder="Institute Code">*@
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel5">
-                                            @Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control", placeholder = "Institution ID" })
-                                            @*<input name="ctl00$RegUser$txtId" type="text" readonly="readonly" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$txtId\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="RegUser_txtId" class="form-control" placeholder="Institute ID">*@
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                        <div class="col-md-1"></div>
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-warning">
+@Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control" })
+@Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
+                            </div>
+                        <div class="col-md-1"></div>
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })    
                             </div>
 
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Tehsil", new { @class = "col-md-2 control-label" })
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control" })
+                            @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.dist_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("District", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.IsGovernment, new { required = "required", @class = "form-control" })
+                            @Html.Label("Institution Type", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.Inst_pwd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Password", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.edu_lvl, new { required = "required", @class = "form-control" })
+                            @Html.Label("Education Level", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.IsActive, new { required = "required", @class = "form-control" })
+                            @Html.Label("Status", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.Gender, new { required = "required", @class = "form-control" })
+                            @Html.Label("Gender", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Enter Zone", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Enter Zone", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.LandLine, new { required = "required", @class = "form-control" })
+                            @Html.Label("Landline No.", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        @*<div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.LandLine, new { required = "required", @class = "form-control" })
+                            @Html.Label("Landline No.", new { @class = "col-md-2 control-label" })
+                        </div>*@
+
+                        <div class="col-md-1"></div>
+
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.MobNo, new { required = "required", @class = "form-control" })
+                            @Html.Label("Mobile No.", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.emis_code, new { required = "required", @class = "form-control" })
+                            @Html.Label("EMIS Code", new { @class = "col-md-2 control-label" })
+                        </div>
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.email, new { required = "required", @class = "form-control" })
+                            @Html.Label("Email ID", new { @class = "col-md-2 control-label" })
+                        </div>
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.affiliation_date, new { required = "required", @class = "form-control" })
+                            @Html.Label("Affiliation Date", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.expiration_date, new { required = "required", @class = "form-control" })
+                            @Html.Label("Expiration Date", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.allowed_mGrp, new { required = "required", @class = "form-control" })
+                            @Html.Label("Allowed Matric Groups", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.allowed_mSub, new { required = "required", @class = "form-control" })
+                            @Html.Label("Allowed Matric Subjects", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.allowed_iGrp, new { required = "required", @class = "form-control" })
+                            @Html.Label("Allowed Inter Groups", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.allowed_iSub, new { required = "required", @class = "form-control" })
+                            @Html.Label("Allowed Inter Subjects", new { @class = "col-md-2 control-label" })
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-2 form-group form-md-line-input form-md-floating-label has-error">
+                            <div class="md-checkbox has-success">
+                                <input type="checkbox" id="checkbox9" class="md-check">
+                                @*@Html.CheckBox( "abc", new { @class= "md-check" ,id= "checkbox9" ,type= "checkbox"})*@
+                                <label for="checkbox9">
+                                    <span class="inc"></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span>
+                                    Enable Grace Period
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-3 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.affiliation_Grace_Period, new { required = "required", @class = "form-control" })
+                            @Html.Label("Grace Period", new { @class = "col-md-2 control-label" })
+                        </div>
+
+
+                            <div class="col-md-1"></div>
+
+                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error right">
                                
-                                <div class="col-md-3">
-                                    <select name="ctl00$RegUser$ddlTehsil" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlTehsil\',\'\')', 0)" id="RegUser_ddlTehsil" class="form-control">
-                                        <option selected="selected" value="0">None</option>
-                                        <option value="1">KAMOKE</option>
-                                       
-
-                                    </select>
-                                </div>
-
-                                @Html.Label("District", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel3">
-                                            @Html.Label("District", new { @class = "col-md-2 control-label" })
-                                            @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control", placeholder = "Institution Code" })
-                                            <span id="RegUser_lbDist" class="col-md-2 control-label" style="color:Green;font-size:Large;font-weight:bold;"></span>
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Institute Type", new { @class = "col-md-2 control-label" })
-                
-                                <div class="col-md-3">
-                                    <select name="ctl00$RegUser$ddlInstType" id="RegUser_ddlInstType" class="form-control">
-                                        <option selected="selected" value="1">1-Govt</option>
-                                        <option value="2">2-Private</option>
-
-                                    </select>
-                                </div>
-                                @Html.Label("Password", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.Inst_pwd, new { required = "required", @class = "form-control", placeholder = "Enter Password" })
-                                        @*<input name="ctl00$RegUser$txtPswd" type="password" id="RegUser_txtPswd" class="form-control">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Education Level", new { @class = "col-md-2 control-label" })
+                                    <button type="button" class="col-md-4 btn large blue">Submit</button>
+                                    <button type="button" class="col-md-4 btn default">Cancel</button>
                                
-                                <div class="col-md-3">
-                                    <div id="RegUser_UpdatePanel8">
-
-                                        <select name="ctl00$RegUser$ddlEduLvl" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlEduLvl\',\'\')', 0)" id="RegUser_ddlEduLvl" class="form-control">
-                                            <option selected="selected" value="1">1-School</option>
-                                            <option value="2">2-College</option>
-                                            <option value="3">3-Higher Secondary School</option>
-
-                                        </select>
-
-                                    </div>
-                                </div>
-                                @Html.Label("Status", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div class="checker" id="uniform-RegUser_chkIsRural"><span><input id="RegUser_chkIsRural" type="checkbox" name="ctl00$RegUser$chkIsRural"></span></div><label for="RegUser_chkIsRural">Is Rural</label>
-                                        <div class="checker" id="uniform-RegUser_chkIsActive"><span><input id="RegUser_chkIsActive" type="checkbox" name="ctl00$RegUser$chkIsActive"></span></div><label for="RegUser_chkIsActive">Is Active</label>
-                                        <div class="checker" id="uniform-RegUser_chkICommunity"><span><input id="RegUser_chkICommunity" type="checkbox" name="ctl00$RegUser$chkICommunity"></span></div><label for="RegUser_chkICommunity">Is Community</label>
-
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Gender", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-3">
-                                    <select name="ctl00$RegUser$ddlGender" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlGender\',\'\')', 0)" id="RegUser_ddlGender" class="form-control">
-                                        <option selected="selected" value="1">Male</option>
-                                        <option value="2">Female</option>
-
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                               @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel9">
-
-                                            <select name="ctl00$RegUser$ddlZoneMatric" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneMatric\',\'\')', 0)" id="RegUser_ddlZoneMatric" class="form-control">
-                                                <option selected="selected" value="0">None</option>
-                                                <option value="1">AHMAD NAGAR</option>
-                                                <option value="2">ALI PUR CHATHA</option>
-                                                <option value="3">AROOP</option>
-                                                <option value="4">AULAKH BHIKEY</option>
-                                          
-                                                <option value="308">MALI PUR</option>
-
-                                            </select>
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("Zone Matric", new { @class = "col-md-2 control-label" })
-                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel10">
-                                            @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control", placeholder = "Zone Matric" })
-                                            @*<input name="ctl00$RegUser$txtZoneMatric" type="text" id="RegUser_txtZoneMatric" class="form-control">*@
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel7">
-
-                                            <select name="ctl00$RegUser$ddlZoneInter" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneInter\',\'\')', 0)" id="RegUser_ddlZoneInter" class="form-control">
-                                                <option selected="selected" value="0">None</option>
-                                                <option value="501">AHMED  NAGAR</option>
-                                                
-                                                <option value="577">JAMKE CHEEMA </option>
-
-                                            </select>
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("Zone Inter", new { @class = "col-md-2 control-label" })
-                              
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel6">
-                                            @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control", placeholder = "Zone Inter" })
-                                            @*<input name="ctl00$RegUser$txtZoneInter" type="text" id="RegUser_txtZoneInter" class="form-control">*@
-
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Landline No", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.LandLine, new { required = "required", @class = "form-control", placeholder = "Enter LandLine No." })
-                                       @* <input name="ctl00$RegUser$txtPtcl" type="text" id="RegUser_txtPtcl" class="form-control" placeholder="Enter Landline No">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("MOBILE No", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.MobNo, new { required = "required", @class = "form-control", placeholder = "Enter Mobile No." })
-                                        @*<input name="ctl00$RegUser$txtMob" type="text" id="RegUser_txtMob" class="form-control" placeholder="Enter Mobile No">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("EMIS CODE", new { @class = "col-md-2 control-label" })
-                               
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.emis_code, new { required = "required", @class = "form-control", placeholder = "Enter EMIS Code" })
-                                        @*<input name="ctl00$RegUser$txtEmisCode" type="text" id="RegUser_txtEmisCode" class="form-control" placeholder="Enter EMIS No">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @Html.Label("EMAIL", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.email, new { required = "required", @class = "form-control", placeholder = "Email" })
-
-                                        @*<input name="ctl00$RegUser$txtEmailAddr" type="text" id="RegUser_txtEmailAddr" class="form-control" placeholder="Enter Inst Email">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
 
 
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Affiliation Date", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel1">
-                                            @Html.TextBoxFor(model => model.affiliation_date, new { required = "required", @class = "form-control", placeholder = "Select Affiliation Date" })
-                                            @*<input name="ctl00$RegUser$txtAffDate" type="text" id="RegUser_txtAffDate" class="form-control">*@
-                                            <input type="image" name="ctl00$RegUser$ImageButton3" id="RegUser_ImageButton3" src="../Images/Cal.jpg" style="height:25px;width:25px;">
 
 
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @Html.Label("Expiration Date", new { @class = "col-md-2 control-label" })
-                             
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel2">
-                                            @Html.TextBoxFor(model => model.expiration_date, new { required = "required", @class = "form-control", placeholder = "Select Expiry Date" })
-                                            @*<input name="ctl00$RegUser$txtExpDate" type="text" id="RegUser_txtExpDate" class="form-control">*@
-                                            <input type="image" name="ctl00$RegUser$ImageButton4" id="RegUser_ImageButton4" src="../Images/Cal.jpg" style="height:25px;width:25px;">
 
 
-                                        </div>
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Allowed Matric Groups", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.allowed_mGrp, new { required = "required", @class = "form-control", placeholder = "Comma Separated Matric Groups Code" })
-                                        @*<input name="ctl00$RegUser$txtMgrps" type="text" id="RegUser_txtMgrps" class="form-control" placeholder="comma Seprated matric Groups Codes">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("Allowed Inter Groups", new { @class = "col-md-2 control-label" })
-                              
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.allowed_iGrp, new { required = "required", @class = "form-control", placeholder = "Comma Separated Inter Groups Code" })
-                                        @*<input name="ctl00$RegUser$txtIgrps" type="text" id="RegUser_txtIgrps" class="form-control" placeholder="comma Seprated Inter Groups Codes">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Allowed Matric Subjects", new { @class = "col-md-2 control-label" })
-                             
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.allowed_mSub, new { required = "required", @class = "form-control", placeholder = "Comma Separated Matric Subject Codes" })
-                                        @*<input name="ctl00$RegUser$txtMsbjs" type="text" id="RegUser_txtMsbjs" class="form-control" placeholder="comma Seprated matric Subject Codes">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                                @Html.Label("Allowed Inter Subjects", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        @Html.TextBoxFor(model => model.allowed_iSub, new { required = "required", @class = "form-control", placeholder = "Comma Separated Inter Subject Codes" })
-                                        @*<input name="ctl00$RegUser$txtIsbjs" type="text" id="RegUser_txtIsbjs" class="form-control" placeholder="comma Seprated matric Subject Codes">*@
-                                        <div class="form-control-focus">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group form-md-line-input has-danger">
-                                @Html.Label("Grace Period Info", new { @class = "col-md-2 control-label" })
-                             
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_upchkgrcprd">
 
-                                            <span style="display:inline-block;font-size:Medium;height:24px;width:194px;"><div class="checker" id="uniform-RegUser_chkGrcPrd"><span><input id="RegUser_chkGrcPrd" type="checkbox" name="ctl00$RegUser$chkGrcPrd" onclick="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$chkGrcPrd\',\'\')', 0)"></span></div><label for="RegUser_chkGrcPrd">Is Grace Period</label></span>
 
-                                        </div>
-                                    </div>
-                                </div>
+                            @*<div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <input type="text" class="form-control" id="form_control_1">
+                    <label for="form_control_1">Info input</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <select class="form-control" id="form_control_1">
+                        <option value=""></option>
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                        <option value="">Option 4</option>
+                    </select>
+                    <label for="form_control_1">Dropdown sample</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label">
+                    <textarea class="form-control" rows="3"></textarea>
+                    <label for="form_control_1">Textarea input</label>
+                </div>
+            </div>
 
-                                @Html.Label("Grace Period Date", new { @class = "col-md-2 control-label" })
-                                
-                                <div class="col-md-3">
-                                    <div class="input-icon">
-                                        <div id="RegUser_UpdatePanel11">
-                                            @Html.TextBoxFor(model => model.affiliation_Grace_Period, new { required = "required", @class = "form-control", placeholder = "Enter Grace Date" })
-                                            @*<input name="ctl00$RegUser$txtGrcDate" type="text" id="RegUser_txtGrcDate" class="form-control">*@
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3">
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <input type="text" class="form-control" id="form_control_1">
+                    <label for="form_control_1">Info input</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <select class="form-control" id="form_control_1">
+                        <option value=""></option>
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                        <option value="">Option 4</option>
+                    </select>
+                    <label for="form_control_1">Dropdown sample</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label">
+                    <textarea class="form-control" rows="3"></textarea>
+                    <label for="form_control_1">Textarea input</label>
+                </div>
+            </div>*@
+                            @*<div class="col-md-12">
+                <div class="form-group form-md-line-input form-md-floating-label has-error">
+                    <input type="text" class="form-control" disabled="" id="form_control_1">
+                    <label for="form_control_1">Disabled</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label has-error">
+                    <input type="text" class="form-control" readonly="" value="You can't edit this" id="form_control_1">
+                    <label for="form_control_1">Readonly</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label">
+                    <div class="form-control form-control-static">
+                        email@example.com
+                    </div>
+                    <label for="form_control_1">Static Control</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <input type="text" class="form-control input-sm" id="form_control_1">
+                    <label for="form_control_1">Small input</label>
+                </div>
+                <div class="form-group form-md-line-input form-md-floating-label has-info">
+                    <input type="text" class="form-control input-lg" id="form_control_1">
+                    <label for="form_control_1">Large input</label>
+                </div>
+            </div>*@
+                        </div>
+                </div>
+                <br/>
+                @*<div class="clearfix"></div>*@
+
+                <div class="form-actions noborder right">
+                    @*<button type="button" class="btn blue">Submit</button>
+                    <button type="button" class="btn default">Cancel</button>*@
+                </div>
+            @*</form>*@
+                        }
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<div class="col-md-12">
+
+                <div class="portlet light bordered">
+
+                    <div class="portlet-title ">
+                        <div class="caption font-green-haze">
+                            <span class="caption-subject bold uppercase">Add New Institute</span>
+                        </div>
+                        <div class="tools">
+                            <a href="" class="collapse" data-original-title="" title=""></a>
+                        </div>
+                    </div>
+
+                    <div class="portlet-body form" style="display: block;">
+                        <div class="form-horizontal">
+    @using (Ajax.BeginForm("AddNewInst", "AddStuff", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnItemVoucherSaved" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+                            <div class="form-body">
+
+
+
+
+
+
+                              <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Institute Name", new { @class= "col-md-2 control-label" })
+
+                                    <div class="col-md-8">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.Name, new { required = "required", @class= "form-control", placeholder = "Enter Institute Name" })
+
                                             <div class="form-control-focus">
                                             </div>
-                                            <input type="image" name="ctl00$RegUser$ImageButton1" id="RegUser_ImageButton1" src="../Images/Cal.jpg" style="height:17px;width:21px;">
-
-
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Institute Address", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-8">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control", placeholder = "Enter Institute Address" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel4">
+                                                @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control", placeholder = "Institution Code" })
+
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel5">
+                                                @Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control", placeholder = "Institution ID" })
+            @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Tehsil", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <select name="ctl00$RegUser$ddlTehsil" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlTehsil\',\'\')', 0)" id="RegUser_ddlTehsil" class="form-control">
+                                            <option selected="selected" value="0">None</option>
+                                            <option value="1">KAMOKE</option>
+
+
+                                        </select>
+                                    </div>
+
+                                    @Html.Label("District", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel3">
+                                                @Html.Label("District", new { @class = "col-md-2 control-label" })
+                                                @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control", placeholder = "Institution Code" })
+                                                <span id="RegUser_lbDist" class="col-md-2 control-label" style="color:Green;font-size:Large;font-weight:bold;"></span>
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Institute Type", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <select name="ctl00$RegUser$ddlInstType" id="RegUser_ddlInstType" class="form-control">
+                                            <option selected="selected" value="1">1-Govt</option>
+                                            <option value="2">2-Private</option>
+
+                                        </select>
+                                    </div>
+                                    @Html.Label("Password", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.Inst_pwd, new { required = "required", @class = "form-control", placeholder = "Enter Password" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Education Level", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div id="RegUser_UpdatePanel8">
+
+                                            <select name="ctl00$RegUser$ddlEduLvl" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlEduLvl\',\'\')', 0)" id="RegUser_ddlEduLvl" class="form-control">
+                                                <option selected="selected" value="1">1-School</option>
+                                                <option value="2">2-College</option>
+                                                <option value="3">3-Higher Secondary School</option>
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    @Html.Label("Status", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div class="checker" id="uniform-RegUser_chkIsRural"><span><input id="RegUser_chkIsRural" type="checkbox" name="ctl00$RegUser$chkIsRural"></span></div><label for="RegUser_chkIsRural">Is Rural</label>
+                                            <div class="checker" id="uniform-RegUser_chkIsActive"><span><input id="RegUser_chkIsActive" type="checkbox" name="ctl00$RegUser$chkIsActive"></span></div><label for="RegUser_chkIsActive">Is Active</label>
+                                            <div class="checker" id="uniform-RegUser_chkICommunity"><span><input id="RegUser_chkICommunity" type="checkbox" name="ctl00$RegUser$chkICommunity"></span></div><label for="RegUser_chkICommunity">Is Community</label>
+
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Gender", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-3">
+                                        <select name="ctl00$RegUser$ddlGender" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlGender\',\'\')', 0)" id="RegUser_ddlGender" class="form-control">
+                                            <option selected="selected" value="1">Male</option>
+                                            <option value="2">Female</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                   @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel9">
+
+                                                <select name="ctl00$RegUser$ddlZoneMatric" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneMatric\',\'\')', 0)" id="RegUser_ddlZoneMatric" class="form-control">
+                                                    <option selected="selected" value="0">None</option>
+                                                    <option value="1">AHMAD NAGAR</option>
+                                                    <option value="2">ALI PUR CHATHA</option>
+                                                    <option value="3">AROOP</option>
+                                                    <option value="4">AULAKH BHIKEY</option>
+
+                                                    <option value="308">MALI PUR</option>
+
+                                                </select>
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("Zone Matric", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel10">
+                                                @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control", placeholder = "Zone Matric" })
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel7">
+
+                                                <select name="ctl00$RegUser$ddlZoneInter" onchange="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$ddlZoneInter\',\'\')', 0)" id="RegUser_ddlZoneInter" class="form-control">
+                                                    <option selected="selected" value="0">None</option>
+                                                    <option value="501">AHMED  NAGAR</option>
+
+                                                    <option value="577">JAMKE CHEEMA </option>
+
+                                                </select>
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("Zone Inter", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel6">
+                                                @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control", placeholder = "Zone Inter" })
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Landline No", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.LandLine, new { required = "required", @class = "form-control", placeholder = "Enter LandLine No." })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("MOBILE No", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.MobNo, new { required = "required", @class = "form-control", placeholder = "Enter Mobile No." })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("EMIS CODE", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.emis_code, new { required = "required", @class = "form-control", placeholder = "Enter EMIS Code" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @Html.Label("EMAIL", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.email, new { required = "required", @class = "form-control", placeholder = "Email" })
+
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Affiliation Date", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel1">
+                                                @Html.TextBoxFor(model => model.affiliation_date, new { required = "required", @class = "form-control", placeholder = "Select Affiliation Date" })
+                                                <input type="image" name="ctl00$RegUser$ImageButton3" id="RegUser_ImageButton3" src="../Images/Cal.jpg" style="height:25px;width:25px;">
+
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @Html.Label("Expiration Date", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel2">
+                                                @Html.TextBoxFor(model => model.expiration_date, new { required = "required", @class = "form-control", placeholder = "Select Expiry Date" })
+                                                <input type="image" name="ctl00$RegUser$ImageButton4" id="RegUser_ImageButton4" src="../Images/Cal.jpg" style="height:25px;width:25px;">
+
+
+                                            </div>
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Allowed Matric Groups", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.allowed_mGrp, new { required = "required", @class = "form-control", placeholder = "Comma Separated Matric Groups Code" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("Allowed Inter Groups", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.allowed_iGrp, new { required = "required", @class = "form-control", placeholder = "Comma Separated Inter Groups Code" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Allowed Matric Subjects", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.allowed_mSub, new { required = "required", @class = "form-control", placeholder = "Comma Separated Matric Subject Codes" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.Label("Allowed Inter Subjects", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            @Html.TextBoxFor(model => model.allowed_iSub, new { required = "required", @class = "form-control", placeholder = "Comma Separated Inter Subject Codes" })
+                                            <div class="form-control-focus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-md-line-input has-danger">
+                                    @Html.Label("Grace Period Info", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_upchkgrcprd">
+
+                                                <span style="display:inline-block;font-size:Medium;height:24px;width:194px;"><div class="checker" id="uniform-RegUser_chkGrcPrd"><span><input id="RegUser_chkGrcPrd" type="checkbox" name="ctl00$RegUser$chkGrcPrd" onclick="javascript:setTimeout('__doPostBack(\'ctl00$RegUser$chkGrcPrd\',\'\')', 0)"></span></div><label for="RegUser_chkGrcPrd">Is Grace Period</label></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @Html.Label("Grace Period Date", new { @class = "col-md-2 control-label" })
+
+                                    <div class="col-md-3">
+                                        <div class="input-icon">
+                                            <div id="RegUser_UpdatePanel11">
+                                                @Html.TextBoxFor(model => model.affiliation_Grace_Period, new { required = "required", @class = "form-control", placeholder = "Enter Grace Date" })
+                                                <div class="form-control-focus">
+                                                </div>
+                                                <input type="image" name="ctl00$RegUser$ImageButton1" id="RegUser_ImageButton1" src="../Images/Cal.jpg" style="height:17px;width:21px;">
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions right">
+                                    <input type="submit" name="ctl00$RegUser$btnSave" value="Add an Institute" onclick="return PostSaveTasks();" id="RegUser_btnSave" class="btn green">
+                                    <input type="submit" name="ctl00$RegUser$btnAffliation" value="Go to Affiliation" id="RegUser_btnAffliation" class="btn green">
+                                    <input type="submit" name="ctl00$RegUser$btnView" value="View Report" id="RegUser_btnView" class="btn green">
+                                    <input type="submit" name="ctl00$RegUser$btnMore" value="More" id="RegUser_btnMore" class="btn green">
+                                </div>
+
+
+                                <div>
+
+                                </div>
                             </div>
-
-                            <div class="form-actions right">
-                                <input type="submit" name="ctl00$RegUser$btnSave" value="Add an Institute" onclick="return PostSaveTasks();" id="RegUser_btnSave" class="btn green">
-                                <input type="submit" name="ctl00$RegUser$btnAffliation" value="Go to Affiliation" id="RegUser_btnAffliation" class="btn green">
-                                <input type="submit" name="ctl00$RegUser$btnView" value="View Report" id="RegUser_btnView" class="btn green">
-                                <input type="submit" name="ctl00$RegUser$btnMore" value="More" id="RegUser_btnMore" class="btn green">
-                            </div>
-
-
-                            <div>
-
-                            </div>
+                            }
                         </div>
-                        }
                     </div>
-                </div>
 
-            </div>
-        </div>
+                </div>
+            </div>*@
   
 
 
