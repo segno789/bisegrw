@@ -4654,6 +4654,7 @@
     <Content Include="Content\metronic\theme\assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="Content\metronic\theme\assets\global\scripts\datatable.js" />
     <Content Include="Content\metronic\theme\assets\global\scripts\metronic.js" />
+    <Content Include="Content\MyScripts\GeneralJS.js" />
     <Content Include="Content\MyScripts\MasterJS.js" />
     <Content Include="Content\MyScripts\UserLoginJS.js" />
     <Content Include="Content\otherImages\Logo.png" />

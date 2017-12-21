@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="show();" id="success">Show Toast</button>
+                      
 
                         <div class="form-group form-md-line-input has-danger">
                             <label class="col-md-2 control-label" for="form_control_1">Employee Code :</label>
@@ -451,7 +451,7 @@
                             <label class="col-md-2 control-label" for="form_control_1">Email :</label>
                             <div class="col-md-3">
                                 <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.email, new { @class = "form-control", id = "txt_email" })
+                                    @Html.TextBoxFor(model => model.email, new { @class = "form-control", id = "txt_email" , required ="required" })
                                     @*<asp:TextBox ID="txt_email" CssClass="form-control"></asp:TextBox>*@
                                     <div class="form-control-focus">
                                     </div>
@@ -597,7 +597,7 @@
                             <label class="col-md-2 control-label" for="form_control_1">About :</label>
                             <div class="col-md-3">
                                 <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.about, new { @class = "form-control", id = "txt_about", TextMode = "MultiLine" })
+                                    @Html.TextBoxFor(model => model.about, new { @class = "form-control", id = "txt_about", TextMode = "MultiLine",required="required" })
                                     @*<asp:TextBox ID="txt_about" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>*@
                                     <div class="form-control-focus">
                                     </div>
@@ -655,7 +655,7 @@
 
                         <div class="form-actions right">
                            
-                            @*<button id="showtoast" class="btn green btn-block">Save Record</button>*@
+                            <button id="showtoast" class="btn green btn-block">Save Record</button>
                             @*<asp:Button ID="btnSave" CssClass="btn green btn-block" Text="Save Record" OnClick="btnSave_Click" />*@
                         </div>
                     }
@@ -668,17 +668,35 @@
     </div>
 </div>
 
-
+<script src="~/Content/MyScripts/GeneralJS.js"></script>
 <script type="text/javascript">
+    //function Validation() {
+    //    var IDs = [];
+    //    $(".form-body").find("input").each(function () {
+    //        if ($(this).prop('required')) {
+    //            IDs.push(this.id);
+    //        }
+    //    });
+    //    alert(IDs)
+    //    Validate(IDs)
+       
+    //}
 
-    function show()
-    {
-        //alert("dlkfjasdlkfjasdklfja");
-        toastr.success('We do have the Kapua suite available.', 'Success Alert', { timeOut: 5000 })
-        toastr.error('You Got Error', 'Inconceivable!', { timeOut: 5000 })
-        toastr.info('It is for your kind information', 'Information', { timeOut: 5000 })
-        toastr.warning('It is for your kind warning', 'Warning', { timeOut: 5000 })
-    }
+    //$('form#register').find('input').each(function () {
+    //    if (!$(this).prop('required')) {
+    //        console.log("NR");
+    //    } else {
+    //        console.log("IR");
+    //    }
+    //});
+    //function show()
+    //{
+    //    //alert("dlkfjasdlkfjasdklfja");
+    //    toastr.success('We do have the Kapua suite available.', 'Success Alert', { timeOut: 5000 })
+    //    toastr.error('You Got Error', 'Inconceivable!', { timeOut: 5000 })
+    //    toastr.info('It is for your kind information', 'Information', { timeOut: 5000 })
+    //    toastr.warning('It is for your kind warning', 'Warning', { timeOut: 5000 })
+    //}
 
   
     //$("#success").click(function () {

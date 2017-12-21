@@ -3,3 +3,8 @@ D:\bisegrw\DAL\bin\Debug\DAL.dll
 D:\bisegrw\DAL\bin\Debug\DAL.pdb
 D:\bisegrw\DAL\obj\Debug\DAL.dll
 D:\bisegrw\DAL\obj\Debug\DAL.pdb
+D:\BISE MVC\BISEWEB\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\BISE MVC\BISEWEB\DAL\obj\Debug\DAL.dll
+D:\BISE MVC\BISEWEB\DAL\obj\Debug\DAL.pdb
+D:\BISE MVC\BISEWEB\DAL\bin\Debug\DAL.dll
+D:\BISE MVC\BISEWEB\DAL\bin\Debug\DAL.pdb
