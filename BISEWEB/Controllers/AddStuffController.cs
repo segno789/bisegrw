@@ -32,14 +32,23 @@ namespace BISEWEB.Controllers
         
 
         // GET: AddStuff
+        [HttpGet]
         public ActionResult AddEmployee()
         {
           
             return View();
 
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddEmployee(tblemployee obj)
+        {
 
-       
+            return View();
+
+        }
+
+
     }
 
 }

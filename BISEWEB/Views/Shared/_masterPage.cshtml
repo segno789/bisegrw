@@ -36,7 +36,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
     <link type="text/css" href=@Url.Content("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all") rel="stylesheet" />
-
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/font-awesome/css/font-awesome.min.css") rel="stylesheet" />
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/simple-line-icons/simple-line-icons.min.css") rel="stylesheet" />
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/global/plugins/bootstrap/css/bootstrap.min.css") rel="stylesheet" />
@@ -49,8 +48,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/custom.css") rel="stylesheet" />
 
     <link type="text/css" href=@Url.Content("~/Content/timeout-dialog.css") rel="stylesheet" />
-   
 
+    <link href="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
+    @*<link type="text/css" href=@Url.Content("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css") rel="stylesheet" />*@
     <link rel="icon" href="~/favicon.ico" />
 
     @*<link rel="icon" href="@Url.Content("~/favicon.ico")" />*@
@@ -1463,6 +1463,14 @@ License: You must have a valid license purchased only from themeforest(the above
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/quick-sidebar.js")></script>
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/demo.js")></script>
 
+
+
+    @*<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>*@
+    <script src="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+    <script src="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.js"></script>
+   
+    @*<script type="text/javascript" src=@Url.Content("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js")></script>*@
+    @*<script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.js")></script>*@
    
     <script type="text/javascript" src=@Url.Content("~/Scripts/timeout-dialog.js")></script>
 
@@ -1489,8 +1497,8 @@ License: You must have a valid license purchased only from themeforest(the above
             Layout.init();
             QuickSidebar.init();
             Demo.init();
-
-            // UIIdleTimeout.init();
+            //UIIdleTimeout.init();
+           // UIToastr.init();
 
             $(function () {
                 var fnTimeOut = function () {
@@ -1615,6 +1623,7 @@ License: You must have a valid license purchased only from themeforest(the above
 var extendMethodUrl='@Url.Action("ExtendSession","User")';
 $(document).ready(function(){
     SessionTimeout.schedulePopup();
+
 });
 
 window.SessionTimeout = (function() {
