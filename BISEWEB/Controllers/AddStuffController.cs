@@ -22,14 +22,20 @@ namespace BISEWEB.Controllers
             return View(obj.GetNodes());
 
         }
-
+        [HttpGet]
         public ActionResult AddNewInst()
         {
             return View();
 
         }
+        [HttpPost]
+        public ActionResult AddNewInst(tblbiodata vc)
+        {
+            //ViewBag.EventID = new SelectList(db.tblEvents, "EventID", "EventName");
+            return View(vc);
+        }
 
-        
+
 
         // GET: AddStuff
         [HttpGet]

@@ -1,0 +1,5 @@
+D:\bisegrw\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\bisegrw\DAL\bin\Debug\DAL.dll
+D:\bisegrw\DAL\bin\Debug\DAL.pdb
+D:\bisegrw\DAL\obj\Debug\DAL.dll
+D:\bisegrw\DAL\obj\Debug\DAL.pdb
