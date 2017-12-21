@@ -1,9 +1,9 @@
 var UIToastr = function () {
+    
 
     return {
         //main function to initiate the module
         init: function () {
-
             var i = -1,
                 toastCount = 0,
                 $toastlast,

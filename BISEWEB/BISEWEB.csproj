@@ -4654,7 +4654,9 @@
     <Content Include="Content\metronic\theme\assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="Content\metronic\theme\assets\global\scripts\datatable.js" />
     <Content Include="Content\metronic\theme\assets\global\scripts\metronic.js" />
-    <Content Include="Content\MyScripts\UserJS.js" />
+    <Content Include="Content\MyScripts\GeneralJS.js" />
+    <Content Include="Content\MyScripts\MasterJS.js" />
+    <Content Include="Content\MyScripts\UserLoginJS.js" />
     <Content Include="Content\otherImages\Logo.png" />
     <Content Include="Content\timeout-dialog.css" />
     <Content Include="Content\tvmenucustom.css" />
@@ -5198,6 +5200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\MyScripts\AddStuffJS\" />
     <Folder Include="Views\Administration\" />
     <Folder Include="Views\BarCodeAdmission\" />
     <Folder Include="Views\ChangeStuff\" />

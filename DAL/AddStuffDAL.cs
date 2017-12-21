@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class AddStuffDAL
+
+    public class AddStuffDAL
     {
+
+
+       
     }
 }

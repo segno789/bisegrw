@@ -27,7 +27,7 @@
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/layout.css") rel="stylesheet" />
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/themes/darkblue.css") rel="stylesheet" />
     <link type="text/css" href=@Url.Content("~/Content/metronic/theme/assets/admin/layout/css/custom.css") rel="stylesheet" />
-
+    <link href="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
     <style>
         .no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
             -webkit-appearance: none !important;
@@ -92,80 +92,8 @@
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/global/scripts/metronic.js")></script>
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/demo.js")></script>
     <script type="text/javascript" src=@Url.Content("~/Content/metronic/theme/assets/admin/layout/scripts/layout.js")></script>
-
-
-    <script>
-        jQuery(document).ready(function () {
-            
-            Metronic.init(); // init metronic core components
-            Layout.init(); // init current layout
-            Demo.init();
-           
-            $("#btnLogin").click(function () {
-                debugger;
-                if ($("#txtLogin").val() == "")
-                {
-                    alert("Enter Employee Code Please !");
-                    $("#txtLogin").focus();
-                    return false;
-                }
-                if ($("#txtPassword").val() == "") {
-                    alert("Enter Password Please !");
-                    $("#txtPassword").focus();
-                    return false;
-                }
-                return true;
-            })
-        });
-        $("#txtPassword").focus(function () {
-            
-            var id = $("#txtLogin").val();
-            if(id=="")
-            {
-                alert("Enter Emloyee Code First !");
-                $("#txtLogin").focus();
-                $("#txtPassword").val()="";
-                return false
-            }
-            $.ajax({
-                url: "/api/MyWebAPI/GetNameByID/" + id,
-                type: "POST",
-                // data: '{id: "' + $("#txtLogin").val() + '" }',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (response) {
-                    if (response == "") {
-                        alert("Employee Code Is Not Valid !")
-                        $("#txtLogin").show();
-                        $("#txtLogin").focus();
-                        return false;
-                    }
-                    var resp = response.split("|");
-                    $('#EmpName').html(resp[0]);
-                    if (resp[1] == "True") {
-                        $('#EmpImg').attr('src', '/Content/EmpImages/' + id + '.jpg');
-                    }
-                    else {
-                        $('#EmpImg').attr('src', '/Content/EmpImages/no-image.png');
-                    }
-                    return false;
-                },
-                failure: function (response) {
-                    alert("Failure");
-                },
-                error: function (response) {
-                    alert("Error" + response.responseText);
-                }
-            });
-
-        });
-        $("#txtLogin").keypress(function (e) {
-            if (e.which == 13) {
-                $("#txtPassword").focus();
-                return false
-            }
-        });
-
-    </script>
+    <script src="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+    <script src="~/Content/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.js"></script>
+    <script src="~/Content/MyScripts/UserLoginJS.js"></script>
 </body>
 </html>
