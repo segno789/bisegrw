@@ -6,667 +6,384 @@
 }
 
 
-
-
-<div class="col-md-12">
-    <div class="portlet light bordered">
-        <div class="portlet-title">
-            <div class="caption font-green-haze">
-                <span class="caption-subject bold uppercase">Add New Employee</span>
-            </div>
-            <div class="tools">
-                <a href="#" class="collapse" data-original-title="" title=""></a>
-            </div>
-        </div>
-        <div class="alert alert-danger" id="dverror">
-            <strong>
-                <asp:Label ID="lbMsg"></asp:Label>
-            </strong>
-        </div>
-        <div class="portlet-body form">
-            <div class="form-horizontal">
-                <div class="form-body">
-                    @using (Ajax.BeginForm("AddEmployee", "AddStuff", new AjaxOptions { HttpMethod = "Post" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <div class="form-group form-md-line-input has-danger">
-                            <div class="col-md-8">
-                            </div>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <img id="Image2" resource="../Admin_BISE/Images/no_image.jpg" style="width:150px;height:150px" alt="No Image" />
-                                    @*<asp:Image ID="Image2" ClientIDMode="Static" ImageUrl="../Admin_BISE/Images/no_image.jpg" Width="150" Height="150" BorderStyle="Outset" />*@
-                                    <br />
-
-                                    <div class="form-control-focus">
-                                        <input type="file" id="FileUpload1" onchange="readURL(this)" />
-                                        @*<asp:FileUpload ID="FileUpload1" onchange="readURL(this) " />*@
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Employee Code :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.emp_cd, new { @class = "form-control", id = "txtEmp_cd" })
-                                    @*<asp:TextBox ID="txtEmp_cd" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtEmp_cd_TextChanged"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Password :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.pass, new { @class = "form-control", id = "txtPass" })
-                                    @*<asp:TextBox ID="txtPass" TextMode="Password" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Employee Name :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", id = "txtEmpName" })
-                                    @*<asp:TextBox ID="txtEmpName" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Employee Father Name :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.fname, new { @class = "form-control", id = "txtFName" })
-                                    @*<asp:TextBox ID="txtFName" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">CNIC :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.cnic, new { @class = "form-control", id = "txt_cnic" })
-                                    @*<asp:TextBox ID="txt_cnic" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">NTN :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.ntn, new { @class = "form-control", id = "txt_ntn" })
-                                    @*<asp:TextBox ID="txt_ntn" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">DOB(MM/DD/YYYY) :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.dob, new { @class = "form-control", id = "txt_dob1" })
-
-
-                                    @*<input type="date" id="txt_dob1" class="form-control" />*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Religion :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-
-                                    <select id="ddl_religion" class="form-control" name="ddl_religion">
-                                        <option selected="selected" value="0">Select Religion</option>
-                                        <option value="1">Muslim</option>
-                                        <option value="2">Non-Muslim</option>
-
-                                    </select>
-
-
-
-                                    @*<asp:DropDownList ID="ddl_religion" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Religion"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Muslim"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Non-Muslim"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Address :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.address, new { @class = "form-control", id = "txt_address", TextMode = "MultiLine" })
-                                    @*<asp:TextBox ID="txt_address" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Mobile No :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.MobileNo, new { @class = "form-control", id = "txtMobNo" })
-
-
-                                    @*<asp:TextBox ID="txtMobNo" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Last Qualification :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <asp:DropDownList ID="ddl_last_qualify" CssClass="form-control"> </asp:DropDownList>
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Gender :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_gender" class="form-control" name="ddl_gender">
-                                        <option selected="selected" value="0">Select Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_gender" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Gender"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Male"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Female"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">BPS :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_bps" class="form-control" name="ddl_bps">
-                                        <option selected="selected" value="0">Select BPS</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                    </select>
-
-                                    @*<asp:DropDownList ID="ddl_bps" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select BPS"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                            <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                                            <asp:ListItem Value="6" Text="6"></asp:ListItem>
-                                            <asp:ListItem Value="7" Text="7"></asp:ListItem>
-                                            <asp:ListItem Value="8" Text="8"></asp:ListItem>
-                                            <asp:ListItem Value="9" Text="9"></asp:ListItem>
-                                            <asp:ListItem Value="10" Text="10"></asp:ListItem>
-                                            <asp:ListItem Value="11" Text="11"></asp:ListItem>
-                                            <asp:ListItem Value="12" Text="12"></asp:ListItem>
-                                            <asp:ListItem Value="13" Text="13"></asp:ListItem>
-                                            <asp:ListItem Value="14" Text="14"></asp:ListItem>
-                                            <asp:ListItem Value="15" Text="15"></asp:ListItem>
-                                            <asp:ListItem Value="16" Text="16"></asp:ListItem>
-                                            <asp:ListItem Value="17" Text="17"></asp:ListItem>
-                                            <asp:ListItem Value="18" Text="18"></asp:ListItem>
-                                            <asp:ListItem Value="19" Text="19"></asp:ListItem>
-                                            <asp:ListItem Value="20" Text="20"></asp:ListItem>
-                                            <asp:ListItem Value="21" Text="21"></asp:ListItem>
-                                            <asp:ListItem Value="22" Text="22"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Designation :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <asp:DropDownList ID="ddlDesig" CssClass="form-control"></asp:DropDownList>
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Date of Joining(MM/DD/YYYY) :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.date_joining, new { @class = "form-control", id = "txt_dateofjoin1" })
-                                    @*<input type="date" id="txt_dateofjoin1" class="form-control" />*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Date of Promoted(MM/DD/YYYY) :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.date_promote, new { @class = "form-control", id = "txt_dateofpromote1" })
-                                    @*<input type="date" id="txt_dateofpromote1" class="form-control" />*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Date Retired(MM/DD/YYYY) :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.date_retired, new { @class = "form-control", id = "txt_dateofretired1" })
-                                    @*<input type="date" data-date-format="yyyy-MM-dd" id="txt_dateofretired1" class="form-control" />*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Seniority No:</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.seniority, new { @class = "form-control", id = "txt_seniorityno" })
-                                    @*<asp:TextBox ID="txt_seniorityno" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Branch Name :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <asp:DropDownList ID="ddlBranch" CssClass="form-control">
-                                        <asp:ListItem Value="0" Text="Select Options"></asp:ListItem>
-                                    </asp:DropDownList>
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Branch Section :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <asp:DropDownList ID="ddlBranch_Section" CssClass="form-control">
-                                        <asp:ListItem Value="0" Text="Select Options"></asp:ListItem>
-                                    </asp:DropDownList>
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Bill Category :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_billcategory" class="form-control" name="ddl_billcategory">
-                                        <option selected="selected" value="0">Select Bill Category</option>
-                                        <option value="1">Officer</option>
-                                        <option value="2">Superintendent</option>
-                                        <option value="3">Staff</option>
-                                        <option value="4">Suspended</option>
-                                    </select>
-
-                                    @*<asp:DropDownList ID="ddl_billcategory" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Bill Category"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Officer"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Superintendent"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="Staff"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="Suspended Employees"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Employee Category :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_empcategory" class="form-control" name="ddl_empcategory">
-                                        <option selected="selected" value="0">Select Employee Category</option>
-                                        <option value="1">Deputation</option>
-                                        <option value="2">Regular</option>
-                                        <option value="3">Contract</option>
-                                        <option value="4">Daily Wages</option>
-                                        <option value="5">Other</option>
-                                        <option value="6">All Staff</option>
-                                    </select>
-
-
-                                    @*<asp:DropDownList ID="ddl_empcategory" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Employee Category"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Deputation"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Regular"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="Contract"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="Daily Wages"></asp:ListItem>
-                                            <asp:ListItem Value="5" Text="Other"></asp:ListItem>
-                                            <asp:ListItem Value="6" Text="All Staff"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Salary Type :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_salarytype" class="form-control" name="ddl_salarytype">
-                                        <option selected="selected" value="0">Select Salary Type</option>
-                                        <option value="1">Only Basic</option>
-                                        <option value="2">With Allowance</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_salarytype" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Salary Type"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Only Basic"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="With Allowance"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">ECR :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.ecr, new { @class = "form-control", id = "txt_ecr" })
-                                    @*<asp:TextBox ID="txt_ecr" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Blood Group :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_bloodgrp" class="form-control" name="ddl_bloodgrp">
-                                        <option selected="selected" value="0">Select Blood Group</option>
-                                        <option value="1">A+ve</option>
-                                        <option value="2">A-ve</option>
-                                        <option value="3">B+ve</option>
-                                        <option value="4">B-ve</option>
-                                        <option value="5">AB+</option>
-                                        <option value="6">AB-</option>
-                                        <option value="7">O+ve</option>
-                                        <option value="8">O-ve</option>
-                                        <option value="9">Nill</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_bloodgrp" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Blood Group"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="A+ve"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="A-ve"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="B+ve"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="B-ve"></asp:ListItem>
-                                            <asp:ListItem Value="5" Text="AB+"></asp:ListItem>
-                                            <asp:ListItem Value="6" Text="AB-"></asp:ListItem>
-                                            <asp:ListItem Value="7" Text="O+ve"></asp:ListItem>
-                                            <asp:ListItem Value="8" Text="O-ve"></asp:ListItem>
-                                            <asp:ListItem Value="9" Text="Nill"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Email :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.email, new { @class = "form-control", id = "txt_email", required = "required" })
-                                    @*<asp:TextBox ID="txt_email" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Disability :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_disability" class="form-control" name="ddl_disability">
-                                        <option selected="selected" value="0">Select Disability</option>
-                                        <option value="1">Is Normal</option>
-                                        <option value="2">Is Disable</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_disability" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Disability"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Is Normal"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Is Disable"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Driving License :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.Driving_License, new { @class = "form-control", id = "txt_drivlicense" })
-                                    @*<asp:TextBox ID="txt_drivlicense" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Expiry Date(MM/DD/YYYY) :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.Expiry_Date, new { @class = "form-control", id = "txt_expirydate1" })
-                                    @*<input type="date" data-date-format="dd-MM-yyyy" id="txt_expirydate1" class="form-control" />*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">Account No :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.accountNo, new { @class = "form-control", id = "txt_accountno" })
-                                    @*<asp:TextBox ID="txt_accountno" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Pay Stage :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_paystage" class="form-control" name="ddl_paystage">
-                                        <option Value="0">Select Pay Stage</option>
-                                        <option Value="1">1</option>
-                                        <option Value="2">2</option>
-                                        <option Value="3">3</option>
-                                        <option Value="4">4</option>
-                                        <option Value="5">5</option>
-                                        <option Value="6">6</option>
-                                        <option Value="7">7</option>
-                                        <option Value="8">8</option>
-                                        <option Value="9">9</option>
-                                        <option Value="10">10</option>
-                                        <option Value="11">11</option>
-                                        <option Value="12">12</option>
-                                        <option Value="13">13</option>
-                                        <option Value="14">14</option>
-                                        <option Value="15">15</option>
-                                        <option Value="16">16</option>
-                                        <option Value="17">17</option>
-                                        <option Value="18">18</option>
-                                        <option Value="19">19</option>
-                                        <option Value="20">20</option>
-                                        <option Value="21">21</option>
-                                        <option Value="22">22</option>
-                                        <option Value="23">23</option>
-                                        <option Value="24">24</option>
-                                        <option Value="25">25</option>
-                                        <option Value="26">26</option>
-                                        <option Value="27">27</option>
-                                        <option Value="28">28</option>
-                                        <option Value="29">29</option>
-                                        <option Value="30">30</option>
-                                        <option Value="31">31</option>
-                                        <option Value="32">32</option>
-                                        <option Value="33">33</option>
-                                        <option Value="34">34</option>
-                                        <option Value="35">35</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_paystage" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Pay Stage"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                            <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                                            <asp:ListItem Value="6" Text="6"></asp:ListItem>
-                                            <asp:ListItem Value="7" Text="7"></asp:ListItem>
-                                            <asp:ListItem Value="8" Text="8"></asp:ListItem>
-                                            <asp:ListItem Value="9" Text="9"></asp:ListItem>
-                                            <asp:ListItem Value="10" Text="10"></asp:ListItem>
-                                            <asp:ListItem Value="11" Text="11"></asp:ListItem>
-                                            <asp:ListItem Value="12" Text="12"></asp:ListItem>
-                                            <asp:ListItem Value="13" Text="13"></asp:ListItem>
-                                            <asp:ListItem Value="14" Text="14"></asp:ListItem>
-                                            <asp:ListItem Value="15" Text="15"></asp:ListItem>
-                                            <asp:ListItem Value="16" Text="16"></asp:ListItem>
-                                            <asp:ListItem Value="17" Text="17"></asp:ListItem>
-                                            <asp:ListItem Value="18" Text="18"></asp:ListItem>
-                                            <asp:ListItem Value="19" Text="19"></asp:ListItem>
-                                            <asp:ListItem Value="20" Text="20"></asp:ListItem>
-                                            <asp:ListItem Value="21" Text="21"></asp:ListItem>
-                                            <asp:ListItem Value="22" Text="22"></asp:ListItem>
-                                            <asp:ListItem Value="23" Text="23"></asp:ListItem>
-                                            <asp:ListItem Value="24" Text="24"></asp:ListItem>
-                                            <asp:ListItem Value="25" Text="25"></asp:ListItem>
-                                            <asp:ListItem Value="26" Text="26"></asp:ListItem>
-                                            <asp:ListItem Value="27" Text="27"></asp:ListItem>
-                                            <asp:ListItem Value="28" Text="28"></asp:ListItem>
-                                            <asp:ListItem Value="29" Text="29"></asp:ListItem>
-                                            <asp:ListItem Value="30" Text="30"></asp:ListItem>
-                                            <asp:ListItem Value="31" Text="31"></asp:ListItem>
-                                            <asp:ListItem Value="32" Text="32"></asp:ListItem>
-                                            <asp:ListItem Value="33" Text="33"></asp:ListItem>
-                                            <asp:ListItem Value="34" Text="34"></asp:ListItem>
-                                            <asp:ListItem Value="35" Text="35"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                            <label class="col-md-2 control-label" for="form_control_1">About :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    @Html.TextBoxFor(model => model.about, new { @class = "form-control", id = "txt_about", TextMode = "MultiLine", required = "required" })
-                                    @*<asp:TextBox ID="txt_about" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input has-danger">
-                            <label class="col-md-2 control-label" for="form_control_1">Is Active :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddlIsActive" class="form-control" name="ddlIsActive">
-                                        <option value="0">Not-Active</option>
-                                        <option selected="selected" value="1">Active</option>
-                                    </select>
-                                    @*<asp:DropDownList ID="ddlIsActive" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Not-Active"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Active"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label class="col-md-2 control-label" for="form_control_1">Employee Status :</label>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <select id="ddl_emp_status" class="form-control" name="ddl_emp_status">
-                                        <option selected="selected" value="0">Select Employee Status</option>
-                                        <option value="1">Present</option>
-                                        <option value="2">Suspend</option>
-                                        <option value="3">On Leave</option>
-                                        <option value="4">Free</option>
-                                        <option value="5">Retire</option>
-                                        <option value="6">Death</option>
-
-                                    </select>
-                                    @*<asp:DropDownList ID="ddl_emp_status" CssClass="form-control">
-                                            <asp:ListItem Value="0" Text="Select Employee Status"></asp:ListItem>
-                                            <asp:ListItem Value="1" Text="Present"></asp:ListItem>
-                                            <asp:ListItem Value="2" Text="Suspend"></asp:ListItem>
-                                            <asp:ListItem Value="3" Text="On Leave"></asp:ListItem>
-                                            <asp:ListItem Value="4" Text="Free"></asp:ListItem>
-                                            <asp:ListItem Value="5" Text="Retire"></asp:ListItem>
-                                            <asp:ListItem Value="6" Text="Death"></asp:ListItem>
-                                        </asp:DropDownList>*@
-                                    <div class="form-control-focus">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="form-actions right">
-
-                            <button id="showtoast" class="btn green btn-block">Save Record</button>
-                            @*<asp:Button ID="btnSave" CssClass="btn green btn-block" Text="Save Record" OnClick="btnSave_Click" />*@
-                        </div>
-                    }
-                </div>
-
-
-            </div>
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption font-green">
+            <i class="icon-pin font-green"></i>
+            <span class="caption-subject bold uppercase"> @ViewBag.Title</span>
         </div>
 
     </div>
+    <div class="portlet-body form">
+        @using (Ajax.BeginForm("AddEmployee", "AddStuff", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnItemVoucherSaved" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            @*<form role="form">*@
+            <div class="form-body">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="col-md-10 form-group form-md-line-input form-md-floating-label">
+                            @Html.TextBoxFor(model => model.emp_cd, new { @class = "form-control", id = "txtEmp_cd" })
+                            <label class="col-md-2 control-label" for="form_control_1">Employee Code:</label>
+                        </div>
+                        <div class="col-md-10 form-group form-md-line-input form-md-floating-label ">
+                            @Html.TextBoxFor(model => model.pass, new { @class = "form-control", id = "txtPass" })
+                            <label class="col-md-2 control-label" for="form_control_1">Password:</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 form-group form-md-line-input form-md-floating-label ">
+                        <img id="Image2" src="../Content/EmpImages/no-image.png" style="width:125px;height:125px" alt="No Image" />
+                        <input type="file" id="FileUpload1" onchange="readURL(this)" />
+                    </div>
+
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-success">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", id = "txtEmpName" })
+                        <label class="col-md-2 control-label" for="form_control_1">Employee Name:</label>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-success">
+                        @Html.TextBoxFor(model => model.fname, new { @class = "form-control", id = "txtFName" })
+                        <label class="col-md-2 control-label" for="form_control_1">Father Name:</label>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-warning">
+                        @Html.TextBoxFor(model => model.cnic, new { @class = "form-control", id = "txt_cnic" })
+                        @Html.Label("Enter CNIC: ", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.ntn, new { @class = "form-control", id = "txt_ntn" })
+                        @Html.Label("Enter NTN: ", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.dob, new { @class = "form-control", id = "txt_dob1" })
+                        @Html.Label("Enter DOB:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_religion" class="form-control" name="ddl_religion">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Muslim</option>
+                            <option value="2">Non-Muslim</option>
+                        </select>
+                        @Html.Label("Select Religion:", new { @class = "col-md-2 control-label" })
+                    </div>
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.address, new { @class = "form-control", id = "txt_address", TextMode = "MultiLine" })
+                        @Html.Label("Enter Address:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.MobileNo, new { @class = "form-control", id = "txtMobNo" })
+                        @Html.Label("Enter Mobile No:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @*<asp:DropDownList ID="ddl_last_qualify" CssClass="form-control"> </asp:DropDownList>*@
+                        <select id="ddl_billcategory" class="form-control" name="ddl_billcategory"></select>
+                        @Html.Label("Select Qualification:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_gender" class="form-control" name="ddl_gender">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                        @Html.Label("Select Gender:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_bps" class="form-control" name="ddl_bps">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                        </select>
+                        @Html.Label("Select BPS:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_billcategory" class="form-control" name="ddl_billcategory"></select>
+                        @Html.Label("Select Desigination:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.date_joining, new { @class = "form-control", id = "txt_dateofjoin1" })
+                        @Html.Label("Enter Date Of Joining:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.date_promote, new { @class = "form-control", id = "txt_dateofpromote1" })
+                        @Html.Label("Enter Date of Promote:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.date_retired, new { @class = "form-control", id = "txt_dateofretired1" })
+                        @Html.Label("Enter Date of Retirement:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.seniority, new { @class = "form-control", id = "txt_seniorityno" })
+                        @Html.Label("Enter Seniority:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_billcategory" class="form-control" name="ddl_billcategory"></select>
+                        @Html.Label("Select Branch:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_billcategory" class="form-control" name="ddl_billcategory"></select>
+                        @Html.Label("Select Sub-Branch:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_billcategory" class="form-control" name="ddl_billcategory">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Officer</option>
+                            <option value="2">Superintendent</option>
+                            <option value="3">Staff</option>
+                            <option value="4">Suspended</option>
+                        </select>
+                        @Html.Label("Select Bill Category:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_empcategory" class="form-control" name="ddl_empcategory">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Deputation</option>
+                            <option value="2">Regular</option>
+                            <option value="3">Contract</option>
+                            <option value="4">Daily Wages</option>
+                            <option value="5">Other</option>
+                            <option value="6">All Staff</option>
+                        </select>
+                        @Html.Label("Select Employee Category:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_salarytype" class="form-control" name="ddl_salarytype">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Only Basic</option>
+                            <option value="2">With Allowance</option>
+                        </select>
+                        @Html.Label("Select Salary Type:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.ecr, new { @class = "form-control", id = "txt_ecr" })
+                        @Html.Label("Enter ECR:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_bloodgrp" class="form-control" name="ddl_bloodgrp">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">A+ve</option>
+                            <option value="2">A-ve</option>
+                            <option value="3">B+ve</option>
+                            <option value="4">B-ve</option>
+                            <option value="5">AB+</option>
+                            <option value="6">AB-</option>
+                            <option value="7">O+ve</option>
+                            <option value="8">O-ve</option>
+                            <option value="9">Nill</option>
+                        </select>
+                        @Html.Label("Select Blood Group:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.email, new { @class = "form-control", id = "txt_email", required = "required" })
+                        @Html.Label("Allowed Inter Groups", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_disability" class="form-control" name="ddl_disability">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Is Normal</option>
+                            <option value="2">Is Disable</option>
+                        </select>
+                        @Html.Label("Select Disability:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.Driving_License, new { @class = "form-control", id = "txt_drivlicense" })
+                        @Html.Label("Enter Driving License:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.Expiry_Date, new { @class = "form-control", id = "txt_expirydate1" })
+                        @Html.Label("Enter License Exirty Date:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.accountNo, new { @class = "form-control", id = "txt_accountno" })
+                        @Html.Label("Enter Account No:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_paystage" class="form-control" name="ddl_paystage">
+                            <option Value="0"></option>
+                            <option Value="1">1</option>
+                            <option Value="2">2</option>
+                            <option Value="3">3</option>
+                            <option Value="4">4</option>
+                            <option Value="5">5</option>
+                            <option Value="6">6</option>
+                            <option Value="7">7</option>
+                            <option Value="8">8</option>
+                            <option Value="9">9</option>
+                            <option Value="10">10</option>
+                            <option Value="11">11</option>
+                            <option Value="12">12</option>
+                            <option Value="13">13</option>
+                            <option Value="14">14</option>
+                            <option Value="15">15</option>
+                            <option Value="16">16</option>
+                            <option Value="17">17</option>
+                            <option Value="18">18</option>
+                            <option Value="19">19</option>
+                            <option Value="20">20</option>
+                            <option Value="21">21</option>
+                            <option Value="22">22</option>
+                            <option Value="23">23</option>
+                            <option Value="24">24</option>
+                            <option Value="25">25</option>
+                            <option Value="26">26</option>
+                            <option Value="27">27</option>
+                            <option Value="28">28</option>
+                            <option Value="29">29</option>
+                            <option Value="30">30</option>
+                            <option Value="31">31</option>
+                            <option Value="32">32</option>
+                            <option Value="33">33</option>
+                            <option Value="34">34</option>
+                            <option Value="35">35</option>
+                        </select>
+                        @Html.Label("Select Pay Stage:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        @Html.TextBoxFor(model => model.about, new { @class = "form-control", id = "txt_about", TextMode = "MultiLine", required = "required" })
+                        @Html.Label("Abount:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddlIsActive" class="form-control" name="ddlIsActive">
+                            <option value="0"></option>
+                            <option value="1">Non-Active</option>
+                            <option value="2">Active</option>
+                        </select>
+                        @Html.Label("Select Status:", new { @class = "col-md-2 control-label" })
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                        <select id="ddl_emp_status" class="form-control" name="ddl_emp_status">
+                            <option selected="selected" value="0"></option>
+                            <option value="1">Present</option>
+                            <option value="2">Suspend</option>
+                            <option value="3">On Leave</option>
+                            <option value="4">Free</option>
+                            <option value="5">Retire</option>
+                            <option value="6">Death</option>
+                        </select>
+                        @Html.Label("Select Employee Status", new { @class = "col-md-2 control-label" })
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-md-11 form-group form-md-line-input form-md-floating-label has-error right">
+                <button id="showtoast" class="btn green btn-block">Save Record</button>
+            </div>
+            <br />
+
+            <div class="form-actions noborder right">
+            </div>
+
+        }
+    </div>
 </div>
+
+
+
+
+
+<script src="jQuery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files[0].size > 60000) {
+                toastr.error("Choose Another File Image Should Be Less Then 60 KB !", "Wrong Input")
+                return false;
+            }
+            else {
+
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#Image2').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
