@@ -34,6 +34,7 @@ namespace BISEWEB.Controllers
         [HttpGet]
         public ActionResult UserLogin()
         {
+            Session["LogIn"] = null;
             obj_user.Emp_cd = 0;
             obj_user.IsSuperAdmin = false;
             obj_user.Name = null;
@@ -51,13 +52,17 @@ namespace BISEWEB.Controllers
                 tblemployee obj = Miscdb.tblemployees.Where(a => a.emp_cd.Equals(objUser.emp_cd) && a.pass.Equals(objUser.pass)).FirstOrDefault();
                 if (obj != null)
                 {
+                   
+                    
                     int emp = Convert.ToInt32(obj.emp_cd);
                     obj_user.Emp_cd = emp;
+                    Session["LogIn"] = emp;
                     obj_user.IsSuperAdmin = Convert.ToBoolean(obj.isSuperAdmin);
                     obj_user.Name = obj.Name;
                     obj_user.Branch_Code = Convert.ToInt32(obj.Branch_Code);
                     SessionWrapper.User = obj_user;
                     return RedirectToAction("Home", "Dashboard");
+                    
                 }
 
             }

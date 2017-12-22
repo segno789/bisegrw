@@ -71,6 +71,22 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-header-fixed page-quick-sidebar-over-content ">
+
+    @{
+    <!--to prevent direct access-->
+        if (Session["LogIn"]== null)
+        { Response.Redirect("~/user/Userlogin"); }
+
+
+        //ViewBag.date = DateTime.Now.Date;
+        //ViewBag.timeDay = DateTime.Now.TimeOfDay;
+
+    <!-- below three are also for disabling cache-->
+        Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+        Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
+        Response.Cache.SetNoStore();
+
+    }
     <!-- BEGIN HEADER -->
     <div class="page-header -i navbar navbar-fixed-top">
         <!-- BEGIN HEADER INNER -->
