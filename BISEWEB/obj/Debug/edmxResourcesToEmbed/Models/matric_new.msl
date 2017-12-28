@@ -739,5 +739,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tblTehsils">
+      <EntityTypeMapping TypeName="matric_newModel.tblTehsil">
+        <MappingFragment StoreEntitySet="tblTehsil">
+          <ScalarProperty Name="teh_abr" ColumnName="teh_abr" />
+          <ScalarProperty Name="dist_cd" ColumnName="dist_cd" />
+          <ScalarProperty Name="teh_name" ColumnName="teh_name" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblZones">
+      <EntityTypeMapping TypeName="matric_newModel.tblZone">
+        <MappingFragment StoreEntitySet="tblZones">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="teh_cd" ColumnName="teh_cd" />
+          <ScalarProperty Name="zone_name" ColumnName="zone_name" />
+          <ScalarProperty Name="zone_cd" ColumnName="zone_cd" />
+          <ScalarProperty Name="Sess" ColumnName="Sess" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="mYear" ColumnName="mYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

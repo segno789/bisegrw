@@ -569,6 +569,7 @@
     <Property Name="dist_cd" Type="Byte" Nullable="false" />
     <Property Name="dist_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="dist_abr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblTehsils" Relationship="matric_newModel.FK_tblTehsil_tblDistrict" FromRole="tblDistrict" ToRole="tblTehsil" />
   </EntityType>
   <EntityType Name="tblHistory">
     <Key>
@@ -791,5 +792,91 @@
       <End Role="tblParentNodes" EntitySet="tblParentNodes" />
       <End Role="tblChildNodes" EntitySet="tblChildNodes" />
     </AssociationSet>
+    <EntitySet Name="tblTehsils" EntityType="matric_newModel.tblTehsil" />
+    <EntitySet Name="tblZones" EntityType="matric_newModel.tblZone" />
+    <AssociationSet Name="FK_tblTehsil_tblDistrict" Association="matric_newModel.FK_tblTehsil_tblDistrict">
+      <End Role="tblDistrict" EntitySet="tblDistricts" />
+      <End Role="tblTehsil" EntitySet="tblTehsils" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZones_tblZones" Association="matric_newModel.FK_tblZones_tblZones">
+      <End Role="tblTehsil" EntitySet="tblTehsils" />
+      <End Role="tblZone" EntitySet="tblZones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZones_tblZones1" Association="matric_newModel.FK_tblZones_tblZones1">
+      <End Role="tblZone" EntitySet="tblZones" />
+      <End Role="tblZone1" EntitySet="tblZones" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="tblTehsil">
+    <Key>
+      <PropertyRef Name="teh_cd" />
+    </Key>
+    <Property Name="teh_cd" Type="Byte" Nullable="false" />
+    <Property Name="teh_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dist_cd" Type="Byte" Nullable="false" />
+    <Property Name="teh_abr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblDistrict" Relationship="matric_newModel.FK_tblTehsil_tblDistrict" FromRole="tblTehsil" ToRole="tblDistrict" />
+    <NavigationProperty Name="tblZones" Relationship="matric_newModel.FK_tblZones_tblZones" FromRole="tblTehsil" ToRole="tblZone" />
+  </EntityType>
+  <EntityType Name="tblZone">
+    <Key>
+      <PropertyRef Name="mYear" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Sess" />
+      <PropertyRef Name="zone_cd" />
+    </Key>
+    <Property Name="mYear" Type="Int16" Nullable="false" />
+    <Property Name="Class" Type="Byte" Nullable="false" />
+    <Property Name="Sess" Type="Byte" Nullable="false" />
+    <Property Name="zone_cd" Type="Int32" Nullable="false" />
+    <Property Name="zone_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="teh_cd" Type="Byte" />
+    <Property Name="Flag" Type="Byte" />
+    <Property Name="Gender" Type="Byte" />
+    <NavigationProperty Name="tblTehsil" Relationship="matric_newModel.FK_tblZones_tblZones" FromRole="tblZone" ToRole="tblTehsil" />
+    <NavigationProperty Name="tblZones1" Relationship="matric_newModel.FK_tblZones_tblZones1" FromRole="tblZone" ToRole="tblZone1" />
+    <NavigationProperty Name="tblZone1" Relationship="matric_newModel.FK_tblZones_tblZones1" FromRole="tblZone1" ToRole="tblZone" />
+  </EntityType>
+  <Association Name="FK_tblTehsil_tblDistrict">
+    <End Type="matric_newModel.tblDistrict" Role="tblDistrict" Multiplicity="1" />
+    <End Type="matric_newModel.tblTehsil" Role="tblTehsil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDistrict">
+        <PropertyRef Name="dist_cd" />
+      </Principal>
+      <Dependent Role="tblTehsil">
+        <PropertyRef Name="dist_cd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZones_tblZones">
+    <End Type="matric_newModel.tblTehsil" Role="tblTehsil" Multiplicity="0..1" />
+    <End Type="matric_newModel.tblZone" Role="tblZone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTehsil">
+        <PropertyRef Name="teh_cd" />
+      </Principal>
+      <Dependent Role="tblZone">
+        <PropertyRef Name="teh_cd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZones_tblZones1">
+    <End Type="matric_newModel.tblZone" Role="tblZone" Multiplicity="1" />
+    <End Type="matric_newModel.tblZone" Role="tblZone1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblZone">
+        <PropertyRef Name="mYear" />
+        <PropertyRef Name="Class" />
+        <PropertyRef Name="Sess" />
+        <PropertyRef Name="zone_cd" />
+      </Principal>
+      <Dependent Role="tblZone1">
+        <PropertyRef Name="mYear" />
+        <PropertyRef Name="Class" />
+        <PropertyRef Name="Sess" />
+        <PropertyRef Name="zone_cd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

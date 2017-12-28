@@ -122,9 +122,29 @@
 @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
                             </div>
                         <div class="col-md-1"></div>
+
+
+
+
+
+                        @*<div class="col-md-5 form-group form-md-line-input form-md-floating-label has-info">
+           
+
+                            @Html.DropDownList("MultipleTables", ViewBag.tehsil as SelectList,new { @class = "form-control" })
+
+                            <label for="form_control_1">Dropdown sample</label>
+                        </div>*@
+
+
+
+
+
+
+
                             <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })
-                            @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })    
+                            @Html.DropDownList("Tehsil", ViewBag.tehsil as SelectList, "Select Tehsil", new { @class = "form-control" })
+                            @*@Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })*@
+                            @* @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })*@    
                             </div>
 
 
@@ -148,7 +168,14 @@
 
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.TextBoxFor(model => model.IsGovernment, new { required = "required", @class = "form-control" })
+                           @* @Html.TextBoxFor(model => model.IsGovernment, new { required = "required", @class = "form-control" })*@
+
+                            <select id="ddl_isgov" class="form-control" name="ddl_isgov">
+                                <option selected="selected" value="0"></option>
+                                <option value="1">Government</option>
+                                <option value="2">Private</option>
+                            </select>
+
                             @Html.Label("Institution Type", new { @class = "col-md-2 control-label" })
                         </div>
 
@@ -166,7 +193,16 @@
 
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.TextBoxFor(model => model.edu_lvl, new { required = "required", @class = "form-control" })
+                            @*@Html.TextBoxFor(model => model.edu_lvl, new { required = "required", @class = "form-control" })*@
+
+
+                            <select id="ddl_religion" class="form-control" name="ddl_religion">
+                                <option selected="selected" value="0"></option>
+                                <option value="1">School</option>
+                                <option value="2">College</option>
+                                <option value="3">Higher Secondary School</option>
+                            </select>
+
                             @Html.Label("Education Level", new { @class = "col-md-2 control-label" })
                         </div>
 

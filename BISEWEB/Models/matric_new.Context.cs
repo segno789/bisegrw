@@ -43,5 +43,7 @@ namespace BISEWEB.Models
         public virtual DbSet<tblBindAllotment> tblBindAllotments { get; set; }
         public virtual DbSet<tblBundle> tblBundles { get; set; }
         public virtual DbSet<tblhistoryForm16> tblhistoryForm16 { get; set; }
+        public virtual DbSet<tblTehsil> tblTehsils { get; set; }
+        public virtual DbSet<tblZone> tblZones { get; set; }
     }
 }

@@ -514,15 +514,6 @@ warning 6002: The table/view 'matric_new.dbo.tblBundle' does not have a primary 
     <Property Name="Cat_Name" Type="varchar" MaxLength="50" />
     <Property Name="Cat_Abr" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'matric_new.dbo.tblCd_Pass' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tblCd_Pass">
-          <Property Name="myear" Type="int" />
-          <Property Name="sess" Type="int" />
-          <Property Name="class" Type="int" />
-          <Property Name="pass" Type="varchar" MaxLength="50" />
-          <Property Name="AccesPass" Type="varchar" MaxLength="80" />
-        </EntityType>-->
   <EntityType Name="tblcentre">
     <Key>
       <PropertyRef Name="CENT_CD" />
@@ -644,19 +635,6 @@ warning 6013: The table/view 'matric_new.dbo.tblCd_Pass' does not have a primary
     <Property Name="SystemName" Type="varchar" MaxLength="50" />
     <Property Name="DomainUser" Type="varchar" MaxLength="80" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'matric_new.dbo.tblhistory14' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tblhistory14">
-          <Property Name="rno" Type="int" />
-          <Property Name="class" Type="tinyint" />
-          <Property Name="mYear" Type="smallint" />
-          <Property Name="sess" Type="tinyint" />
-          <Property Name="PrevString" Type="varchar" MaxLength="2500" />
-          <Property Name="ChangedString" Type="varchar" MaxLength="2500" />
-          <Property Name="ChangedDate" Type="datetime" />
-          <Property Name="ChangedBy" Type="int" />
-          <Property Name="ChangedByForm" Type="int" />
-        </EntityType>-->
   <!--Errors Found During Generation:
 warning 6002: The table/view 'matric_new.dbo.tblhistoryForm16' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="tblhistoryForm16">
@@ -782,6 +760,31 @@ warning 6002: The table/view 'matric_new.dbo.tblhistoryForm16' does not have a p
     <Property Name="Excp" Type="tinyint" />
     <Property Name="emp_cd" Type="int" />
   </EntityType>
+  <EntityType Name="tblTehsil">
+    <Key>
+      <PropertyRef Name="teh_cd" />
+    </Key>
+    <Property Name="teh_cd" Type="tinyint" Nullable="false" />
+    <Property Name="teh_name" Type="varchar" MaxLength="50" />
+    <Property Name="dist_cd" Type="tinyint" Nullable="false" />
+    <Property Name="teh_abr" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblZones">
+    <Key>
+      <PropertyRef Name="mYear" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Sess" />
+      <PropertyRef Name="zone_cd" />
+    </Key>
+    <Property Name="mYear" Type="smallint" Nullable="false" />
+    <Property Name="Class" Type="tinyint" Nullable="false" />
+    <Property Name="Sess" Type="tinyint" Nullable="false" />
+    <Property Name="zone_cd" Type="int" Nullable="false" />
+    <Property Name="zone_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="teh_cd" Type="tinyint" />
+    <Property Name="Flag" Type="tinyint" />
+    <Property Name="Gender" Type="tinyint" />
+  </EntityType>
   <Association Name="FK_tblChildNodes_tblParentNodes">
     <End Role="tblParentNodes" Type="Self.tblParentNodes" Multiplicity="0..1" />
     <End Role="tblChildNodes" Type="Self.tblChildNodes" Multiplicity="*" />
@@ -791,6 +794,48 @@ warning 6002: The table/view 'matric_new.dbo.tblhistoryForm16' does not have a p
       </Principal>
       <Dependent Role="tblChildNodes">
         <PropertyRef Name="ParentNodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTehsil_tblDistrict">
+    <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="1" />
+    <End Role="tblTehsil" Type="Self.tblTehsil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDistrict">
+        <PropertyRef Name="dist_cd" />
+      </Principal>
+      <Dependent Role="tblTehsil">
+        <PropertyRef Name="dist_cd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZones_tblZones">
+    <End Role="tblTehsil" Type="Self.tblTehsil" Multiplicity="0..1" />
+    <End Role="tblZones" Type="Self.tblZones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTehsil">
+        <PropertyRef Name="teh_cd" />
+      </Principal>
+      <Dependent Role="tblZones">
+        <PropertyRef Name="teh_cd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZones_tblZones1">
+    <End Role="tblZones" Type="Self.tblZones" Multiplicity="1" />
+    <End Role="tblZones1" Type="Self.tblZones" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblZones">
+        <PropertyRef Name="mYear" />
+        <PropertyRef Name="Class" />
+        <PropertyRef Name="Sess" />
+        <PropertyRef Name="zone_cd" />
+      </Principal>
+      <Dependent Role="tblZones1">
+        <PropertyRef Name="mYear" />
+        <PropertyRef Name="Class" />
+        <PropertyRef Name="Sess" />
+        <PropertyRef Name="zone_cd" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -810,6 +855,8 @@ warning 6002: The table/view 'matric_new.dbo.tblhistoryForm16' does not have a p
     <EntitySet Name="tblParentNodes" EntityType="Self.tblParentNodes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPicPath" EntityType="Self.tblPicPath" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblScanned_Data" EntityType="Self.tblScanned_Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTehsil" EntityType="Self.tblTehsil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblZones" EntityType="Self.tblZones" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblBindAllotment" EntityType="Self.tblBindAllotment" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [tblBindAllotment].[Emp_cd] AS [Emp_cd], 
@@ -857,6 +904,18 @@ warning 6002: The table/view 'matric_new.dbo.tblhistoryForm16' does not have a p
     <AssociationSet Name="FK_tblChildNodes_tblParentNodes" Association="Self.FK_tblChildNodes_tblParentNodes">
       <End Role="tblParentNodes" EntitySet="tblParentNodes" />
       <End Role="tblChildNodes" EntitySet="tblChildNodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTehsil_tblDistrict" Association="Self.FK_tblTehsil_tblDistrict">
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+      <End Role="tblTehsil" EntitySet="tblTehsil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZones_tblZones" Association="Self.FK_tblZones_tblZones">
+      <End Role="tblTehsil" EntitySet="tblTehsil" />
+      <End Role="tblZones" EntitySet="tblZones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZones_tblZones1" Association="Self.FK_tblZones_tblZones1">
+      <End Role="tblZones" EntitySet="tblZones" />
+      <End Role="tblZones1" EntitySet="tblZones" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

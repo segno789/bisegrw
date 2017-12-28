@@ -12,19 +12,21 @@ namespace BISEWEB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblDistrict
+    public partial class tblTehsil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblDistrict()
+        public tblTehsil()
         {
-            this.tblTehsils = new HashSet<tblTehsil>();
+            this.tblZones = new HashSet<tblZone>();
         }
     
+        public byte teh_cd { get; set; }
+        public string teh_name { get; set; }
         public byte dist_cd { get; set; }
-        public string dist_name { get; set; }
-        public string dist_abr { get; set; }
+        public string teh_abr { get; set; }
     
+        public virtual tblDistrict tblDistrict { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblTehsil> tblTehsils { get; set; }
+        public virtual ICollection<tblZone> tblZones { get; set; }
     }
 }

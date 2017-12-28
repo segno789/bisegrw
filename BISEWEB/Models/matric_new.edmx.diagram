@@ -24,6 +24,11 @@
         <EntityTypeShape EntityType="matric_newModel.tblBundle" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="matric_newModel.tblhistoryForm16" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="matric_newModel.FK_tblChildNodes_tblParentNodes" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="matric_newModel.tblTehsil" Width="1.5" PointX="13" PointY="15" />
+        <EntityTypeShape EntityType="matric_newModel.tblZone" Width="1.5" PointX="15.25" PointY="14.625" />
+        <AssociationConnector Association="matric_newModel.FK_tblTehsil_tblDistrict" />
+        <AssociationConnector Association="matric_newModel.FK_tblZones_tblZones" />
+        <AssociationConnector Association="matric_newModel.FK_tblZones_tblZones1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
