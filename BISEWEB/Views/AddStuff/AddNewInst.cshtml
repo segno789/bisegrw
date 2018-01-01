@@ -1,5 +1,6 @@
 ﻿@model BISEWEB.Models.tblInstitutes_all
 
+
 @{
     ViewBag.Title = "Add New Institute";
     Layout = "~/Views/Shared/_masterPage.cshtml";
@@ -95,27 +96,29 @@
                     <div class="col-md-12">
                         
 
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-success">
+                            @Html.TextBoxFor(model => model.Inst_cd, new {id ="txtInst_cd", required = "required", @class = "form-control" })
+                            @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
+                        </div>
 
-
-                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label">
-                                @Html.TextBoxFor(model => model.Name, new { required = "required", @class = "form-control" })
-                                @Html.Label("Institute Name", new { @class = "col-md-2 control-label" })
-
-                            </div>
+                            
                             
                            <div class="col-md-1"></div>
-                        
-                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label ">
-                                @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control" })
-                                @Html.Label("Institute Address", new { @class = "col-md-2 control-label" })
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label">
+                            @Html.TextBoxFor(model => model.Name, new { required = "required", @class = "form-control" })
+                            @Html.Label("Institute Name", new { @class = "col-md-2 control-label" })
 
-                            </div>
+                        </div>
+
+
+                           
                         <div class="col-md-1"></div> 
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label ">
+                            @Html.TextBoxFor(model => model.address, new { required = "required", @class = "form-control" })
+                            @Html.Label("Institute Address", new { @class = "col-md-2 control-label" })
 
-                            <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-success">
-                                @Html.TextBoxFor(model => model.Inst_cd, new { required = "required", @class = "form-control" })
-                                @Html.Label("Institute Code", new { @class = "col-md-2 control-label" })
-                            </div>
+                        </div>
+                          
                         <div class="col-md-1"></div>
                             <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-warning">
 @Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control" })
@@ -148,12 +151,12 @@
                             </div>
 
 
-                        <div class="col-md-1"></div>
+                        @*<div class="col-md-1"></div>
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
                             @Html.TextBoxFor(model => model.Inst_Id, new { required = "required", @class = "form-control" })
                             @Html.Label("Institute ID", new { @class = "col-md-2 control-label" })
-                        </div>
+                        </div>*@
 
 
                         <div class="col-md-1"></div>
@@ -226,33 +229,55 @@
                         <div class="col-md-1"></div>
 
 
+
+
+            
+
+
+
+
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control" })
-                            @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
+
+                            @Html.DropDownList("Matric Zone", ViewBag.mzone as SelectList, "Select Matric Zone", new { @class = "form-control" })
+                            @*@Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })*@
+                            @* @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })*@
                         </div>
+
+
+                        @*<div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Select Matric Zone", new { @class = "col-md-2 control-label" })
+                        </div>*@
 
 
                         <div class="col-md-1"></div>
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
                             @Html.TextBoxFor(model => model.zone_cd, new { required = "required", @class = "form-control" })
-                            @Html.Label("Enter Zone", new { @class = "col-md-2 control-label" })
+                            @Html.Label("Enter Matric Zone", new { @class = "col-md-2 control-label" })
                         </div>
 
 
                         <div class="col-md-1"></div>
+
+
+                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.DropDownList("InterZone", ViewBag.Izone as SelectList, "Select Inter Zone", new { @class = "form-control" })
+                            @*@Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })*@
+                            @* @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })*@
+                        </div>
+
+                        @*<div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
+                            @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control" })
+                            @Html.Label("Select Inter Zone", new { @class = "col-md-2 control-label" })
+                        </div>*@
+
+                        <div class="col-md-1"></div>
+
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
                             @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control" })
-                            @Html.Label("Select Zone", new { @class = "col-md-2 control-label" })
-                        </div>
-
-                        <div class="col-md-1"></div>
-
-
-                        <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.TextBoxFor(model => model.iZone_cd, new { required = "required", @class = "form-control" })
-                            @Html.Label("Enter Zone", new { @class = "col-md-2 control-label" })
+                            @Html.Label("Enter Inter Zone", new { @class = "col-md-2 control-label" })
                         </div>
 
 
@@ -260,7 +285,7 @@
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
                             @Html.TextBoxFor(model => model.LandLine, new { required = "required", @class = "form-control" })
-                            @Html.Label("Landline No.", new { @class = "col-md-2 control-label" })
+                            @Html.Label("Landline Number", new { @class = "col-md-2 control-label" })
                         </div>
 
 
@@ -275,7 +300,7 @@
 
                         <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
                             @Html.TextBoxFor(model => model.MobNo, new { required = "required", @class = "form-control" })
-                            @Html.Label("Mobile No.", new { @class = "col-md-2 control-label" })
+                            @Html.Label("Mobile Number", new { @class = "col-md-2 control-label" })
                         </div>
 
                         <div class="col-md-1"></div>
@@ -371,6 +396,8 @@
                                     <button type="button" class="col-md-4 btn default">Cancel</button>
                                
                             </div>
+
+                        @Html.TextBox("userNameTextBox")
 
 
 
@@ -886,4 +913,52 @@
   
 
 
-</div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+    $(function () {
+            $('#userNameTextBox').change(function () {
+                var changedText = $(this).val();
+
+                //Post the content of your Textbox to your "YourAction" action in "YourController"
+                $.post('@Url.Action("UserNameChanged","Example")', { "ChangedText": changedText }, function (data) { alert(data); });
+            });
+    });
+</script>
+
+
+
+
+
+
+<script>
+
+function GetZoneName()
+{
+        debugger;
+        var stateId = $("#stateDropDown").val();
+        $.ajax
+        ({
+           url: '/AddStuffController/GetZonesName',
+           type: 'POST',
+           datatype: 'application/json',
+           contentType: 'application/json',
+           data: JSON.stringify({
+           stateId: +stateId
+           }),
+           success: function(result)
+           {
+              $("#cityDropDown").html("");
+              $.each($.parseJSON(result), function(i, city)
+              {
+                 $("#cityDropDown").append
+                 ($('<option></option>').val(city.CityID).html(city.CityName))
+              })
+            },
+            error: function()
+            {
+                 alert("Whooaaa! Something went wrong..")
+            },
+        });
+   }
+</script> 
