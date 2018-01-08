@@ -145,7 +145,7 @@
 
 
                             <div class="col-md-5 form-group form-md-line-input form-md-floating-label has-error">
-                            @Html.DropDownList("Tehsil", ViewBag.tehsil as SelectList, "Select Tehsil", new { @class = "form-control" })
+                            @Html.DropDownList("Tehsil", ViewBag.tehsil as SelectList, "Select Tehsil", new { @class = "form-control", @onchange = "getdistrict()" ,@id = "Tehsil" })
                             @*@Html.TextBoxFor(model => model.teh_cd, new { required = "required", @class = "form-control" })*@
                             @* @Html.Label("Tehsil Code", new { @class = "col-md-2 control-label" })*@    
                             </div>
@@ -960,5 +960,33 @@ function GetZoneName()
                  alert("Whooaaa! Something went wrong..")
             },
         });
-   }
+}
+
+
+
+
+function getdistrict() {
+    var stateId = $('#Tehsil').val();
+    alert(stateId);
+    $.ajax({
+        
+        //url: @*@Url.Action("getdistricts","AddStuff"),*@
+        url: '/AddStuff/getdistricts/'//+ stateId,
+        type: "POST",
+        datatype: 'application/json',
+        contentType: 'application/json',
+        data: { teh: stateId },
+        
+        success: function (cities) {
+            $("#City").html(""); // clear before appending new list
+            $.each(cities, function (i, city) {
+                $("#City").append(
+                    $('<option></option>').val(city.CityId).html(city.CityName));
+            });
+        }
+
+    });
+
+  }
+
 </script> 

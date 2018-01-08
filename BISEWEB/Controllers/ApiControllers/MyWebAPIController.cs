@@ -37,6 +37,53 @@ namespace BISEWEB.Controllers
             return Name;
         }
 
+
+        public string getdistrict(int id)
+        {
+            string Name = "";
+
+            var person = matric_new.tblTehsils
+             .Join(matric_new.tblDistricts,
+                   p => p.dist_cd,
+                   e => e.dist_cd,
+
+                   (p, e) => new {
+                       teh_cd = p.teh_cd,
+                       Dist_Name = e.dist_name
+                       //MiddleName = p.MiddleName,
+                       //LastName = p.LastName,
+                       //EmailID = e.EmailAddress1
+                   }
+                   ).Where(c => c.teh_cd == id)
+                   .FirstOrDefault();
+
+            if (person != null)
+                
+                {
+                Name = person.Dist_Name;
+            }
+        //}
+
+            //var cities = matric_new.tblDistricts.Join(matric_new.tblTehsils.  .Where(c => c.dist_cd == teh);
+       
+            //string Name = "";
+            //tblemployee obj = Miscdb.tblemployees.Where(a => a.emp_cd.Equals(id)).FirstOrDefault();
+            //string filename = HttpContext.Current.Server.MapPath("~/Content/EmpImages/" + id + ".jpg");
+            //if (obj != null)
+            //{
+            //    Name = obj.Name;
+            //    if (File.Exists(filename))
+            //    {
+            //        Name = Name + "|True";
+            //    }
+            //    else
+            //    {
+            //        Name = Name + "|False";
+            //    }
+            //}
+            return Name;
+        }
+
         //[HttpPost]
         //public void ActionResesult([FromBody] tblemployee model)
         //{

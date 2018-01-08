@@ -18,6 +18,12 @@ namespace BISEWEB
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { controller = "MyWebAPI", action = "GetNameByID", id = UrlParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+    name: "APIaa",
+    routeTemplate: "api/{controller}/{action}/{id}",
+    defaults: new { controller = "MyWebAPI", action = "getdistrict", id = UrlParameter.Optional }
+);
         }
     }
 }

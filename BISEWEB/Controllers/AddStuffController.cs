@@ -43,6 +43,22 @@ namespace BISEWEB.Controllers
 
             ViewBag.Mzone = new SelectList(matric_new.tblZones.Where(o => o.mYear == DateTime.Now.Year && o.Class == 10), "zone_cd", "zone_name");
 
+
+            var person = matric_new.tblTehsils
+               .Join(matric_new.tblDistricts,
+                     p => p.dist_cd,
+                     e => e.dist_cd,
+
+                     (p, e) => new {
+                         teh_cd = p.teh_cd,
+                         Dist_Name = e.dist_name
+                          //MiddleName = p.MiddleName,
+                          //LastName = p.LastName,
+                          //EmailID = e.EmailAddress1
+                      }
+                     ).Where(c => c.teh_cd == 1)
+                     .FirstOrDefault();
+
             return View();
 
         }
@@ -72,6 +88,33 @@ namespace BISEWEB.Controllers
 
         }
 
+
+
+        [HttpGet]
+        public ActionResult getdistricts()
+        {
+           int  teh = 1;
+
+            var person = matric_new.tblTehsils
+                .Join(matric_new.tblDistricts,
+                      p => p.dist_cd,
+                      e => e.dist_cd,
+
+                      (p, e) => new {
+                          teh_cd= p.teh_cd,
+                          Dist_Name = e.dist_name
+                          //MiddleName = p.MiddleName,
+                          //LastName = p.LastName,
+                          //EmailID = e.EmailAddress1
+                      }
+                      ).Where(c => c.teh_cd ==teh)
+                      .FirstOrDefault();
+
+            //var cities = matric_new.tblDistricts.Join(matric_new.tblTehsils.  .Where(c => c.dist_cd == teh);
+            return Json(person, JsonRequestBehavior.AllowGet);
+        }
+
+
         //public ActionResult GetZonesName(int zone_code )
         //{
         //    var zone_name = "";
@@ -98,5 +141,8 @@ namespace BISEWEB.Controllers
 
 
     }
+
+
+
 
 }
